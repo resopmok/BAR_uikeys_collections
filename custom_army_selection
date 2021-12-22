@@ -12,3 +12,12 @@ bind             Ctrl+e  select AllMap+_Not_Builder_Aircraft+_ClearSelection_Sel
 bind             Ctrl+a  select AllMap++_ClearSelection_SelectAll+ // select everything on map
 bind             Ctrl+r  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+ // Idle contructors
 bind             Ctrl+f  select Visible+_Not_Aircraft_Not_Building_Weapons+_ClearSelection_SelectAll+ // select visible units with a weapon (use for comm pushes) 
+
+//from badosu
+select Visible+_Aircraft_WeaponRange_679_Not_WeaponRange_741+_ClearSelection_SelectAll+ //select all fighters
+//from badosu, stolen from teddy
+bind        c        select FromMouse_500+_Builder_Not_Building_Not_Weapons+_SelectAll+  //select cons near mouse
+bind        v        select PrevSelection+_Not_RelativeHealth_50+_ClearSelection_SelectAll+ // select damaged units from previous selection
+bind        v        select FromMouse_500+_Not_Builder_Not_Building_Not_Aircraft_Weapons_Not_RelativeHealth_50+_ClearSelection_SelectAll+ // select damaged units near mouse
+bind        x        select FromMouse_500+_Not_Builder_Not_Building_Not_Aircraft_Weapons+_SelectAll+ // select fighting land units near mouse
+bind        z        select PrevSelection++_ClearSelection_SelectPart_50+ // split units in selection
