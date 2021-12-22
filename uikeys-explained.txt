@@ -1,0 +1,176 @@
+// Prevent springsettings.exe from altering this file.
+//SPRINGSETTINGS DO NOT TOUCH
+
+// Unbind some defaults so they're available for custom bindings.
+unbind		Ctrl+a			select
+unbind		Ctrl+b			select
+unbind		Ctrl+c			select
+unbind		Ctrl+r			select
+unbind		Ctrl+v			select
+unbind		Ctrl+w			select
+unbind		Ctrl+x			select
+unbind		Ctrl+z			select
+
+unbind		Alt+o			singlestep
+bind		Meta+o			singlestep
+
+// Mnemonics
+// a -> all
+// e -> engineers (builders)
+// f -> factories
+// r -> radars
+// w -> wings (aircraft)
+// s -> soldiers (armed units)
+// c -> civilians (unarmed units)
+// z -> default legacy Total Annihilation binding for unit types in the current selection
+
+// Ctrl bindings select units near the mouse cursor.
+// Less useful than the Ctrl+Shift variant which appends instead of replacing.
+// Replaces the current selection.
+bind		Ctrl+a			select		FromMouseC_240++_ClearSelection_SelectAll+
+bind		Ctrl+e			select		FromMouseC_240+_Builder_Not_Building+_ClearSelection_SelectAll+
+bind		Ctrl+f			select		FromMouseC_240+_Builder_Building+_ClearSelection_SelectAll+
+bind		Ctrl+r			select		FromMouseC_240+_Radar+_ClearSelection_SelectAll+
+bind		Ctrl+w			select		FromMouseC_240+_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+s			select		FromMouseC_240+_Not_Building_Not_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+c			select		FromMouseC_240+_Not_Building_Not_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+z			select		FromMouseC_240+_InPrevSel+_ClearSelection_SelectAll+
+
+// Alt bindings select units visible on screen.
+// Replaces the current selection.
+bind		Alt+a			select		Visible++_ClearSelection_SelectAll+
+bind		Alt+e			select		Visible+_Builder_Not_Building+_ClearSelection_SelectAll+
+bind		Alt+f			select		Visible+_Builder_Building+_ClearSelection_SelectAll+
+bind		Alt+r			select		Visible+_Radar+_ClearSelection_SelectAll+
+bind		Alt+w			select		Visible+_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Alt+s			select		Visible+_Not_Building_Not_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Alt+c			select		Visible+_Not_Building_Not_Weapons+_ClearSelection_SelectAll+
+bind		Alt+z			select		Visible+_InPrevSel+_ClearSelection_SelectAll+
+
+// Ctrl+Alt bindings select units across the entire battlefield.
+// Replaces the current selection.
+bind		Ctrl+Alt+a		select		AllMap++_ClearSelection_SelectAll+
+bind		Ctrl+Alt+e		select		AllMap+_Builder_Not_Building+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+f		select		AllMap+_Builder_Building+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+r		select		AllMap+_Radar+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+w		select		AllMap+_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+s		select		AllMap+_Not_Building_Not_Aircraft_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+c		select		AllMap+_Not_Building_Not_Weapons+_ClearSelection_SelectAll+
+bind		Ctrl+Alt+z		select		AllMap+_InPrevSel+_ClearSelection_SelectAll+
+
+// Same as Ctrl bindings but append to the current selection instead of replacing.
+// Meant to be used by spamming the key combination while moving the mouse cursor over the desired units.
+bind		Ctrl+Shift+a		select		FromMouseC_240++_SelectAll+
+bind		Ctrl+Shift+e		select		FromMouseC_240+_Builder_Not_Building+_SelectAll+
+bind		Ctrl+Shift+f		select		FromMouseC_240+_Builder_Building+_SelectAll+
+bind		Ctrl+Shift+r		select		FromMouseC_240+_Radar+_SelectAll+
+bind		Ctrl+Shift+w		select		FromMouseC_240+_Aircraft_Weapons+_SelectAll+
+bind		Ctrl+Shift+s		select		FromMouseC_240+_Not_Building_Not_Aircraft_Weapons+_SelectAll+
+bind		Ctrl+Shift+c		select		FromMouseC_240+_Not_Building_Not_Weapons+_SelectAll+
+bind		Ctrl+Shift+z		select		FromMouseC_240+_InPrevSel+_SelectAll+
+
+// Same as Alt bindings but append to the current selection instead of replacing.
+bind		Shift+Alt+a		select		Visible++_SelectAll+
+bind		Shift+Alt+e		select		Visible+_Builder_Not_Building+_SelectAll+
+bind		Shift+Alt+f		select		Visible+_Builder_Building+_SelectAll+
+bind		Shift+Alt+r		select		Visible+_Radar+_SelectAll+
+bind		Shift+Alt+w		select		Visible+_Aircraft_Weapons+_SelectAll+
+bind		Shift+Alt+s		select		Visible+_Not_Building_Not_Aircraft_Weapons+_SelectAll+
+bind		Shift+Alt+c		select		Visible+_Not_Building_Not_Weapons+_SelectAll+
+bind		Shift+Alt+z		select		Visible+_InPrevSel+_SelectAll+
+
+// Same as Ctrl+Alt bindings but append to the current selection instead of replacing.
+bind		Ctrl+Shift+Alt+a	select		AllMap++_SelectAll+
+bind		Ctrl+Shift+Alt+e	select		AllMap+_Builder_Not_Building+_SelectAll+
+bind		Ctrl+Shift+Alt+f	select		AllMap+_Builder_Building+_SelectAll+
+bind		Ctrl+Shift+Alt+r	select		AllMap+_Radar+_SelectAll+
+bind		Ctrl+Shift+Alt+w	select		AllMap+_Aircraft_Weapons+_SelectAll+
+bind		Ctrl+Shift+Alt+s	select		AllMap+_Not_Building_Not_Aircraft_Weapons+_SelectAll+
+bind		Ctrl+Shift+Alt+c	select		AllMap+_Not_Building_Not_Weapons+_SelectAll+
+bind		Ctrl+Shift+Alt+z	select		AllMap+_InPrevSel+_SelectAll+
+
+// Mnemonics
+// o -> operational (at least 70% of max HP left)
+// x -> eXcellent condition (at least 90% of max HP left)
+// n -> numbered (assigned to a Ctrl+number group)
+// i -> idle
+// y -> yawning (waiting)
+
+// Ctrl bindings narrow down a selection to only the units which DO match the condition.
+// Alt Bindings narrow down a selection to only the units which DO NOT match the condition.
+// There must be a previous selection; these bindings do not select, they only narrow down.
+// Example: Press Ctrl+Alt+e (select all engineers), press Ctrl+i.
+// Effect: Only idle builders will remain in the final selection.
+bind		Ctrl+o			select		PrevSelection+_RelativeHealth_70+_ClearSelection_SelectAll+
+bind		Alt+o			select		PrevSelection+_Not_RelativeHealth_70+_ClearSelection_SelectAll+
+bind		Ctrl+x			select		PrevSelection+_RelativeHealth_90+_ClearSelection_SelectAll+
+bind		Alt+x			select		PrevSelection+_Not_RelativeHealth_90+_ClearSelection_SelectAll+
+bind		Ctrl+n			select		PrevSelection+_InHotkeyGroup+_ClearSelection_SelectAll+
+bind		Alt+n			select		PrevSelection+_Not_InHotkeyGroup+_ClearSelection_SelectAll+
+bind		Ctrl+i			select		PrevSelection+_Idle+_ClearSelection_SelectAll+
+bind		Alt+i			select		PrevSelection+_Not_Idle+_ClearSelection_SelectAll+
+bind		Ctrl+y			select		PrevSelection+_Waiting+_ClearSelection_SelectAll+
+bind		Alt+y			select		PrevSelection+_Not_Waiting+_ClearSelection_SelectAll+
+
+// Narrow down a selection to a fraction of the original quantity of units.
+// There must be a previous selection; these bindings do not select, they only narrow down.
+// Example: Select 20 units, press Ctrl+k.
+// Effect: Only 10 units will remain selected and 10 will be deselected.
+// Ctrl+k -> keep half (50%)
+// Ctrl+l -> keep 3/4 (75%)
+// Alt+k -> keep 2/3 (67%)
+// Alt+l -> keep almost all (95%)
+bind		Ctrl+k			select		PrevSelection++_ClearSelection_SelectPart_50+
+bind		Ctrl+l			select		PrevSelection++_ClearSelection_SelectPart_75+
+bind		Alt+k 			select		PrevSelection++_ClearSelection_SelectPart_67+
+bind		Alt+l			select		PrevSelection++_ClearSelection_SelectPart_95+
+
+// Conditional wait bindings. Only useful in command queues.
+// Groups of units will wait until all of them have reached their waypoints before
+// proceding to the next command in the queue. In other words, they will wait for
+// stragglers.
+bind		/			gatherwait
+bind		Shift+/		gatherwait enqueued
+
+// Timed wait bindings. Only useful in command queues.
+// Units will wait for 3 seconds before proceding to the next command in the queue.
+bind		;			timewait 3
+bind		Shift+;		timewait 3 enqueued
+// Units will wait for 9 seconds before proceding to the next command in the queue.
+bind		'			timewait 9
+bind		Shift+'		timewait 9 enqueued
+
+// Conditional wait bindings. Only useful in command queues.
+// Usable for groups of units but more useful for factories.
+// Warning: Num-Lock MUST be off for these to work.
+// Example: Select a factory, R-Click near the factory to set a rally point,
+// press Shift+numpad3, press f (Fight command) and Shift+L-Click on an enemy base,
+// toggle repeat to On on the factory, build some units.
+// Effect: Units will wait at the rally point until a group of 9 forms before
+// executing the Fight command.
+bind		numpad1				squadwait 3
+bind		Shift+numpad1		squadwait 3 enqueued
+bind		numpad2				squadwait 6
+bind		Shift+numpad2		squadwait 6 enqueued
+bind		numpad3				squadwait 9
+bind		Shift+numpad3		squadwait 9 enqueued
+bind		numpad4				squadwait 12
+bind		Shift+numpad4		squadwait 12 enqueued
+bind		numpad5				squadwait 15
+bind		Shift+numpad5		squadwait 15 enqueued
+bind		numpad6				squadwait 18
+bind		Shift+numpad6		squadwait 18 enqueued
+bind		numpad7				squadwait 21
+bind		Shift+numpad7		squadwait 21 enqueued
+bind		numpad8				squadwait 24
+bind		Shift+numpad8		squadwait 24 enqueued
+bind		numpad9				squadwait 27
+bind		Shift+numpad9		squadwait 27 enqueued
+bind		numpad0				squadwait 30
+bind		Shift+numpad0		squadwait 30 enqueued
+
+// Bindings for the Capture and Restore buttons on the left panel.
+bind		n			capture
+bind		Shift+n		capture enqueued
+bind		o			restore
+bind		Shift+o		restore enqueued
