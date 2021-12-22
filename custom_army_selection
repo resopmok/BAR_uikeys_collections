@@ -1,1 +1,14 @@
 // Please add your custom army selection keys to this file via pull request
+
+//from resopmok
+bind                tab  select AllMap+_ManualFireUnit+_ClearSelection_SelectOne+ // select commander
+bind           Ctrl+tab  select Visible+_InPrevSel+_SelectAll+ // select visible units of same type
+bind             Ctrl+w  select AllMap+_InPrevSel+_SelectAll+ // select all units of same type on map
+bind             Ctrl+e  select Visible+_Not_Aircraft_Not_WeaponRange_470_Weapons_Not_ManualFireUnit+_ClearSelection_SelectAll+ // frontline or short-range forces
+bind             Ctrl+r  select Visible+_Not_Aircraft_WeaponRange_470+_ClearSelection_SelectAll+ // artillery
+bind             Ctrl+t  select Visible+_Not_Builder_Aircraft+_ClearSelection_SelectAll+ // Air on visible map
+bind             Ctrl+t  select AllMap+_Builder_Building_Idle+_ClearSelection_SelectOne+ // selects idle factories
+bind             Ctrl+e  select AllMap+_Not_Builder_Aircraft+_ClearSelection_SelectAll+ // All air on map
+bind             Ctrl+a  select AllMap++_ClearSelection_SelectAll+ // select everything on map
+bind             Ctrl+r  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+ // Idle contructors
+bind             Ctrl+f  select Visible+_Not_Aircraft_Not_Building_Weapons+_ClearSelection_SelectAll+ // select visible units with a weapon (use for comm pushes) 
