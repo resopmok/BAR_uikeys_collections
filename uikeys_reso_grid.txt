@@ -1,4 +1,4 @@
-// This uikeys.txt was cobbled together by resopmok.
+// This uikeys.txt was cobbled together by resopmok. 
 // This file meant to be used in conjunction with the BAR grid menu.
 // This uikeys was tested only on a QWERTY keyboard. Significant changes should be made for other keyboard layouts.
 // Please note some differences with the current default hotkey layout:
