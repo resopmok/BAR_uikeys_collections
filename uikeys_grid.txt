@@ -3,10 +3,12 @@
 // Changes are as follows: 
 // -> Moved track and trackmode to o and ctl+o respectively
 // -> Added resurrect and capture to t
-// -> Moved toggleoverview to ' (not `)
-// -> Moved select commander to tab 
+// -> Moved toggleoverview to ' (not `) (from tab)
+// -> Moved select commander to tab  (from Ctrl+c)
 // -> Added select units of same type in view to Ctrl+tab
 // -> drawinmap (ping) removed from q
+// -> sharedialog removed from h (antiquated)
+// -> fight added to h (so that a fight waypoint can be set from labs)
 // -> selfd added to Ctrl+h so that labs can self-d (it also remains on Ctrl+d).
 
 
@@ -85,12 +87,12 @@ bind     Ctrl+Shift+f10  createvideo
 bind              C+f11  luaui tweakgui
 bind            Any+f12  screenshot
 
-bind      Any+§,Any+§  drawlabel
+bind      Any+ยง,Any+ยง  drawlabel
 bind        Any+^,Any+^  drawlabel
 bind        Any+`,Any+`  drawlabel
 bind        Any+\,Any+\  drawlabel
 bind              Any+`  drawinmap
-bind             Any+§  drawinmap
+bind             Any+ยง  drawinmap
 bind              Any+^  drawinmap
 // bind                  q  drawinmap
 bind              Any+\  drawinmap
@@ -179,6 +181,7 @@ bind                  e  reclaim
 bind                  f  fight
 bind            Shift+f  fight
 bind                  g  guard
+bind                  h  fight
 bind             Ctrl+h  selfd
 bind       Ctrl+Shift+h  selfd queued
 bind                  h  sharedialog
