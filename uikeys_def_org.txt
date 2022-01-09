@@ -1,8 +1,8 @@
-// Create from /keysave on 22/11/2021
+// Created from /keysave on 22/11/2021
 // Organized defaults with buildunit bindings removed
 
 
-unbindall          // clear the defaults 
+unbindall          // clear the defaults
 unbind enter chat  // clear the defaults
 
 fakemeta  0x020
@@ -57,7 +57,6 @@ bind                  ]  buildfacing dec
 bind          any+alt+x  buildspacing dec
 
 bind             Ctrl+q  aiselect
-bind              Any+t  track
 
 bind            Ctrl+f1  viewfps
 bind             Any+f1  ShowElevation
@@ -77,12 +76,12 @@ bind     Ctrl+Shift+f10  createvideo
 bind              C+f11  luaui tweakgui
 bind            Any+f12  screenshot
 
-bind      Any+§,Any+§  drawlabel
+bind      Any+ยง,Any+ยง  drawlabel
 bind        Any+^,Any+^  drawlabel
 bind        Any+`,Any+`  drawlabel
 bind        Any+\,Any+\  drawlabel
 bind              Any+`  drawinmap
-bind             Any+§  drawinmap
+bind             Any+ยง  drawinmap
 bind              Any+^  drawinmap
 bind                  q  drawinmap
 bind              Any+\  drawinmap
@@ -111,6 +110,9 @@ bind             Ctrl+8  specteam 17
 bind             Ctrl+9  specteam 18
 bind             Ctrl+0  specteam 19
 
+bind                  q  groupselect
+bind                  q  groupadd
+bind            Shift+q  groupclear
 bind              Any+0  group0
 bind              Any+1  group1
 bind              Any+2  group2
@@ -188,6 +190,7 @@ bind            Shift+r  repair
 bind                  s  stop
 bind            Shift+s  stop
 bind             ctrl+s  stopproduction
+bind              Any+t  track
 bind             Ctrl+t  trackmode
 bind                  u  unloadunits
 bind              Alt+o  singlestep
@@ -214,7 +217,3 @@ bind             Ctrl+w  select AllMap+_Not_Aircraft_Weapons+_ClearSelection_Sel
 bind             Ctrl+r  select AllMap+_Radar+_ClearSelection_SelectAll+
 bind             Ctrl+a  select AllMap++_ClearSelection_SelectAll+
 bind             Ctrl+v  select AllMap+_Not_Builder_Not_Commander_InPrevSel_Not_InHotkeyGroup+_SelectAll+
-
-bind                  q  groupselect
-bind                  q  groupadd
-bind            Shift+q  groupclear
