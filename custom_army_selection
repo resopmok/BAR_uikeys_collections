@@ -1,3 +1,6 @@
+// _IdMatches is now a working filter. New commander selection filter since Thor is a ManualFireUnit.
+bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+
+
 // Please add your custom army selection keys to this file via pull request
 
 //from resopmok
