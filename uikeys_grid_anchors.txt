@@ -10,6 +10,7 @@
 // -> drawinmap (ping) removed from q
 // -> sharedialog removed from h (antiquated)
 // -> fight added to h (so that a fight waypoint can be set from labs)
+// -> manuallaunch added to d for Thor EMP missile.
 // -> selfd added to Ctrl+h so that labs can self-d (it also remains on Ctrl+d)
 // -> viewfps, viewrot, viewfree removed
 // -> viewrot removed
@@ -194,6 +195,8 @@ bind            Shift+a  attack
 bind                  b  gridmenu_next_page
 bind                  d  manualfire
 bind            Shift+d  manualfire
+bind                  d  manuallaunch
+bind            Shift+d  manuallaunch
 bind             Ctrl+d  selfd
 bind       Ctrl+Shift+d  selfd queued
 bind            Shift+e  reclaim
