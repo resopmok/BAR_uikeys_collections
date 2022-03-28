@@ -3,6 +3,10 @@ bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_Cl
 
 // Please add your custom army selection keys to this file via pull request
 
+//salute
+bind                  2  select Visible+_Not_Building_Not_Transport_Weapons_Not_RelativeHealth_59+_ClearSelection_SelectAll+
+bind              Any+2  select Visible+_Not_Builder_Not_Building_Not_NameContain_Commander_Not_Transport_Weapons_RelativeHealth_60+_ClearSelection_SelectAll+
+
 //from resopmok
 bind                tab  select AllMap+_ManualFireUnit+_ClearSelection_SelectOne+ // select commander
 bind           Ctrl+tab  select Visible+_InPrevSel+_SelectAll+ // select visible units of same type
