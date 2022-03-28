@@ -1,9 +1,10 @@
-// _IdMatches is now a working filter. New commander selection filter since Thor is a ManualFireUnit.
+// _IdMatches is now a working filter. It will only make a single match unless preceded by _Not as keybinds will use AND but not OR.
+// New commander selection filter since Thor is a ManualFireUnit:
 bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+
 
 // Please add your custom army selection keys to this file via pull request
 
-//salute
+//salute - ?? - not sure what these two do, taken off Discord
 bind                  2  select Visible+_Not_Building_Not_Transport_Weapons_Not_RelativeHealth_59+_ClearSelection_SelectAll+
 bind              Any+2  select Visible+_Not_Builder_Not_Building_Not_NameContain_Commander_Not_Transport_Weapons_RelativeHealth_60+_ClearSelection_SelectAll+
 
