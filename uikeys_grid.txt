@@ -4,17 +4,19 @@
 // -> Moved track and trackmode to o and ctl+o respectively
 // -> Added resurrect and capture to t
 // -> Moved toggleoverview to ' (not `) (from tab)
-// -> Moved select commander to tab  (from Ctrl+c)
+// -> Moved select commander to tab (from Ctrl+c) and update to exclude Thor
 // -> Added select units of same type in view to Ctrl+tab
 // -> drawinmap (ping) removed from q
 // -> sharedialog removed from h (antiquated)
 // -> fight added to h (so that a fight waypoint can be set from labs)
 // -> selfd added to Ctrl+h so that labs can self-d (it also remains on Ctrl+d).
 // -> manuallaunch added to d for Thor EMP missile.
+// -> Added a clear all selections bind to esc
 
 
 unbindall          // clear the defaults
 unbind enter chat  // clear the defaults
+bind             esc  select AllMap++_ClearSelection+ 
 
 fakemeta  0x020
 
@@ -187,7 +189,7 @@ bind                  g  guard
 bind                  h  fight
 bind             Ctrl+h  selfd
 bind       Ctrl+Shift+h  selfd queued
-bind                  h  sharedialog
+// bind                  h  sharedialog
 bind            Shift+g  guard
 bind                  i  customgameinfo
 bind              Any+j  mouse2
@@ -230,7 +232,7 @@ bind         ctrl+alt+z  areamex
 bind           Any+0xf6  losradar
 bind              Any+;  losradar
 
-bind                tab  select AllMap+_ManualFireUnit+_ClearSelection_SelectOne+
+bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+
 bind           Ctrl+tab  select Visible+_InPrevSel+_SelectAll+
 bind             Ctrl+z  select AllMap+_InPrevSel+_ClearSelection_SelectAll+
 bind             Ctrl+x  select AllMap+_InPrevSel_Not_InHotkeyGroup+_SelectAll+
