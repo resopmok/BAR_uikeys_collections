@@ -4,6 +4,7 @@ unbind enter chat  // clear the defaults
 
 fakemeta  0x020
 
+bind          Any+Space unit_stats
 bind              Any+5  group5
 bind      Alt+backspace  fullscreen
 bind                  R  repair
