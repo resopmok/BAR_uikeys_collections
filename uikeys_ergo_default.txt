@@ -1,0 +1,449 @@
+// Hotkey layout created by resopmok for use as an alternative to the legacy Spring defaults.
+// Adds camera hotkeys, more commands from unit order menus, more buildings to build cycle hotkeys, and attempts to place commands in ergonomic places.
+// It was designed for the qwerty layout, so be aware you may need to make changes to support your layout.
+// Some support has been added with scancodes (sc_) for positional layouts.
+
+unbindall          // clear the defaults
+unbind enter chat  // clear the defaults
+
+bind             esc  select AllMap++_ClearSelection+ // deselect
+
+fakemeta  0x020
+
+bind          Any+pause  pause
+bind      Ctrl+Shift+f8  savegame
+bind      Alt+Shift+esc  reloadforce
+bind     Ctrl+Shift+esc  quitforce
+
+bind         Ctrl+enter  chatall
+bind        Shift+enter  chatspec
+bind        Shift+enter  chatswitchspec
+bind Alt+ctrl+s,Alt+ctrl+s  chatswitchspec
+bind          Any+enter  chat
+bind         Ctrl+enter  chatswitchall
+bind          Alt+enter  chatswitchally
+bind Alt+ctrl+a,Alt+ctrl+a  chatswitchally
+bind          Alt+enter  chatally
+
+
+bind         Ctrl+right  edit_next_word
+bind             Any+up  edit_prev_line
+bind            Any+end  edit_end
+bind            Any+tab  edit_complete
+bind           Alt+left  edit_home
+bind           Any+home  edit_home
+bind          Any+right  edit_next_char
+bind           Any+left  edit_prev_char
+bind           Any+down  edit_next_line
+bind          Any+enter  edit_return
+bind         Any+delete  edit_delete
+bind      Any+backspace  edit_backspace
+bind          Ctrl+left  edit_prev_word
+bind         Any+escape  edit_escape
+bind          Alt+right  edit_end
+bind                esc  quitmessage
+bind             Ctrl+v  pastetext
+
+bind      Alt+backspace  fullscreen
+
+bind               sc_[  buildfacing inc
+bind               sc_]  buildfacing dec
+bind         Shift+sc_[  buildfacing inc
+bind         Shift+sc_]  buildfacing dec
+bind        shift+alt+z  buildspacing inc
+bind              alt+z  buildspacing inc
+bind              alt+x  buildspacing dec
+bind        shift+alt+x  buildspacing dec
+
+bind            Ctrl+f1  set_camera_anchor 1
+bind            Ctrl+f2  set_camera_anchor 2
+bind            Ctrl+f3  set_camera_anchor 3
+bind            Ctrl+f4  set_camera_anchor 4
+bind                 f1  focus_camera_anchor 1
+bind                 f2  focus_camera_anchor 2
+bind                 f3  focus_camera_anchor 3
+bind                 f4  focus_camera_anchor 4
+
+bind                 f5  LastMsgPos
+bind                 f6  ShowPathTraversability
+bind                 f7  ShowMetalMap
+bind                 f8  ShowElevation
+bind            Ctrl+f5  viewta
+bind            Ctrl+f6  viewspring
+//bind            Ctrl+f7  togglecammode
+
+bind                 f9  luaui showhealthbars
+bind                f10  options
+bind     Ctrl+Shift+f10  createvideo
+bind              C+f11  luaui tweakgui
+bind            Any+f12  screenshot
+
+bind              Alt+sc_`  remove_from_autogroup
+bind              Any+sc_`  drawinmap
+bind     Any+sc_`,Any+sc_`  drawlabel
+//control groups
+bind              0  group 0
+bind              1  group 1
+bind              2  group 2
+bind              3  group 3
+bind              4  group 4
+bind              5  group 5
+bind              6  group 6
+bind              7  group 7
+bind              8  group 8
+bind              9  group 9
+
+bind              Ctrl+0  group set 0
+bind              Ctrl+1  group set 1
+bind              Ctrl+2  group set 2
+bind              Ctrl+3  group set 3
+bind              Ctrl+4  group set 4
+bind              Ctrl+5  group set 5
+bind              Ctrl+6  group set 6
+bind              Ctrl+7  group set 7
+bind              Ctrl+8  group set 8
+bind              Ctrl+9  group set 9
+
+bind              Shift+0  group add 0
+bind              Shift+1  group add 1
+bind              Shift+2  group add 2
+bind              Shift+3  group add 3
+bind              Shift+4  group add 4
+bind              Shift+5  group add 5
+bind              Shift+6  group add 6
+bind              Shift+7  group add 7
+bind              Shift+8  group add 8
+bind              Shift+9  group add 9
+
+// bind              n  group selectadd n //  add group n to current selection (default in bar Shift+n)
+// bind              n  group add n // add current selection to group n and select group n (default in bar Ctrl+Shift+n)
+// bind              n  group selecttoggle n // add group n to current selection and remove units from group n in previous selection (default in bar Alt+n, overriden by autogroup if enabled)
+// bind              n  group selectclear n // remove only units from group n from current selection (no default)
+
+bind            numpad2  moveback
+bind            numpad3  movedown
+bind       Any+pagedown  movedown
+bind            numpad8  moveforward
+bind             Any+up  moveforward
+bind            numpad9  moveup
+bind         Any+pageup  moveup
+bind           Any+left  moveleft
+bind            numpad4  moveleft
+bind            numpad6  moveright
+bind          Any+right  moveright
+bind           Any+down  moveback
+
+bind              Alt+f  forcestart
+
+bind              Alt+=  increasespeed
+bind        Alt+numpad+  increasespeed
+bind              Alt+-  decreasespeed
+bind        Alt+numpad-  decreasespeed
+// orders
+bind                  a  attack
+bind            Shift+a  attack
+bind             Ctrl+a  areaattack
+bind       Ctrl+Shift+a  areaattack
+bind                  b  onoff
+bind            Shift+b  onoff
+bind             Ctrl+b  selfd
+bind       Ctrl+Shift+b  selfd queued
+bind                  d  manualfire
+bind            Shift+d  manualfire
+bind                  d  manuallaunch
+bind            Shift+d  manuallaunch
+bind            Shift+e  reclaim
+bind                  e  reclaim
+bind                  f  fight
+bind            Shift+f  fight
+bind                  g  stopproduction
+bind            Shift+g  stopproduction
+bind                  g  stop
+bind            Shift+g  stop
+bind                  h  patrol
+bind            Shift+h  patrol
+// bind                  h  sharedialog // deprecated
+bind                  i  unit_stats
+bind             Ctrl+i  customgameinfo
+bind                  j  loadunits
+bind            Shift+j  loadunits
+bind                  k  cloak
+bind            Shift+k  cloak
+bind                  k  wantcloak
+bind              any+k  wantcloak
+bind                  l  firestate
+bind            Shift+l  firestate
+bind                  ;  movestate
+bind            Shift+;  movestate
+bind                  m  restore
+bind            Shift+m  restore
+bind                  n  settargetnoground
+bind                  o  guard
+bind            Shift+o  guard
+bind              Any+p  toggleoverview
+bind                  r  repair
+bind            Shift+r  repair
+bind                  s  settarget  // target fires at ground
+bind             Ctrl+s  canceltarget
+bind                  t  repeat
+bind            Shift+t  repeat
+bind                  u  unloadunits
+bind            Shift+u  unloadunits
+bind                  w  resurrect
+bind            Shift+w  resurrect
+bind	              w  capture
+bind	        Shift+w  capture
+bind                  y  wait
+bind            Shift+y  wait queued
+
+bind             Ctrl+z  areamex
+bind              Any+'  togglelos
+bind             Ctrl+'  losradar
+// army and unit selection
+bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+ //commander
+bind           Ctrl+tab  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+ //idle builder
+bind                  q  select Visible+_InPrevSel+_ClearSelection_SelectAll+ // select all on-screen units of same type as currently selected
+bind             Ctrl+q  select PrevSelection++_ClearSelection_SelectPart_50+ // split units in selection
+bind             Ctrl+w  select AllMap+_InPrevSel+_ClearSelection_SelectAll+
+bind             Ctrl+e  select AllMap++_ClearSelection_SelectAll+
+
+// bind             Ctrl+q  select AllMap+_IdMatches_armpw+_ClearSelection_SelectOne+ //doesn't work use Not_IdMatches
+// bind           Ctrl+tab  select Visible+_InPrevSel+_ClearSelection_SelectAll+
+//bind             Ctrl+z  select AllMap+_InPrevSel+_ClearSelection_SelectAll+
+//bind             Ctrl+x  select AllMap+_InPrevSel_Not_InHotkeyGroup+_SelectAll+
+
+//bind             Ctrl+w  select AllMap+_Not_Aircraft_Weapons+_ClearSelection_SelectAll+
+//bind             Ctrl+r  select AllMap+_Radar+_ClearSelection_SelectAll+
+//bind             Ctrl+v  select AllMap+_Not_Builder_Not_ManualFireUnit_InPrevSel_Not_InHotkeyGroup+_SelectAll+
+
+// constructor + econ buildings
+// Bindings listed first appear ahead of others when repeat-pressing the key. E.g., z will built LLT, radar, AA, then Beamer/HLLT
+// It's best to have sea bindings after land bindings, though there are still occasional weirdnesses when accessing some of them. 
+
+bind                  z  buildunit_armmex      // Metal Extractor - Extracts Metal from Metalspots
+bind                  z  buildunit_cormex      // Metal Extractor - Extracts Metal from Metalspots
+bind                  z  buildunit_cormakr     // T1 converter
+bind                  z  buildunit_armmakr     // T1 converter
+bind                  z  buildunit_armamex     // Twilight - Stealthy Cloakable Metal Extractor
+bind                  z  buildunit_corexp      // Exploiter - Armed Metal Extractor
+bind                  z  buildunit_armmstor    // Metal storage
+bind                  z  buildunit_cormstor    // Metal storage
+bind                  z  buildunit_armmoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_cormoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_coruwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_armuwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_armmmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind                  z  buildunit_cormmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind                  z  buildunit_corfmakr    // floating T1 converter
+bind                  z  buildunit_armfmakr    // floating T1 converter
+bind                  z  buildunit_armuwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind                  z  buildunit_coruwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind                  z  buildunit_cormexp     // Moho Exploiter - Armed Moho Metal Extractor
+
+bind            shift+z  buildunit_armmex      // Metal Extractor - Extracts Metal from Metalspots
+bind            shift+z  buildunit_cormex      // Metal Extractor - Extracts Metal from Metalspots
+bind            shift+z  buildunit_cormakr     // T1 converter
+bind            shift+z  buildunit_armmakr     // T1 converter
+bind            shift+z  buildunit_armamex     // Twilight - Stealthy Cloakable Metal Extractor
+bind            shift+z  buildunit_corexp      // Exploiter - Armed Metal Extractor
+bind            shift+z  buildunit_armmstor    // Metal storage
+bind            shift+z  buildunit_cormstor    // Metal storage
+bind            shift+z  buildunit_armmoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_cormoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_coruwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_armuwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_armmmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind            shift+z  buildunit_cormmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind            shift+z  buildunit_corfmakr    // floating T1 converter
+bind            shift+z  buildunit_armfmakr    // floating T1 converter
+bind            shift+z  buildunit_armuwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind            shift+z  buildunit_coruwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind            shift+z  buildunit_cormexp     // Moho Exploiter - Armed Moho Metal Extractor
+//bind            shift+z  areamex               // build mexes in area
+
+bind                  x  buildunit_armsolar    // Solar Collector - Produces 20 Energy
+bind                  x  buildunit_corsolar    // Solar Collector - Produces 20 Energy
+bind                  x  buildunit_armwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind                  x  buildunit_corwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind                  x  buildunit_armadvsol   // Advanced Solar Collector - Produces 75 Energy
+bind                  x  buildunit_coradvsol   // Advanced Solar Collector - Produces 75 Energy
+bind                  x  buildunit_armestor    // Energy storage
+bind                  x  buildunit_corestor    // Energy storage
+bind                  x  buildunit_armfus      // Fusion Reactor - Produces 1000 Energy
+bind                  x  buildunit_corfus      // Fusion Reactor - Produces 1100 Energy
+bind                  x  buildunit_armafus     // AFUS
+bind                  x  buildunit_corafus     // AFUS
+bind                  x  buildunit_armageo     // T2 geothermal
+bind                  x  buildunit_corageo     // T2 geothermal
+bind                  x  buildunit_armgmm      // T2 safe geothermal
+bind                  x  buildunit_corbhmth    // T2 geothermal plasma battery
+bind                  x  buildunit_armtide     // Tidal Generator - Produces Energy (depends on map)
+bind                  x  buildunit_cortide     // Tidal Generator - Produces Energy (depends on map)
+bind                  x  buildunit_armuwfus    // Underwater Fusion Plant - Produces 1200 Energy
+bind                  x  buildunit_coruwfus    // Underwater Fusion Plant - Produces 1220 Energy
+
+bind            shift+x  buildunit_armsolar    // Solar Collector - Produces 20 Energy
+bind            shift+x  buildunit_corsolar    // Solar Collector - Produces 20 Energy
+bind            shift+x  buildunit_armwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind            shift+x  buildunit_corwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind            shift+x  buildunit_armadvsol   // Advanced Solar Collector - Produces 75 Energy
+bind            shift+x  buildunit_coradvsol   // Advanced Solar Collector - Produces 75 Energy
+bind            shift+x  buildunit_armestor    // Energy storage
+bind            shift+x  buildunit_corestor    // Energy storage
+bind            shift+x  buildunit_armfus      // Fusion Reactor - Produces 1000 Energy
+bind            shift+x  buildunit_corfus      // Fusion Reactor - Produces 1100 Energy
+bind            shift+x  buildunit_armafus     // AFUS
+bind            shift+x  buildunit_corafus     // AFUS
+bind            shift+x  buildunit_armageo     // T2 geothermal
+bind            shift+x  buildunit_corageo     // T2 geothermal
+bind            shift+x  buildunit_armgmm      // T2 safe geothermal
+bind            shift+x  buildunit_corbhmth    // T2 geothermal plasma battery
+bind            shift+x  buildunit_armtide     // Tidal Generator - Produces Energy (depends on map)
+bind            shift+x  buildunit_cortide     // Tidal Generator - Produces Energy (depends on map)
+bind            shift+x  buildunit_armuwfus    // Underwater Fusion Plant - Produces 1200 Energy
+bind            shift+x  buildunit_coruwfus    // Underwater Fusion Plant - Produces 1220 Energy
+// T1
+bind                  c  buildunit_armllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind                  c  buildunit_corllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind                  c  buildunit_armrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind                  c  buildunit_corrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+//bind                  c  buildfirst armrad armfrad     // Radar Tower - Early Warning System. Transportable (Heavy)
+//bind                  c  buildfirst corrad corfrad     // Radar Tower - Early Warning System. Transportable (Heavy)
+
+bind                  c  buildunit_armrl       // Defender - Light Anti-air Tower. Transportable (Heavy)
+bind                  c  buildunit_corrl       // Pulverizer - Light Anti-air Tower. Transportable (Heavy)
+bind                  c  buildunit_armbeamer   // beamer
+bind                  c  buildunit_corhllt     // HLLT
+// T2
+bind                  c  buildunit_armpb       // Pit Bull - Pop-up Gauss Cannon
+bind                  c  buildunit_corvipe     // Viper - Pop-up Sabot Battery
+bind                  c  buildunit_armarad     // Adv radar
+bind                  c  buildunit_corarad     // Adv radar
+bind                  c  buildunit_armflak     // Flakker - Anti-Air Flak Gun
+bind                  c  buildunit_corflak     // Cobra - Anti-Air Flak Gun
+bind                  c  buildunit_armamb      // ambusher
+bind                  c  buildunit_cortoast    // toaster
+//T1 sea
+bind                  c  buildunit_armtl       // Harpoon - Offshore Torpedo Launcher
+bind                  c  buildunit_cortl       // Urchin - Offshore Torpedo Launcher
+bind                  c  buildunit_armfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind                  c  buildunit_corfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind                  c  buildunit_armfrt      // Sentry - Floating Anti-air Tower
+bind                  c  buildunit_corfrt      // Stinger - Floating Anti-air Tower
+bind                  c  buildunit_armfhlt     // Floating HLT
+bind                  c  buildunit_corfhlt     // Floating HLT
+//T2 sea
+bind                  c  buildunit_armatl      // Moray adv torpedo launcher
+bind                  c  buildunit_coratl      // Lamprey adv torpedo launcher
+bind                  c  buildunit_armason     // Adv sonar station
+bind                  c  buildunit_corason     // Adv sonar station
+bind                  c  buildunit_armfflak    // Flakker NS AA
+bind                  c  buildunit_corenaa     // Cobra NS AA 
+bind                  c  buildunit_armkraken   // Kraken - Floating heavy plasma defense
+bind                  c  buildunit_corfdoom    // Devastator - Floating Doomsday machine
+
+bind            shift+c  buildunit_armllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind            shift+c  buildunit_corllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind            shift+c  buildunit_armrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind            shift+c  buildunit_corrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind            shift+c  buildunit_armrl       // Defender - Light Anti-air Tower. Transportable (Heavy)
+bind            shift+c  buildunit_corrl       // Pulverizer - Light Anti-air Tower. Transportable (Heavy)
+bind            shift+c  buildunit_armbeamer   // beamer
+bind            shift+c  buildunit_corhllt     // HLLT
+bind            shift+c  buildunit_armpb       // Pit Bull - Pop-up Gauss Cannon
+bind            shift+c  buildunit_corvipe     // Viper - Pop-up Sabot Battery
+bind            shift+c  buildunit_armarad     // Adv radar
+bind            shift+c  buildunit_corarad     // Adv radar
+bind            shift+c  buildunit_armflak     // Flakker - Anti-Air Flak Gun
+bind            shift+c  buildunit_corflak     // Cobra - Anti-Air Flak Gun
+bind            shift+c  buildunit_armamb      // ambusher
+bind            shift+c  buildunit_cortoast    // toaster
+bind            shift+c  buildunit_armtl       // Harpoon - Offshore Torpedo Launcher
+bind            shift+c  buildunit_cortl       // Urchin - Offshore Torpedo Launcher
+bind            shift+c  buildunit_armfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind            shift+c  buildunit_corfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind            shift+c  buildunit_armfrt      // Sentry - Floating Anti-air Tower
+bind            shift+c  buildunit_corfrt      // Stinger - Floating Anti-air Tower
+bind            shift+c  buildunit_armfhlt     // Floating HLT
+bind            shift+c  buildunit_corfhlt     // Floating HLT
+bind            shift+c  buildunit_armatl      // Moray adv torpedo launcher
+bind            shift+c  buildunit_coratl      // Lamprey adv torpedo launcher
+bind            shift+c  buildunit_armason     // Adv sonar station
+bind            shift+c  buildunit_corason     // Adv sonar station
+bind            shift+c  buildunit_armfflak    // Flakker NS AA
+bind            shift+c  buildunit_corenaa     // Cobra NS AA
+bind            shift+c  buildunit_armkraken   // Kraken - Floating heavy plasma defense
+bind            shift+c  buildunit_corfdoom    // Devastator - Floating Doomsday machine
+
+bind                  v  buildunit_armnanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_cornanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_armnanotcplat  // Nano Turret - Repairs and builds in large radius
+bind                  v  buildunit_cornanotcplat  // Nano Turret - Repairs and builds in large radius
+//bind                  v  buildfirst armnanotc armnanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+//bind                  v  buildfirst cornanotc cornanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_armlab      // Bot Lab - Produces Level 1 Bots
+bind                  v  buildunit_corlab      // Bot Lab - Produces Level 1 Bots
+bind                  v  buildunit_armalab     // T2 Bot Lab - Produces Level 2 Bots
+bind                  v  buildunit_coralab     // T2 Bot Lab - Produces Level 2 Bots
+bind                  v  buildunit_armvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind                  v  buildunit_corvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind                  v  buildunit_armavp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind                  v  buildunit_coravp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind                  v  buildunit_armap       // Aircraft Plant - Produces Level 1 Aircraft
+bind                  v  buildunit_corap       // Aircraft Plant - Produces Level 1 Aircraft
+bind                  v  buildunit_armaap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind                  v  buildunit_coraap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind                  v  buildunit_armhp       // Hoover lab
+bind                  v  buildunit_corhp       // Hoover lab
+
+bind                  v  buildunit_armsy       // Shipyard - Produces Level 1 Ships
+bind                  v  buildunit_corsy       // Shipyard - Produces Level 1 Ships
+bind                  v  buildunit_armasy      // T2 Shipyard - Produces Level 2 Ships
+bind                  v  buildunit_corasy      // T2 Shipyard - Produces Level 2 Ships
+
+bind            shift+v  buildunit_armnanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_cornanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_armnanotcplat  // Nano Turret - Repairs and builds in large radius
+bind            shift+v  buildunit_cornanotcplat  // Nano Turret - Repairs and builds in large radius
+//bind            shift+v  buildfirst armnanotc armnanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+//bind            shift+v  buildfirst cornanotc cornanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_armlab      // Bot Lab - Produces Level 1 Bots
+bind            shift+v  buildunit_corlab      // Bot Lab - Produces Level 1 Bots
+bind            shift+v  buildunit_armalab     // T2 Bot Lab - Produces Level 2 Bots
+bind            shift+v  buildunit_coralab     // T2 Bot Lab - Produces Level 2 Bots
+bind            shift+v  buildunit_armvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind            shift+v  buildunit_corvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind            shift+v  buildunit_armavp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind            shift+v  buildunit_coravp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind            shift+v  buildunit_armap       // Aircraft Plant - Produces Level 1 Aircraft
+bind            shift+v  buildunit_corap       // Aircraft Plant - Produces Level 1 Aircraft
+bind            shift+v  buildunit_armaap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind            shift+v  buildunit_coraap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind            shift+v  buildunit_armhp       // Hoover lab
+bind            shift+v  buildunit_corhp       // Hoover lab
+
+bind            shift+v  buildunit_armsy       // Shipyard - Produces Level 1 Ships
+bind            shift+v  buildunit_corsy       // Shipyard - Produces Level 1 Ships
+bind            shift+v  buildunit_armasy      // T2 Shipyard - Produces Level 2 Ships
+bind            shift+v  buildunit_corasy      // T2 Shipyard - Produces Level 2 Ships
+
+//mines
+bind  z  buildunit_armmine1    // light mine
+bind  z  buildunit_cormine1    // light mine
+bind  x  buildunit_armmine2    // medium mine
+bind  x  buildunit_cormine2    // medium mine
+bind  x  buildunit_cormine4    // commando mine
+bind  c  buildunit_armmine3    // heavy mine
+bind  c  buildunit_cormine3    // heavy mine
+bind  x  buildunit_armfmine3   // naval heavy mine
+bind  x  buildunit_corfmine3   // naval heavy mine
+
+bind  shift+z  buildunit_armmine1    // light mine
+bind  shift+z  buildunit_cormine1    // light mine
+bind  shift+x  buildunit_armmine2    // medium mine
+bind  shift+x  buildunit_cormine2    // medium mine
+bind  shift+x  buildunit_cormine4    // commando mine
+bind  shift+c  buildunit_armmine3    // heavy mine
+bind  shift+c  buildunit_cormine3    // heavy mine
+bind  shift+x  buildunit_armfmine3   // naval heavy mine (naval engineer)
+bind  shift+x  buildunit_corfmine3   // naval heavy mine (naval engineer)
