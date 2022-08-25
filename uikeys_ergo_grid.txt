@@ -1,5 +1,5 @@
 // Hotkey layout created by resopmok for use in conjunction with grid menu. Resolves various conflicts
-// present if using grid menu, adds camera hotkeys, and attempts to place commands in ergonomic places.
+// present if using grid menu, adds hotkeys for more unit orders, adds camera hotkeys, and attempts to place commands in ergonomic places.
 // It was designed for the qwerty layout, so be aware you may need to make changes to support your layout.
 // Some support has been added with scancodes (sc_) for positional layouts.
 
