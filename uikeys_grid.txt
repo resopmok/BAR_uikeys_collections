@@ -1,3 +1,4 @@
+// This is an older version uikeys that pairs with grid menu, similar in some ways to the default.
 // Modified from default uikeys.txt to specifically support grid menu and solve conflicts with default keybinds.
 // It was designed for the qwerty layout, so be aware you may need to make changes to support your layout.
 // Changes are as follows: 
