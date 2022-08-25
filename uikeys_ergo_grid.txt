@@ -223,8 +223,8 @@ bind                  y  wait
 bind            Shift+y  wait queued
 
 bind             Ctrl+z  areamex
-bind              Any+;  togglelos
-bind              Ctrl+;  losradar
+bind              Any+'  togglelos
+bind              Ctrl+'  losradar
 
 bind                tab  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+ //commander
 bind           Ctrl+tab  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+ //idle builder
