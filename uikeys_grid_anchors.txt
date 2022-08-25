@@ -1,3 +1,4 @@
+// Older version of uikeys that was similar to the default but intended to support grid menu with camera hotkeys added.
 // Modified from default uikeys.txt to specifically support grid menu and solve conflicts with default keybinds.
 // Also added camera anchors to F1-F4 for quick camera movements.
 // It was designed for the qwerty layout, so be aware you may need to make changes to support your layout.
