@@ -39,16 +39,13 @@ bind      Ctrl+Shift+f8  savegame
 bind      Alt+Shift+esc  reloadforce
 bind     Ctrl+Shift+esc  quitforce
 
+bind          Any+enter  chat
 bind         Ctrl+enter  chatall
+bind         Ctrl+enter  chatswitchall
 bind        Shift+enter  chatspec
 bind        Shift+enter  chatswitchspec
-bind Alt+ctrl+s,Alt+ctrl+s  chatswitchspec
-bind          Any+enter  chat
-bind         Ctrl+enter  chatswitchall
-bind          Alt+enter  chatswitchally
-bind Alt+ctrl+a,Alt+ctrl+a  chatswitchally
 bind          Alt+enter  chatally
-
+bind          Alt+enter  chatswitchally
 
 bind         Ctrl+right  edit_next_word
 bind             Any+up  edit_prev_line
