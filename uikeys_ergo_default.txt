@@ -81,6 +81,18 @@ bind            Any+f12  screenshot
 bind              Alt+sc_`  remove_from_autogroup
 bind              Any+sc_`  drawinmap
 bind     Any+sc_`,Any+sc_`  drawlabel
+
+bind                 Alt+0  add_to_autogroup 0
+bind                 Alt+1  add_to_autogroup 1
+bind                 Alt+2  add_to_autogroup 2
+bind                 Alt+3  add_to_autogroup 3
+bind                 Alt+4  add_to_autogroup 4
+bind                 Alt+5  add_to_autogroup 5
+bind                 Alt+6  add_to_autogroup 6
+bind                 Alt+7  add_to_autogroup 7
+bind                 Alt+8  add_to_autogroup 8
+bind                 Alt+9  add_to_autogroup 9
+
 //control groups
 bind              0  group 0
 bind              1  group 1
