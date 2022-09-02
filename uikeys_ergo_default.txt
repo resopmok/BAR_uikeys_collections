@@ -189,7 +189,7 @@ bind            Shift+m  restore
 bind                  n  settargetnoground
 bind                  o  guard
 bind            Shift+o  guard
-bind              Any+p  toggleoverview
+// bind              Any+p  toggleoverview
 bind                  r  repair
 bind            Shift+r  repair
 bind                  s  settarget  // target fires at ground
