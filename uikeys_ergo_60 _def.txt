@@ -189,7 +189,7 @@ bind            Shift+m  restore
 bind                  n  settargetnoground
 bind                  o  guard
 bind            Shift+o  guard
-bind              Any+p  toggleoverview
+// bind              Any+p  toggleoverview
 bind          meta+sc_q  drawinmap
 bind meta+sc_q,meta+sc_q  drawlabel
 bind                  r  repair
