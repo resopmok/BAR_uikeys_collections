@@ -1,4 +1,4 @@
--- BAR hotkey config file: ergokeys for grid menu	
+-- Grid opti layout with new changes for testing. changes marked with comments
 	local bindings = {
 --		{ "Any+alt" , "mobile_waypoint_modifier" },
 		{            "esc", "select", "AllMap++_ClearSelection+" },
