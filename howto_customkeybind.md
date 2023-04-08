@@ -1,7 +1,6 @@
 8 April 2023                 
 
-# How to customize keybinds in
-# Beyond All Reason           
+# How to customize keybinds in Beyond All Reason           
 
 ## The Two Formats
 
