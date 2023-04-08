@@ -1,6 +1,6 @@
 8 April 2023                 
 
-# How to customize keybinds in Beyond All Reason           
+# How to customize keybinds in Beyond All Reason 
 
 ## The Two Formats
 
@@ -23,13 +23,6 @@ If you're interested in customizing a preset instead of default hotkeys:
 - Copy the raw contents and overwrite any existing `bar_hotkey_custom.lua` in the data directory (opened from launcher).
 - Make your changes and test as above.
 
-
-References:
-
-- Documentation for select action: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/SelectionKeys.md
-- Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
-- General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
-
 ### uikeys.txt format
 
 To use custom keybindings:
@@ -45,7 +38,7 @@ To use custom keybindings:
 Test your changes in real time:
 - Type `/keyreload` to everyone chat after you have saved additional changes to your uikeys.txt
 
-References:
+##References:
 
 - Documentation for select action: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/SelectionKeys.md
 - Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
