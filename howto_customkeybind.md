@@ -35,7 +35,7 @@ References:
 To use custom keybindings:
 - Open the launcher and click on "Open Installation Directory."
 - Open "data" folder (not necessary on Linux systems).
-- In-game (singleplayer skirmish against InactiveAI), choose the preset you want to customize from Settings -> Control -> Keybindings -> Custom
+- In-game (singleplayer skirmish against InactiveAI), choose the preset you want to customize from Settings -> Control -> Keybindings
 - Open the chat box with enter (to everyone, not spectator or ally) and enter the command `/keysave`
 - Open the file uikeys.tmp in your choice of text editor and make changes to your liking.
 - Rename `uikeys.tmp` to `uikeys.txt`
