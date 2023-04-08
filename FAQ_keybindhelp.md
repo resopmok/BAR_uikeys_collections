@@ -9,5 +9,5 @@
 ```	{ "Any+sc_w",     "moveforward"  },
 	{ "Any+sc_s",     "moveback"     },
 	{ "Any+sc_d",     "moveright"    },
-	{ "Any+sc_a",     "moveleft"     },
+	{ "Any+sc_a",     "moveleft"     },```
 3. If you want to customize a wasdpan set with grid menu, review the Hobo Joe guide here:
