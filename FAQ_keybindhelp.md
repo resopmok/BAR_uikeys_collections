@@ -1,6 +1,6 @@
 8 April 2023
 
-#FAQs from keybind-help
+# FAQs from #keybind-help
 
 ### How can I get camera pan on wasd?
 
