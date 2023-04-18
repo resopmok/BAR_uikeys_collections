@@ -26,3 +26,5 @@ This layout was made shortly after scancodes were introduced to keybindings to a
 ### How do I invert map scrolling with the middle mouse button?
 
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
+
+Unforunately no, not at this time. 
