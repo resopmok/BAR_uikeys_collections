@@ -15,7 +15,7 @@ To use custom keybindings:
 - Edit the file `bar_hotkeys_custom.lua` with your desired changes. 
 
 Test your changes in real time:
-- Switch off from and to the Custom preset in the in-game Settings.
+- Switch off from and then back to the Custom preset in the in-game Settings.
 - Press F11 (or type `/widgetselector` to everyone chat), disable, then re-enable `BAR  Hotkeys` in the widget list (click it to turn off and then on again).
 
 If you're interested in customizing a preset instead of default hotkeys:
