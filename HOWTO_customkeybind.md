@@ -38,7 +38,7 @@ To use custom keybindings:
 Test your changes in real time:
 - Type `/keyreload` to everyone chat after you have saved additional changes to your uikeys.txt
 
-##References:
+## References:
 
 - Documentation for select action: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/SelectionKeys.md
 - Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
