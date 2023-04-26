@@ -10,12 +10,12 @@ As of the documented date, Beyond All Reason is able to interpret hotkey configu
 
 To use custom keybindings:
 - Open the launcher and click on "Open Installation Directory."
-- Open "data" folder (not necessary on Linux systems).
+- Open the "data" folder (not necessary on Linux systems).
 - In-game (singleplayer skirmish against InactiveAI), select Settings -> Control -> Keybindings -> Custom
 - Edit the file `bar_hotkeys_custom.lua` with your desired changes. 
 
 Test your changes in real time:
-- Switch off from and then back to the Custom preset in the in-game Settings.
+- Switch off from and then back to the Custom preset in the in-game Settings. OR
 - Press F11 (or type `/widgetselector` to everyone chat), disable, then re-enable `BAR  Hotkeys` in the widget list (click it to turn off and then on again).
 
 If you're interested in customizing a preset instead of default hotkeys:
