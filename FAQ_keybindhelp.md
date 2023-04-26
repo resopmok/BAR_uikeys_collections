@@ -21,11 +21,11 @@ This layout was made shortly after scancodes were introduced to keybindings to a
 
 ### What is different about the 60% layouts? Do you have any images of the 60% layouts?
 
-60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (). You can find images for the grid optimized 60% layout here (https://github.com/resopmok/BAR_uikeys_collections/blob/main/a_grid_opti60.png), but there are none currently available for the default 60%.
+60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for the grid optimized 60% layout here (https://github.com/resopmok/BAR_uikeys_collections/blob/main/a_grid_opti60.png), but there are none currently available for the default 60%.
 
 ### How can I acces the widget list and why do I want to?
 
-There may be an option in the in-game settings to enable the widget selecter. 
+There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. Some hotkey customizers use it to disable the "Bar Hotkey" widget if they use a uikeys.txt format config file.
 
 ### How do I invert map scrolling with the middle mouse button?
 
