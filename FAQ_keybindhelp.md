@@ -27,6 +27,10 @@ This layout was made shortly after scancodes were introduced to keybindings to a
 
 There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. Some hotkey customizers use it to disable the "Bar Hotkey" widget if they use a uikeys.txt format config file.
 
+### I want to invert the grid menu home row to QWER. How?
+
+You can use this version of the grid opti config file (https://github.com/resopmok/BAR_uikeys_collections/blob/main/bar_hotkeys_custom_invertqwer.lua) to move your grid menu's home row from ZXCV to QWER. In this case, instead of the ZX keystrokes building you a solar, QW will do so. RA would build you a construction turret, and WS would be your basic anti-air. Currently we can't invert the actual layout of grid menu in game to accomodate, so your QWER row will still display in the same location on the menu that ZXCV was. The config also moves army selection, resurrect, repair, and reclaim order to ZXCV respectively.
+
 ### How do I invert map scrolling with the middle mouse button?
 
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
