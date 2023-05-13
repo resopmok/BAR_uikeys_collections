@@ -40,6 +40,6 @@ Test your changes in real time:
 
 ## References:
 
-- Documentation for select action: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/SelectionKeys.md
+- Documentation for select action: https://beyond-all-reason.github.io/spring/articles/select-command/
 - Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
 - General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
