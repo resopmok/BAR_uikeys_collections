@@ -35,4 +35,5 @@ You can use this version of the grid opti config file (https://github.com/resopm
 
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
 
-Unforunately no, not at this time. 
+Keybinding doesn't currently support rebinding of mouse buttons. It is however possible to bind mouse presses in widgets via `MousePress` and `MouseRelease` but it is not recommended to pursue this without some knowledge of how the engine handles these calls.
+Other users have had success with third party software to allow for the rebinding of mouse buttons. 
