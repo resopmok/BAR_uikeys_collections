@@ -5,3 +5,4 @@ This is central place to help people customize their keybinds for BAR. Originall
 - old files are incopmlete but may contain interesting binds.
 - default, default60, grid_opti and grid_opti60 are from /keysave 1/17/23
 - any .lua are for the LUA style config, currently loaded by the bar hotkey widget.
+- refer to the HOWTO and FAQ as documentation, and come find us on the official BAR discord in #keybind-help.
