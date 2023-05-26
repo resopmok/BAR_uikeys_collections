@@ -19,7 +19,7 @@ Test your changes in real time:
 - Press F11 (or type `/widgetselector` to everyone chat), disable, then re-enable `BAR  Hotkeys` in the widget list (click it to turn off and then on again).
 
 If you're interested in customizing a preset instead of default hotkeys:
-- Find the preset you want to customize from the main repo: https://github.com/beyond-all-reason/Beyond-All-Reason/tree/bf53d5b9297922225774dbfc31277b274a97e226/luaui/configs
+- Find the preset you want to customize from the main repo: [https://github.com/beyond-all-reason/Beyond-All-Reason/tree/bf53d5b9297922225774dbfc31277b274a97e226/luaui/configs](https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs)
 - Copy the raw contents and overwrite any existing `bar_hotkey_custom.lua` in the data directory (opened from launcher).
 - Make your changes and test as above.
 
