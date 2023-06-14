@@ -33,6 +33,9 @@ You can use this version of the grid opti config file (https://github.com/resopm
 
 ### How do I invert map scrolling with the middle mouse button?
 
+When using Spring camera (Ctrl+F3 in default binds, Ctrl+F6 in grid bindings): you can type `/set MouseInvert 1` into everyone chat and it will invert the camera scroll while holding down the middle mouse button.
+When using TA (overhead) camera (Ctrl+F2 in default binds, Ctrl+F5 in grid bindings): when holding down middle mouse button to scroll, there is no option for inverting. If you enable "Middle click toggles camera move (Settings -> Control), you can use a mode which mode which will reverse with this middle mouse button click that activates mouse panning. To do that, type `/set MiddleClickScrollSpeed -0.01` into everyone chat.
+
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
 
 Keybinding doesn't currently support rebinding of mouse buttons. It is however possible to bind mouse presses in widgets via `MousePress` and `MouseRelease` but it is not recommended to pursue this without some knowledge of how the engine handles these calls.
