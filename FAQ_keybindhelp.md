@@ -4,7 +4,7 @@
 
 ### BAR recently updated the custom keybind format, and I am now missing grid hotkeys while using a default preset. How do I fix?
 
-One of the biggest changes is with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. But to address the question directly, you would make a uikeys.txt which includes only the following:
+One of the biggest changes with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. But to address the question directly, you would make a uikeys.txt which includes only the following:
 ```
 unbindall
 keyload luaui/configs/hotkeys/gridmenu_keys.txt
@@ -26,7 +26,7 @@ bind sc_s moveback
 bind sc_d moveright
 bind sc_a moveleft
 ```
-These are recommended changes if you are changing a default setup:
+These are recommended changes if you are altering a default setup:
 - Move `wait` to t; remove `trackmode`, remove air selection hotkey.
 - Move `attack` to f,f (double tap f); select all move to Ctrl+e.
 - Move `stop` to q; remove duplicate map marks; move `stopproduction` to Ctrl+q
@@ -45,11 +45,12 @@ This layout was made shortly after scancodes were introduced to keybindings to a
 
 ### How can I acces the widget list and why do I want to?
 
-There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. Some hotkey customizers use it to disable the "Bar Hotkey" widget if they use a uikeys.txt format config file.
+There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. This isn't necessarily a hotkey-related question anymore but it comes up frequently anyway.
 
 ### I want to invert the grid menu home row to QWER. How?
 
 You can use this version of the grid opti config file (https://github.com/resopmok/BAR_uikeys_collections/blob/main/bar_hotkeys_custom_invertqwer.lua) to move your grid menu's home row from ZXCV to QWER. In this case, instead of the ZX keystrokes building you a solar, QW will do so. RA would build you a construction turret, and WS would be your basic anti-air. Currently we can't invert the actual layout of grid menu in game to accomodate, so your QWER row will still display in the same location on the menu that ZXCV was. The config also moves army selection, resurrect, repair, and reclaim order to ZXCV respectively.
+Note: this .lua config file will not work in the game anymore. Sometime in the near future I'll make preset file you can include which would replace your `gridmenu_keys.txt` and makes the swap. It's more likely to happen sooner if someone bothers me about it.
 
 ### How do I invert map scrolling with the middle mouse button?
 
@@ -59,5 +60,6 @@ You can use this version of the grid opti config file (https://github.com/resopm
 
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
 
-Keybinding doesn't currently support rebinding of mouse buttons. It is however possible to bind mouse presses in widgets via `MousePress` and `MouseRelease` but it is not recommended to pursue this without some knowledge of how the engine handles these calls.
-Other users have had success with third party software like AutoHotkey to allow for the rebinding of mouse buttons. 
+- Keybinding doesn't currently support rebinding of mouse buttons. It is however possible to bind mouse presses in widgets via `MousePress` and `MouseRelease` but it is not recommended to pursue this without some knowledge of how the engine handles these calls.
+- Some users have had success with third party software like AutoHotkey to allow for the rebinding of mouse buttons.
+- Depending on your needs, this widget from MasterBel might be helpful: https://discord.com/channels/549281623154229250/1123878514827997195
