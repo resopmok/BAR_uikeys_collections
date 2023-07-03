@@ -2,17 +2,37 @@
 
 # FAQs from #keybind-help
 
+### BAR recently updated the custom keybind format, and I am now missing grid hotkeys while using a default preset. How do I fix?
+
+One of the biggest changes is with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. But to address the question directly, you would make a uikeys.txt which includes only the following:
+```
+unbindall
+keyload luaui/configs/hotkeys/gridmenu_keys.txt
+keyload luaui/configs/hotkeys/default_keys.txt
+```
+Or, if you were previously using the default 60% layout with grid menu, your uikeys.txt would look like this:
+```
+unbindall
+keyload luaui/configs/hotkeys/gridmenu_keys.txt
+keyload luaui/configs/hotkeys/default_keys_60pct.txt
+```
+
 ### How can I get camera pan on wasd?
 
-1. Copy the contents of https://github.com/resopmok/BAR_uikeys_collections/blob/main/bar_hotkeys_custom_wasddefault.lua to a local file called `bar_hotkeys_custom.lua` in your game's data folder. Read the changes at the top of the file, and enable the layout in-game through Settings -> Control -> Keybinds -> Custom
-2. If you want to create your own custom keyset with wasdpan, move commands off wasd according to your desires, and add this to your custom config file:
+1. If you want to create your own custom keyset with wasdpan, follow the how-to on customization to move commands off wasd according to your desires, and add this to your custom config file:
 ```
-	{ "Any+sc_w",     "moveforward"  },
-	{ "Any+sc_s",     "moveback"     },
-	{ "Any+sc_d",     "moveright"    },
-	{ "Any+sc_a",     "moveleft"     },
+bind sc_w moveforward
+bind sc_s moveback
+bind sc_d moveright
+bind sc_a moveleft
 ```
-3. If you want to customize a wasdpan set with grid menu, ask @HoboJoe on the BAR official Discord channel #keybind-help.
+These are recommended changes if you are changing a default setup:
+- Move `wait` to t; remove `trackmode`, remove air selection hotkey.
+- Move `attack` to f,f (double tap f); select all move to Ctrl+e.
+- Move `stop` to q; remove duplicate map marks; move `stopproduction` to Ctrl+q
+- Move all d commands moved to b (`dgun`, `selfd`, `manuallaunch`); move select idle workers to Ctrl+x.
+2. If you want to customize a wasdpan set with grid menu, ask @HoboJoe on the BAR official Discord channel #keybind-help.
+3. Coming soon are probably some presets you can include with your uikeys.txt that may aid in the process for grid menu users.
 
 ### What is the "mnemonic" layout and should I use it?
 
