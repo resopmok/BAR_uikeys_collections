@@ -1,43 +1,21 @@
-8 April 2023                 
+2 July 2023                 
 
 # How to customize keybinds in Beyond All Reason 
+There may be a variety of reasons why you want to change a single or multiple keybinds. The following guide will take you step-by-step through the process of customizing your chosen preset.
 
-## The Two Formats
+## Customize by editing a text file
 
-As of the documented date, Beyond All Reason is able to interpret hotkey configuration files from two different formats. The first is in LUA and read directly by the bar hotkey widget. The second is uikeys.txt, which can be read by the engine, but requires that the bar hotkey widget be disabled.
-
-### LUA format
-
-To use custom keybindings:
 - Open the launcher and click on "Open Installation Directory."
-- Open the "data" folder (not necessary on Linux systems).
-- In-game (singleplayer skirmish against InactiveAI), select Settings -> Control -> Keybindings -> Custom
-- Edit the file `bar_hotkeys_custom.lua` with your desired changes. 
+- Open "data" folder (not necessary on Linux systems). This is where the custom keybind config file, `uikeys.txt`, will  live.
+- In-game (singleplayer skirmish against InactiveAI), first choose the preset you want to customize from Settings -> Control -> Keybindings
+- Then from Settings -> Control -> Keybindings, select "Custom" from the drop-down and the game will create a `uikeys.txt` for you to edit with your favorite text editor. This first version of your custom file is based on the last preset you had chosen.
+- To test your changes in real time: Type `/keyreload` after you have saved additional changes to your `uikeys.txt`.
 
-Test your changes in real time:
-- Switch off from and then back to the Custom preset in the in-game Settings. OR
-- Press F11 (or type `/widgetselector` to everyone chat), disable, then re-enable `BAR  Hotkeys` in the widget list (click it to turn off and then on again).
+## Customize by using the Ingame Keybind Editor widget (by MasterBel)
 
-If you're interested in customizing a preset instead of default hotkeys:
-- Find the preset you want to customize from the main repo, it should have a name like bar_hotkeys_grid.lua or bar_hotkeys_60.lua:
-- https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs
-- Copy the raw contents and overwrite any existing `bar_hotkey_custom.lua` in the data directory (opened from launcher).
-- Make your changes and test as above.
-
-### uikeys.txt format
-
-To use custom keybindings:
-- Open the launcher and click on "Open Installation Directory."
-- Open "data" folder (not necessary on Linux systems).
-- In-game (singleplayer skirmish against InactiveAI), choose the preset you want to customize from Settings -> Control -> Keybindings
-- Open the chat box with enter (to everyone, not spectator or ally) and enter the command `/keysave`
-- Open the file uikeys.tmp in your choice of text editor and make changes to your liking.
-- Rename `uikeys.tmp` to `uikeys.txt`
-- Press F11 (or type `/widgetselector` to everyone chat) and disable the `BAR Hotkeys` widget in the list. It should turn red when off.
-- Type `/keyreload` to everyone chat to load the new bindings. The BAR Hotkey widget should remain disabled and the uikeys.txt loaded anytime you start a new game.
-
-Test your changes in real time:
-- Type `/keyreload` to everyone chat after you have saved additional changes to your uikeys.txt
+- You can find this widget on the official BAR discord here: https://discord.com/channels/549281623154229250/1113861314582954078
+- There are special instructions for the installation of this widget, be sure to read them and follow them carefully to ensure it works properly.
+- It has a variety of useful features and allows you to search keybinds and manage them without tabbing out of the game.
 
 ## References:
 
