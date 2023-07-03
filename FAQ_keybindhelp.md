@@ -16,7 +16,16 @@ unbindall
 keyload luaui/configs/hotkeys/gridmenu_keys.txt
 keyload luaui/configs/hotkeys/default_keys_60pct.txt
 ```
+### I want to port an old bar_hotkeys_custom.lua format configuration to uikeys.txt (or it failed to update update format with recent change).
 
+- First, make sure your keybinds are set to custom ingame.
+- Close the game
+- Make sure your bar_hotkeys_custom.lua file is in your data directory
+- Open springsettings.cfg (in your data folder) and find the line with `KeybindingFile`
+- Set it to `KeybindingFile = bar_hotkeys_custom.lua`
+- If you have a uikeys.txt file, delete or rename it
+- Launch the game, and start a skirmish
+  
 ### How can I get camera pan on wasd?
 
 1. If you want to create your own custom keyset with wasdpan, follow the how-to on customization to move commands off wasd according to your desires, and add this to your custom config file:
