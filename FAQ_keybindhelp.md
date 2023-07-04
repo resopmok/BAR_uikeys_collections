@@ -16,7 +16,7 @@ unbindall
 keyload luaui/configs/hotkeys/gridmenu_keys.txt
 keyload luaui/configs/hotkeys/default_keys_60pct.txt
 ```
-### I want to port an old bar_hotkeys_custom.lua format configuration to uikeys.txt (or it failed to update update format with recent change).
+### I want to port an old bar_hotkeys_custom.lua format configuration to uikeys.txt (or it failed to update format with recent change).
 
 - First, make sure your keybinds are set to custom ingame.
 - Close the game
