@@ -1,6 +1,7 @@
 2 July 2023                 
 
 # How to customize keybinds in Beyond All Reason 
+
 There may be a variety of reasons why you want to change a single or multiple keybinds. The following guide will take you step-by-step through the process of customizing your chosen preset.
 
 ## Customize by editing a text file
@@ -22,3 +23,4 @@ There may be a variety of reasons why you want to change a single or multiple ke
 - Documentation for select action: https://beyond-all-reason.github.io/spring/articles/select-command/
 - Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
 - General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
+- BAR master preset layouts: https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs/hotkeys
