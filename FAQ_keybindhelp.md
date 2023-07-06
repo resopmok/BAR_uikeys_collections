@@ -56,6 +56,7 @@ keyload luaui/configs/hotkeys/num_keys.txt
 ```
 keyload num_keys.txt
 ```
+This sets the config to read your local `num_keys.txt` which has the changes, instead of the default from the repo.
 
 ### What is the "mnemonic" layout and should I use it?
 
