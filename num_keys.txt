@@ -1,3 +1,5 @@
+// This is NOT default - it swaps the bindings of group add and group selectadd
+
 bind 1 specteam 0
 bind 2 specteam 1
 bind 3 specteam 2
