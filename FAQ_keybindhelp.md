@@ -52,7 +52,7 @@ During the recent hotkey update, group behavior was unified between grid and def
 ```
 keyload luaui/configs/hotkeys/num_keys.txt
 ```
-and replace it with:
+  and replace it with:
 ```
 keyload num_keys.txt
 ```
