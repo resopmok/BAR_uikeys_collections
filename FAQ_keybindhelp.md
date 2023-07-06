@@ -43,6 +43,20 @@ These are recommended changes if you are altering a default setup:
 2. If you want to customize a wasdpan set with grid menu, ask @HoboJoe on the BAR official Discord channel #keybind-help.
 3. Coming soon are probably some presets you can include with your uikeys.txt that may aid in the process for grid menu users.
 
+### I'm not satisfied with the function of Shift+<number key>. I want it to _add_ my selection to the control group and select the whole group.
+
+During the recent hotkey update, group behavior was unified between grid and default keybinds. To restore the previous grid behavior (which is now Ctrl+Shift+), follow these steps:
+- Put this file in your /data/ directory (same place as `uikeys.txt`): https://github.com/resopmok/BAR_uikeys_collections/blob/main/num_keys.txt
+- Create a custom `uikeys.txt` following instructions in the how-to: https://github.com/resopmok/BAR_uikeys_collections/blob/main/HOWTO_customkeybind.md
+- Find the following line in the `uikeys.txt`:
+```
+keyload luaui/configs/hotkeys/num_keys.txt
+```
+and replace it with:
+```
+keyload num_keys.txt
+```
+
 ### What is the "mnemonic" layout and should I use it?
 
 There are "scancodes" in the config files that ensure the layout is positional ( if g were swapped with a, you would press g to atacck). The mnemonic layout is for people who have keyboard layouts different from qwerty but prefer their commands in their home keyboard's position instead (a would still attack, but that is located where g is on a qwerty keyboard).
