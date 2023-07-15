@@ -19,7 +19,7 @@ This can be done with any keybind file in the uikeys format. To import the keybi
 | `keyload luaui/configs/hotkeys/grid_keys_60pct.txt`    | [Grid layout keybinds for 60% keyboards](https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/configs/hotkeys/grid_keys_60pct.txt)          |
 | `keyload luaui/configs/hotkeys/gridmenu_keys.txt`      | [Gridmenu hotkeys](https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/configs/hotkeys/gridmenu_keys.txt) (ONLY includes building hotkeys) |
 | `keyload luaui/configs/hotkeys/mnemomic_keys.txt`      | [Mnemonic layout](https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/configs/hotkeys/mnemonic_keys.txt) (Teifion special)                 |
-| `keyload luaui/configs/hotkeys/num_keys.txt`           | [Ctrl group hotkeys](https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/configs/hotkeys/num_keys.txt)                                     |
+| `keyload luaui/configs/hotkeys/num_keys.txt`           | [Control group hotkeys](https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/configs/hotkeys/num_keys.txt)                                     |
 
 
 This can be used to very easily compose together modular keybind sets, for example to combine default hotkeys with the gridmenu building keys, you can make a `uikeys.txt` file containing only these lines:
