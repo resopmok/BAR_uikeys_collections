@@ -1,0 +1,62 @@
+// This is an opinionated grid keys config with WASD camera controls plus some other changes
+
+unbindall
+
+// Don't uncomment both of these lines!  Things will break!
+keyload luaui/configs/hotkeys/grid_keys.txt             // Uncomment this line to base the config on fullsize grid keys
+// keyload luaui/configs/hotkeys/grid_keys_60pct.txt    // Uncomment this line to base the config on 60% grid keys
+
+// unbind WASD keys so they can be rebound to camera
+unbindkeyset Any+sc_w
+unbindkeyset sc_w
+unbindkeyset Any+sc_a
+unbindkeyset sc_a
+unbindkeyset Any+sc_s
+unbindkeyset sc_s
+unbindkeyset Any+sc_d
+unbindkeyset sc_d
+
+
+// Set WASD to camera movement
+bind sc_w moveforward
+bind sc_a moveleft
+bind sc_s moveback
+bind sc_d moveright
+bind meta+tab toggleoverview
+
+
+// Override default behavior so that WASD doesn't add to build queue when pressing wasd
+// builder and factory tabs here denote differences between structure build orders and factory queue orders
+bind           Any+sc_a  gridmenu_key 2 1 builder
+bind           Any+sc_s  gridmenu_key 2 2 builder
+bind           Any+sc_d  gridmenu_key 2 3 builder
+bind           Any+sc_w  gridmenu_key 3 2 builder
+
+
+// space modifiers for wasd keys
+// this will allow you to still use WASD for other commands when pressing them with space
+// e.g. pressing space-a will give attack command, while just pressing a will move camera
+bind 	meta+sc_a 			attack
+bind 	Shift+meta+sc_a 	attack
+bind 	Ctrl+sc_s 			stop
+bind 	Ctrl+Shift+sc_s 	stop
+bind 	meta+sc_s			settarget
+bind 	Alt+sc_s			canceltarget
+bind 	meta+sc_d 			manualfire
+bind 	Shift+meta+sc_d 	manualfire
+bind 	meta+sc_d 			manuallaunch
+bind 	Shift+meta+sc_d 	manuallaunch
+
+
+// Set g to guard, because I like it better that way
+unbindkeyset  	sc_g
+unbindkeyset 	Shift+sc_g
+bind 	sc_g 				guard
+bind 	shift+sc_g			guard
+
+unbindkeyset sc_p
+unbindkeyset Shift+sc_p
+bind 	sc_p 				patrol
+bind 	Shift+sc_p 			patrol
+
+
