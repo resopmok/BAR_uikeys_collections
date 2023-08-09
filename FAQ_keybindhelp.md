@@ -4,7 +4,9 @@
 
 ### BAR recently updated the custom keybind format, and I am now missing grid menu unit hotkeys while wanting to use the default key layout. How do I fix?
 
-One of the biggest changes with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. In this case, you will need to put the default keyset with the keyset that manages grid menu hotkeys. You can do that by making a uikeys.txt which includes only the following:
+One of the biggest changes with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. In this case, you will need to put the default keyset with the keyset that manages grid menu hotkeys. 
+- First, from the in-game Settings -> Control -> Keybindings, make sure you have "Custom" selected from the dropdown. WHen you do this a "grid" button will appear right below. The green toggle enables grid build menu, the red one default build menu.
+- Then, make a `uikeys.txt` which contains only the following; put it in your BAR install /data/ directory (not needed on Linux, just put it in the install directory):
 ```
 unbindall
 keyload luaui/configs/hotkeys/gridmenu_keys.txt
