@@ -28,22 +28,9 @@ keyload luaui/configs/hotkeys/default_keys_60pct.txt
 - If you have a uikeys.txt file, delete or rename it
 - Launch the game, and start a skirmish
   
-### How can I get camera pan on wasd?
+### I want to move the camera with WASD.
 
-1. If you want to create your own custom keyset with wasdpan, follow the how-to on customization to move commands off wasd according to your desires, and add this to your custom config file:
-```
-bind sc_w moveforward
-bind sc_s moveback
-bind sc_d moveright
-bind sc_a moveleft
-```
-These are recommended changes if you are altering a default setup:
-- Move `wait` to t; remove `trackmode`, remove air selection hotkey.
-- Move `attack` to f,f (double tap f); select all move to Ctrl+e.
-- Move `stop` to q; remove duplicate map marks; move `stopproduction` to Ctrl+q
-- Move all d commands moved to b (`dgun`, `selfd`, `manuallaunch`); move select idle workers to Ctrl+x.
-2. If you want to customize a wasdpan set with grid menu, ask @HoboJoe on the BAR official Discord channel #keybind-help.
-3. Coming soon are probably some presets you can include with your uikeys.txt that may aid in the process for grid menu users.
+Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_camera_presets/).
 
 ### I'm not satisfied with the function of Shift+<number key>. I want it to _add_ my selection to the control group and select the whole group.
 
@@ -69,7 +56,7 @@ This layout was made shortly after scancodes were introduced to keybindings to a
 
 60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including default and grid 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
 
-### How can I acces the widget list and why do I want to?
+### How can I access the widget list and why do I want to?
 
 There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. This isn't necessarily a hotkey-related question anymore but it comes up frequently anyway.
 
