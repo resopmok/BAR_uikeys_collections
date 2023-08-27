@@ -28,22 +28,9 @@ keyload luaui/configs/hotkeys/default_keys_60pct.txt
 - If you have a uikeys.txt file, delete or rename it
 - Launch the game, and start a skirmish
   
-### How can I get camera pan on wasd?
+### I want to move the camera with WASD.
 
-1. If you want to create your own custom keyset with wasdpan, follow the how-to on customization to move commands off wasd according to your desires, and add this to your custom config file:
-```
-bind sc_w moveforward
-bind sc_s moveback
-bind sc_d moveright
-bind sc_a moveleft
-```
-These are recommended changes if you are altering a default setup:
-- Move `wait` to t; remove `trackmode`, remove air selection hotkey.
-- Move `attack` to f,f (double tap f); select all move to Ctrl+e.
-- Move `stop` to q; remove duplicate map marks; move `stopproduction` to Ctrl+q
-- Move all d commands moved to b (`dgun`, `selfd`, `manuallaunch`); move select idle workers to Ctrl+x.
-2. If you want to customize a wasdpan set with grid menu, ask @HoboJoe on the BAR official Discord channel #keybind-help.
-3. Coming soon are probably some presets you can include with your uikeys.txt that may aid in the process for grid menu users.
+Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_camera_presets/).
 
 ### I'm not satisfied with the function of Shift+<number key>. I want it to _add_ my selection to the control group and select the whole group.
 
