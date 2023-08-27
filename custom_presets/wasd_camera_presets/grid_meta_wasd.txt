@@ -1,0 +1,12 @@
+unbindall // clear the defaults (required)
+
+// Don't uncomment both of these lines! Things will break!
+keyload luaui/configs/hotkeys/grid_keys.txt             // Uncomment this line to base the config on fullsize grid keys
+// keyload luaui/configs/hotkeys/grid_keys_60pct.txt    // Uncomment this line to base the config on 60% grid keys
+
+
+// Bind (Meta+)WASD to camera movement
+bind Meta+sc_w moveforward
+bind Meta+sc_a moveleft
+bind Meta+sc_s moveback
+bind Meta+sc_d moveright
