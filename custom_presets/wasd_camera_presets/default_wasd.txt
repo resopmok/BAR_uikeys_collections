@@ -1,28 +1,35 @@
-// BAR hotkey layout which adds camera controls on WASD. Makes following changes to default hotkeys: version captured 1/23/2023
-// added wasd for camera movement controls
-// moved wait to t; trackmode removed, air selection hotkey removed
-// attack moved to f,f (double tap f); select all move to Ctrl+e
-// stop moved to q; duplicate map marks removed; stopproduction moved to Ctrl+q
-// all d commands moved to b (dgun, selfd, manuallaunch); select idle workers moved to Ctrl+x
+unbindall // clear the defaults (required)
 
-
-unbindall          // clear the defaults
-
-// Don't uncomment both of these lines!  Things will break!
+// Don't uncomment both of these lines! Things will break!
 keyload luaui/configs/hotkeys/default_keys.txt          // Uncomment this line to base the config on fullsize default keys
-//keyload luaui/configs/hotkeys/default_keys_60pct.txt  // Uncomment this line to base the config on 60% default keys
+// keyload luaui/configs/hotkeys/default_keys_60pct.txt // Uncomment this line to base the config on 60% default keys
 
 
-// Unbind WASD keys
+// Unbind WASD keys (incl. modifiers)
+unbindkeyset Shift+sc_w
+unbindkeyset Ctrl+sc_w
+unbindkeyset Alt+sc_w
+unbindkeyset Meta+sc_w
 unbindkeyset Any+sc_w
 unbindkeyset sc_w
+unbindkeyset Shift+sc_a
+unbindkeyset Ctrl+sc_a
+unbindkeyset Alt+sc_a
+unbindkeyset Meta+sc_a
 unbindkeyset Any+sc_a
 unbindkeyset sc_a
+unbindkeyset Shift+sc_s
+unbindkeyset Ctrl+sc_s
+unbindkeyset Alt+sc_s
+unbindkeyset Meta+sc_s
 unbindkeyset Any+sc_s
 unbindkeyset sc_s
+unbindkeyset Shift+sc_d
+unbindkeyset Ctrl+sc_d
+unbindkeyset Alt+sc_d
+unbindkeyset Meta+sc_d
 unbindkeyset Any+sc_d
 unbindkeyset sc_d
-unbindkeyset Ctrl+sc_x
 
 
 // Set WASD to camera movement
@@ -32,21 +39,23 @@ bind sc_s moveback
 bind sc_d moveright
 
 
-// Rebind other commands away from WASD
-bind        sc_q            stop
-bind        Shift+sc_q      stop
-bind        Ctrl+sc_q       stopproduction
-bind        sc_t            wait
-bind        Shift+sc_t      wait queued
-bind        sc_f            attack
-bind        Shift+sc_f      attack
-bind        Alt+sc_f        areaattack
-bind        Alt+Shift+sc_f  areaattack
-bind        Ctrl+sc_b       selfd
-bind        Shift+Ctrl+sc_b selfd queued
-bind        sc_b            manualfire
-bind        Shift+sc_b      manualfire
-bind        sc_b            manuallaunch
-bind        Shift+sc_b      manuallaunch
-bind        Ctrl+sc_x       select AllMap+_Builder_Idle+_ClearSelection_SelectOne+
-bind        Ctrl+sc_e       select AllMap++_ClearSelection_SelectAll+
+// Rebind other commands away from WASD (incl. modifiers)
+bind         sc_q            stop
+bind         Shift+sc_q      stop
+bind         Ctrl+sc_q       stopproduction
+bind         sc_t            wait
+bind         Shift+sc_t      wait queued
+bind         sc_f            attack
+bind         Shift+sc_f      attack
+bind         Alt+sc_f        areaattack
+bind         Alt+Shift+sc_f  areaattack
+bind         Ctrl+sc_e       select AllMap++_ClearSelection_SelectAll+
+unbindkeyset Ctrl+sc_x       // must unbind this one first since it's bound already to an obscure selection command
+bind         Ctrl+sc_x       select AllMap+_Builder_Idle+_ClearSelection_SelectOne+
+unbindkeyset Ctrl+sc_b       // must unbind this one first since it's bound already to select idle builder
+bind         Ctrl+sc_b       selfd
+bind         Shift+Ctrl+sc_b selfd queued
+bind         sc_b            manualfire
+bind         Shift+sc_b      manualfire
+bind         sc_b            manuallaunch
+bind         Shift+sc_b      manuallaunch
