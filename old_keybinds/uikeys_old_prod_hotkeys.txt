@@ -1,0 +1,1597 @@
+// This uikeys.txt was cobbled together by resopmok.
+// This file meant to be used in conjunction with the Factory UI Keys widget by badosu
+// Please find it here: https://gist.github.com/badosu/c656fa654aadc61b99df8db5e6b3c15f#file-factory_ui_keys-lua and
+// drop it into the directory Beyond-All-Reason/data/LuaUI/Widgets/ (create this directory if it does not exist).
+// Make sure to enable the widget from the f11 list after installing it.
+// I also recommend using the badmenu widget (also by badosu), which adds the hotkey to the lab production menu and 
+// redraws build menus only with cycle options. It is installed the same was as the Factory UI Keys Widget.
+// Find it here: https://gist.github.com/badosu/fbba5a23c33300d56df2b8e87db4e819
+// This uikeys was tested only on a QWERTY keyboard. Significant changes should be made for other keyboard layouts.
+// Please note some differences with the current default hotkey layout:
+// -> Production hotkeys added for factories using z -> / and h, j including Shift+ (add 5), Alt+ (insert as next
+//    unit in queue), and Ctrl+ (dequeue)functionality.
+// -> Clear factory queue added to e (works when a lab is selected).
+// -> Factory repeat on/off added to r (works when a lab is selected).
+// -> Select commander has moved to q from Ctrl+c.
+// -> Select idle worker has moved to Ctrl+s from Ctrl+b.
+// -> Custom army selections (select all of same type unit on map) have moved to ctrl+q through ctrl+i and ctrl+f.
+// -> Ping the map removed from q, now only on `.
+// -> Resurrect (rez bots, subs) and capture (commanders) added to t (when they are selected).
+// -> Some debugs moved to Alt+o and Alt+p.
+// -> Build keys for constructors have had some changes and additions, for example T1 energy converters added to z
+// and T2 factories added to v.
+// -> Mines are now on z, x, and c - after buildings, before units.
+
+
+
+unbindall          // clear the defaults
+unbind enter chat  // clear the defaults
+
+fakemeta  0x020
+
+bind      Alt+Shift+esc  reloadforce
+bind     Ctrl+Shift+esc  quitforce
+
+bind        Shift+enter  chatspec
+bind        Shift+enter  chatswitchspec
+bind         Ctrl+enter  chatall
+bind         Ctrl+enter  chatswitchall
+bind          Any+enter  chat
+bind          Alt+enter  chatally
+bind          Alt+enter  chatswitchally
+bind Alt+ctrl+s,Alt+ctrl+s  chatswitchspec
+bind Alt+ctrl+a,Alt+ctrl+a  chatswitchally
+bind                esc  quitmessage
+
+bind          Any+enter  edit_return
+bind         Any+escape  edit_escape
+bind         Ctrl+right  edit_next_word
+bind            Any+end  edit_end
+bind             Any+up  edit_prev_line
+bind            Any+tab  edit_complete
+bind           Alt+left  edit_home
+bind           Any+home  edit_home
+bind          Any+right  edit_next_char
+bind           Any+down  edit_next_line
+bind         Any+delete  edit_delete
+bind      Any+backspace  edit_backspace
+bind          Ctrl+left  edit_prev_word
+bind          Alt+right  edit_end
+bind           Any+left  edit_prev_char
+
+bind             Ctrl+v  pastetext
+
+bind          Any+pause  pause
+
+//  bind              Any+j  mouse2 // disabled because j will be production hotkey 
+//  bind          backspace  mousestate // not from /keysave
+bind    Shift+backspace  togglecammode
+bind     Ctrl+backspace  togglecammode
+bind                  i  customgameinfo
+// bind              Any+i  customgameinfo
+
+bind              Any+l  togglelos
+//  bind              Any+;  toggleradarandjammer
+//  bind              Any+;  losradar
+//  bind            Any+tab  toggleoverview
+
+//  bind                  ,  prevmenu
+//  bind                  .  nextmenu
+// bind            Shift+,  decguiopacity
+// bind            Shift+.  incguiopacity
+
+bind                  =  speedup
+bind                  -  slowdown
+bind              Alt+=  speedup
+// bind         Alt+insert  speedup
+bind        Alt+numpad+  speedup
+bind              Alt++  speedup
+bind              Alt+-  slowdown
+bind        Alt+numpad-  slowdown
+// bind         Alt+delete  slowdown
+
+bind              Alt+o  debugcolvol
+// bind              Alt+p  debugpath
+bind              Alt+p  debug
+// bind              Alt+o  singlestep
+
+//  bind              Any+h  sharedialog
+//  bind              Any+c  controlunit
+//  bind             Alt+t  trackmode
+bind              Alt+t  track
+
+// bind              Any+§    drawinmap
+// bind              Any+^  drawinmap
+// bind                  q  drawinmap // drawinmap and labels on `
+bind        Any+`,Any+`  drawlabel
+bind              Any+`  drawinmap
+
+// bind        Any+\,Any+\  drawlabel
+// bind        Any+§,Any+§     drawlabel
+// bind        Any+^,Any+^  drawlabel
+// bind              Any+\  drawinmap
+
+bind           Any+home  increaseViewRadius
+bind            Any+end  decreaseViewRadius
+
+bind             Any+up  moveforward
+bind            numpad8  moveforward
+bind           Any+down  moveback
+bind            numpad2  moveback
+bind            numpad6  moveright
+bind          Any+right  moveright
+bind           Any+left  moveleft
+bind            numpad4  moveleft
+bind            numpad9  moveup
+bind         Any+pageup  moveup
+bind       Any+pagedown  movedown
+bind            numpad3  movedown
+bind          Any+shift  movefast
+bind            numpad1  movefast
+bind           Any+ctrl  moveslow
+
+
+bind                  1  specteam 0
+bind                  2  specteam 1
+bind                  3  specteam 2
+bind                  4  specteam 3
+bind                  5  specteam 4
+bind                  6  specteam 5
+bind                  7  specteam 6
+bind                  8  specteam 7
+bind                  9  specteam 8
+bind                  0  specteam 9
+bind             Ctrl+1  specteam 10
+bind             Ctrl+2  specteam 11
+bind             Ctrl+3  specteam 12
+bind             Ctrl+4  specteam 13
+bind             Ctrl+5  specteam 14
+bind             Ctrl+6  specteam 15
+bind             Ctrl+7  specteam 16
+bind             Ctrl+8  specteam 17
+bind             Ctrl+9  specteam 18
+bind             Ctrl+0  specteam 19
+
+bind              Any+0  group0
+bind              Any+1  group1
+bind              Any+2  group2
+bind              Any+3  group3
+bind              Any+4  group4
+bind              Any+5  group5
+bind              Any+6  group6
+bind              Any+7  group7
+bind              Any+8  group8
+bind              Any+9  group9
+
+bind              alt+z  buildspacing inc
+bind        shift+alt+z  buildspacing inc
+bind        shift+alt+x  buildspacing dec
+bind          any+alt+x  buildspacing dec
+
+// bind                  o  buildfacing inc
+bind                  [  buildfacing inc
+bind                  ]  buildfacing dec
+bind            Shift+[  buildfacing inc
+bind            Shift+]  buildfacing dec
+
+// bind            shift+z  areamex
+// bind         ctrl+alt+z  areamex
+bind                  a  attack
+bind            Shift+a  attack
+bind              Alt+a  areaattack
+bind        Alt+Shift+a  areaattack
+bind            Shift+d  manualfire
+bind                  d  manualfire
+bind             Ctrl+d  selfd
+bind       Ctrl+Shift+d  selfd queued
+bind                  y  settargetnoground
+bind              alt+y  settarget
+bind                  e  reclaim
+bind                  e  dequeueunit   // added - use with widget
+bind            Shift+e  reclaim
+bind                  f  fight
+bind            Shift+f  fight
+bind              Alt+f  forcestart
+bind                  g  guard
+bind            Shift+g  guard
+bind                  k  cloak
+bind            Shift+k  cloak
+bind              any+k  wantcloak
+bind                  k  wantcloak
+bind                  l  loadunits
+bind            Shift+l  loadunits
+bind                  u  unloadunits
+bind            Shift+u  unloadunits
+// bind                  m  move
+// bind            Shift+m  move
+bind                  p  patrol
+bind            Shift+p  patrol
+bind                  r  repair
+bind                  r  togglerepeat // added - use widget
+bind            Shift+r  repair
+bind                  s  stop
+bind            Shift+s  stop
+bind            Shift+w  wait queued
+bind                  w  wait
+bind                  x  onoff
+bind            Shift+x  onoff
+bind                  t  resurrect  // added
+bind            shift+t  resurrect  // added
+bind	              t  capture    // added
+bind	        shift+t  capture    // added
+
+
+// bind                  q  groupselect
+// bind                  q  groupadd
+// bind             Ctrl+q  aiselect
+// bind            Shift+q  groupclear
+
+bind            Ctrl+f1  viewfps
+bind            Ctrl+f2  viewta
+bind            Ctrl+f3  viewspring
+bind            Ctrl+f4  viewrot
+bind            Ctrl+f5  viewfree
+
+bind             Any+f1  ShowElevation
+bind             Any+f2  ShowPathTraversability
+bind             Any+f3  LastMsgPos
+bind             Any+f4  ShowMetalMap
+bind             Any+f5  HideInterface
+//  bind             Any+f6  NoSound
+bind             Any+f6  MuteSound
+bind             Any+f7  DynamicSky
+bind      Ctrl+Shift+f8  savegame
+bind                 f9  luaui showhealthbars
+bind                f10  options
+bind     Ctrl+Shift+f10  createvideo
+bind              C+f11  luaui tweakgui
+bind            Any+f12  screenshot
+
+ //bindings for selecting units and parts of the army - ctl+u and ctl+i are still available to be bound
+bind                  q  select AllMap+_ManualFireUnit+_ClearSelection_SelectOne+ // select commander
+bind             Ctrl+q  select Visible+_InPrevSel_Not_InHotkeyGroup+_SelectAll+ // select visible units of same type
+bind             Ctrl+w  select AllMap+_InPrevSel_Not_InHotkeyGroup+_SelectAll+ // select all units of same type on map
+bind             Ctrl+e  select Visible+_Not_Aircraft_Not_WeaponRange_470_Weapons_Not_ManualFireUnit+_ClearSelection_SelectAll+ // frontline or short-range forces
+bind             Ctrl+r  select Visible+_Not_Aircraft_WeaponRange_470+_ClearSelection_SelectAll+ // artillery
+bind             Ctrl+t  select Visible+_Not_Builder_Aircraft+_ClearSelection_SelectAll+ // Air on visible map
+//bind             Ctrl+t  select AllMap+_Builder_Building_Idle+_ClearSelection_SelectOne+ // selects idle factories
+bind             Ctrl+y  select AllMap+_Not_Builder_Aircraft+_ClearSelection_SelectAll+ // All air on map
+bind             Ctrl+a  select AllMap++_ClearSelection_SelectAll+ // select everything on map
+bind             Ctrl+s  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+ // Idle contructors
+bind             Ctrl+f  select Visible+_Not_Aircraft_Not_Building_Weapons+_ClearSelection_SelectAll+ // select visible units with a weapon (use for comm pushes) 
+
+// bind             Ctrl+e  select AllMap+_Not_Builder_Not_Commander_InPrevSel_Not_InHotkeyGroup+_SelectAll+ 
+// bind             Ctrl+r  select AllMap+_Radar+_ClearSelection_SelectAll+ // all radars and jammers
+// bind      Alt+backspace  fullscreen
+
+// constructor + econ buildings
+// Bindings listed first appear ahead of others when repeat-pressing the key. E.g., z will built LLT, radar, AA, then Beamer/HLLT
+// It's best to have sea bindings after land bindings, though there are still occasional weirdnesses when accessing some of them. 
+
+bind                  z  buildunit_armmex      // Metal Extractor - Extracts Metal from Metalspots
+bind                  z  buildunit_cormex      // Metal Extractor - Extracts Metal from Metalspots
+bind                  z  buildunit_cormakr     // T1 converter
+bind                  z  buildunit_armmakr     // T1 converter
+bind                  z  buildunit_armamex     // Twilight - Stealthy Cloakable Metal Extractor
+bind                  z  buildunit_corexp      // Exploiter - Armed Metal Extractor
+bind                  z  buildunit_armmstor    // Metal storage
+bind                  z  buildunit_cormstor    // Metal storage
+bind                  z  buildunit_armmoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_cormoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_coruwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_armuwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind                  z  buildunit_armmmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind                  z  buildunit_cormmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind                  z  buildunit_corfmakr    // floating T1 converter
+bind                  z  buildunit_armfmakr    // floating T1 converter
+bind                  z  buildunit_armuwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind                  z  buildunit_coruwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind                  z  buildunit_cormexp     // Moho Exploiter - Armed Moho Metal Extractor
+//bind                  z  areamex               // build mexes in area
+
+bind            shift+z  buildunit_armmex      // Metal Extractor - Extracts Metal from Metalspots
+bind            shift+z  buildunit_cormex      // Metal Extractor - Extracts Metal from Metalspots
+bind            shift+z  buildunit_cormakr     // T1 converter
+bind            shift+z  buildunit_armmakr     // T1 converter
+bind            shift+z  buildunit_armamex     // Twilight - Stealthy Cloakable Metal Extractor
+bind            shift+z  buildunit_corexp      // Exploiter - Armed Metal Extractor
+bind            shift+z  buildunit_armmstor    // Metal storage
+bind            shift+z  buildunit_cormstor    // Metal storage
+bind            shift+z  buildunit_armmoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_cormoho     // Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_coruwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_armuwmme    // Underwater Moho Mine - Advanced Metal Extractor / Storage
+bind            shift+z  buildunit_armmmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind            shift+z  buildunit_cormmkr     // Advanced Energy Converter - Converts 600 energy into 10.3 metal per sec
+bind            shift+z  buildunit_corfmakr    // floating T1 converter
+bind            shift+z  buildunit_armfmakr    // floating T1 converter
+bind            shift+z  buildunit_armuwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind            shift+z  buildunit_coruwmmm    // Floating Adv. Energy Converter - Converts 650 energy into 11 metal per sec
+bind            shift+z  buildunit_cormexp     // Moho Exploiter - Armed Moho Metal Extractor
+//bind            shift+z  areamex               // build mexes in area
+
+bind                  x  buildunit_armsolar    // Solar Collector - Produces 20 Energy
+bind                  x  buildunit_corsolar    // Solar Collector - Produces 20 Energy
+bind                  x  buildunit_armwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind                  x  buildunit_corwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind                  x  buildunit_armadvsol   // Advanced Solar Collector - Produces 75 Energy
+bind                  x  buildunit_coradvsol   // Advanced Solar Collector - Produces 75 Energy
+bind                  x  buildunit_armestor    // Energy storage
+bind                  x  buildunit_corestor    // Energy storage
+bind                  x  buildunit_armfus      // Fusion Reactor - Produces 1000 Energy
+bind                  x  buildunit_corfus      // Fusion Reactor - Produces 1100 Energy
+bind                  x  buildunit_armafus     // AFUS
+bind                  x  buildunit_corafus     // AFUS
+bind                  x  buildunit_armageo     // T2 geothermal
+bind                  x  buildunit_corageo     // T2 geothermal
+bind                  x  buildunit_armgmm      // T2 safe geothermal
+bind                  x  buildunit_corbhmth    // T2 geothermal plasma battery
+bind                  x  buildunit_armtide     // Tidal Generator - Produces Energy (depends on map)
+bind                  x  buildunit_cortide     // Tidal Generator - Produces Energy (depends on map)
+bind                  x  buildunit_armuwfus    // Underwater Fusion Plant - Produces 1200 Energy
+bind                  x  buildunit_coruwfus    // Underwater Fusion Plant - Produces 1220 Energy
+
+bind            shift+x  buildunit_armsolar    // Solar Collector - Produces 20 Energy
+bind            shift+x  buildunit_corsolar    // Solar Collector - Produces 20 Energy
+bind            shift+x  buildunit_armwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind            shift+x  buildunit_corwin      // Wind Generator - Produces Energy. Depends on wind strength.
+bind            shift+x  buildunit_armadvsol   // Advanced Solar Collector - Produces 75 Energy
+bind            shift+x  buildunit_coradvsol   // Advanced Solar Collector - Produces 75 Energy
+bind            shift+x  buildunit_armestor    // Energy storage
+bind            shift+x  buildunit_corestor    // Energy storage
+bind            shift+x  buildunit_armfus      // Fusion Reactor - Produces 1000 Energy
+bind            shift+x  buildunit_corfus      // Fusion Reactor - Produces 1100 Energy
+bind            shift+x  buildunit_armafus     // AFUS
+bind            shift+x  buildunit_corafus     // AFUS
+bind            shift+x  buildunit_armageo     // T2 geothermal
+bind            shift+x  buildunit_corageo     // T2 geothermal
+bind            shift+x  buildunit_armgmm      // T2 safe geothermal
+bind            shift+x  buildunit_corbhmth    // T2 geothermal plasma battery
+bind            shift+x  buildunit_armtide     // Tidal Generator - Produces Energy (depends on map)
+bind            shift+x  buildunit_cortide     // Tidal Generator - Produces Energy (depends on map)
+bind            shift+x  buildunit_armuwfus    // Underwater Fusion Plant - Produces 1200 Energy
+bind            shift+x  buildunit_coruwfus    // Underwater Fusion Plant - Produces 1220 Energy
+// T1
+bind                  c  buildunit_armllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind                  c  buildunit_corllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind                  c  buildunit_armrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind                  c  buildunit_corrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+//bind                  c  buildfirst armrad armfrad     // Radar Tower - Early Warning System. Transportable (Heavy)
+//bind                  c  buildfirst corrad corfrad     // Radar Tower - Early Warning System. Transportable (Heavy)
+
+bind                  c  buildunit_armrl       // Defender - Light Anti-air Tower. Transportable (Heavy)
+bind                  c  buildunit_corrl       // Pulverizer - Light Anti-air Tower. Transportable (Heavy)
+bind                  c  buildunit_armbeamer   // beamer
+bind                  c  buildunit_corhllt     // HLLT
+// T2
+bind                  c  buildunit_armpb       // Pit Bull - Pop-up Gauss Cannon
+bind                  c  buildunit_corvipe     // Viper - Pop-up Sabot Battery
+bind                  c  buildunit_armarad     // Adv radar
+bind                  c  buildunit_corarad     // Adv radar
+bind                  c  buildunit_armflak     // Flakker - Anti-Air Flak Gun
+bind                  c  buildunit_corflak     // Cobra - Anti-Air Flak Gun
+bind                  c  buildunit_armamb      // ambusher
+bind                  c  buildunit_cortoast    // toaster
+//T1 sea
+bind                  c  buildunit_armtl       // Harpoon - Offshore Torpedo Launcher
+bind                  c  buildunit_cortl       // Urchin - Offshore Torpedo Launcher
+bind                  c  buildunit_armfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind                  c  buildunit_corfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind                  c  buildunit_armfrt      // Sentry - Floating Anti-air Tower
+bind                  c  buildunit_corfrt      // Stinger - Floating Anti-air Tower
+bind                  c  buildunit_armfhlt     // Floating HLT
+bind                  c  buildunit_corfhlt     // Floating HLT
+//T2 sea
+bind                  c  buildunit_armatl      // Moray adv torpedo launcher
+bind                  c  buildunit_coratl      // Lamprey adv torpedo launcher
+bind                  c  buildunit_armason     // Adv sonar station
+bind                  c  buildunit_corason     // Adv sonar station
+bind                  c  buildunit_armfflak    // Flakker NS AA
+bind                  c  buildunit_corenaa     // Cobra NS AA 
+bind                  c  buildunit_armkraken   // Kraken - Floating heavy plasma defense
+bind                  c  buildunit_corfdoom    // Devastator - Floating Doomsday machine
+
+bind            shift+c  buildunit_armllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind            shift+c  buildunit_corllt      // LLT - Light Laser Tower. Transportable (Heavy)
+bind            shift+c  buildunit_armrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind            shift+c  buildunit_corrad      // Radar Tower - Early Warning System. Transportable (Heavy)
+bind            shift+c  buildunit_armrl       // Defender - Light Anti-air Tower. Transportable (Heavy)
+bind            shift+c  buildunit_corrl       // Pulverizer - Light Anti-air Tower. Transportable (Heavy)
+bind            shift+c  buildunit_armbeamer   // beamer
+bind            shift+c  buildunit_corhllt     // HLLT
+bind            shift+c  buildunit_armpb       // Pit Bull - Pop-up Gauss Cannon
+bind            shift+c  buildunit_corvipe     // Viper - Pop-up Sabot Battery
+bind            shift+c  buildunit_armarad     // Adv radar
+bind            shift+c  buildunit_corarad     // Adv radar
+bind            shift+c  buildunit_armflak     // Flakker - Anti-Air Flak Gun
+bind            shift+c  buildunit_corflak     // Cobra - Anti-Air Flak Gun
+bind            shift+c  buildunit_armamb      // ambusher
+bind            shift+c  buildunit_cortoast    // toaster
+bind            shift+c  buildunit_armtl       // Harpoon - Offshore Torpedo Launcher
+bind            shift+c  buildunit_cortl       // Urchin - Offshore Torpedo Launcher
+bind            shift+c  buildunit_armfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind            shift+c  buildunit_corfrad     // Floating Radar/Sonar Tower - Early Warning System
+bind            shift+c  buildunit_armfrt      // Sentry - Floating Anti-air Tower
+bind            shift+c  buildunit_corfrt      // Stinger - Floating Anti-air Tower
+bind            shift+c  buildunit_armfhlt     // Floating HLT
+bind            shift+c  buildunit_corfhlt     // Floating HLT
+bind            shift+c  buildunit_armatl      // Moray adv torpedo launcher
+bind            shift+c  buildunit_coratl      // Lamprey adv torpedo launcher
+bind            shift+c  buildunit_armason     // Adv sonar station
+bind            shift+c  buildunit_corason     // Adv sonar station
+bind            shift+c  buildunit_armfflak    // Flakker NS AA
+bind            shift+c  buildunit_corenaa     // Cobra NS AA
+bind            shift+c  buildunit_armkraken   // Kraken - Floating heavy plasma defense
+bind            shift+c  buildunit_corfdoom    // Devastator - Floating Doomsday machine
+
+bind                  v  buildunit_armnanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_cornanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_armnanotcplat  // Nano Turret - Repairs and builds in large radius
+bind                  v  buildunit_cornanotcplat  // Nano Turret - Repairs and builds in large radius
+//bind                  v  buildfirst armnanotc armnanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+//bind                  v  buildfirst cornanotc cornanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+bind                  v  buildunit_armlab      // Bot Lab - Produces Level 1 Bots
+bind                  v  buildunit_corlab      // Bot Lab - Produces Level 1 Bots
+bind                  v  buildunit_armalab     // T2 Bot Lab - Produces Level 2 Bots
+bind                  v  buildunit_coralab     // T2 Bot Lab - Produces Level 2 Bots
+bind                  v  buildunit_armvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind                  v  buildunit_corvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind                  v  buildunit_armavp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind                  v  buildunit_coravp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind                  v  buildunit_armap       // Aircraft Plant - Produces Level 1 Aircraft
+bind                  v  buildunit_corap       // Aircraft Plant - Produces Level 1 Aircraft
+bind                  v  buildunit_armaap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind                  v  buildunit_coraap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind                  v  buildunit_armhp       // Hoover lab
+bind                  v  buildunit_corhp       // Hoover lab
+
+bind                  v  buildunit_armsy       // Shipyard - Produces Level 1 Ships
+bind                  v  buildunit_corsy       // Shipyard - Produces Level 1 Ships
+bind                  v  buildunit_armasy      // T2 Shipyard - Produces Level 2 Ships
+bind                  v  buildunit_corasy      // T2 Shipyard - Produces Level 2 Ships
+
+bind            shift+v  buildunit_armnanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_cornanotc   // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_armnanotcplat  // Nano Turret - Repairs and builds in large radius
+bind            shift+v  buildunit_cornanotcplat  // Nano Turret - Repairs and builds in large radius
+//bind            shift+v  buildfirst armnanotc armnanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+//bind            shift+v  buildfirst cornanotc cornanotcplat  // Nano Turret - Assist & Repair in large radius. Transportable
+bind            shift+v  buildunit_armlab      // Bot Lab - Produces Level 1 Bots
+bind            shift+v  buildunit_corlab      // Bot Lab - Produces Level 1 Bots
+bind            shift+v  buildunit_armalab     // T2 Bot Lab - Produces Level 2 Bots
+bind            shift+v  buildunit_coralab     // T2 Bot Lab - Produces Level 2 Bots
+bind            shift+v  buildunit_armvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind            shift+v  buildunit_corvp       // Vehicle Plant - Produces Level 1 Vehicles
+bind            shift+v  buildunit_armavp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind            shift+v  buildunit_coravp      // T2 Vehicle Plant - Produces Level 2 Vehicles
+bind            shift+v  buildunit_armap       // Aircraft Plant - Produces Level 1 Aircraft
+bind            shift+v  buildunit_corap       // Aircraft Plant - Produces Level 1 Aircraft
+bind            shift+v  buildunit_armaap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind            shift+v  buildunit_coraap      // T2 Aircraft Plant - Produces Level 2 Aircraft
+bind            shift+v  buildunit_armhp       // Hoover lab
+bind            shift+v  buildunit_corhp       // Hoover lab
+
+bind            shift+v  buildunit_armsy       // Shipyard - Produces Level 1 Ships
+bind            shift+v  buildunit_corsy       // Shipyard - Produces Level 1 Ships
+bind            shift+v  buildunit_armasy      // T2 Shipyard - Produces Level 2 Ships
+bind            shift+v  buildunit_corasy      // T2 Shipyard - Produces Level 2 Ships
+
+
+// b is a new build hotkey intended for use with more advanced but frequently used defenses.
+//T1
+bind                  b  buildunit_armclaw     // lightning turret
+bind                  b  buildunit_cormaw      // flame turret
+bind                  b  buildunit_armjamt     // jammer
+bind                  b  buildunit_corjamt     // jammer
+bind                  b  buildunit_armferret   // Ferret AA
+bind                  b  buildunit_cormadsam   // SAM
+bind                  b  buildunit_armhlt      // HLT
+bind                  b  buildunit_corhlt      // HLT
+//T2
+bind                  b  buildunit_armanni     // Tachyon Accelerator
+bind                  b  buildunit_cordoom     // Doomsday Machine
+bind                  b  buildunit_armveil     // Adv radar jammer
+bind                  b  buildunit_corshroud   // Adv radar jammer
+bind                  b  buildunit_armmercury  // Long-range AA
+bind                  b  buildunit_corscreamer // Long-range AA
+bind                  b  buildunit_armamd      // Anti-nuke
+bind                  b  buildunit_corfmd      // Anti-nuke
+//T1 sea
+bind                  b  buildunit_armdl       // Coastal torpedo launcher
+bind                  b  buildunit_cordl       // Coastal torpedo launcher
+//T2 sea
+bind                  b  buildunit_armfatf     // Floating targeting facility
+bind                  b  buildunit_corfatf     // Floating targeting facility 
+
+bind            shift+b  buildunit_armclaw     // lightning turret
+bind            shift+b  buildunit_cormaw      // flame turret
+bind            shift+b  buildunit_armjamt     // jammer
+bind            shift+b  buildunit_corjamt     // jammer
+bind            shift+b  buildunit_armferret   // Ferret AA
+bind            shift+b  buildunit_cormadsam   // SAM
+bind            shift+b  buildunit_armhlt      // HLT
+bind            shift+b  buildunit_corhlt      // HLT
+bind            shift+b  buildunit_armanni     // Tachyon Accelerator
+bind            shift+b  buildunit_cordoom     // Doomsday Machine
+bind            shift+b  buildunit_armveil     // Adv radar jammer
+bind            shift+b  buildunit_corshroud   // Adv radar jammer
+bind            shift+b  buildunit_armmercury  // Long-range AA
+bind            shift+b  buildunit_corscreamer // Long-range AA
+bind            shift+b  buildunit_armamd      // Anti-nuke
+bind            shift+b  buildunit_corfmd      // Anti-nuke
+bind            shift+b  buildunit_armdl       // Coastal torpedo launcher
+bind            shift+b  buildunit_cordl       // Coastal torpedo launcher
+bind            shift+b  buildunit_armfatf     // Floating targeting facility
+bind            shift+b  buildunit_corfatf     // Floating targeting facility ! farg?
+
+//mines
+bind  z  buildunit_armmine1    // light mine
+bind  z  buildunit_cormine1    // light mine
+bind  x  buildunit_armmine2    // medium mine
+bind  x  buildunit_cormine2    // medium mine
+bind  x  buildunit_cormine4    // commando mine
+bind  c  buildunit_armmine3    // heavy mine
+bind  c  buildunit_cormine3    // heavy mine
+bind  x  buildunit_armfmine3   // naval heavy mine
+bind  x  buildunit_corfmine3   // naval heavy mine
+
+bind  shift+z  buildunit_armmine1    // light mine
+bind  shift+z  buildunit_cormine1    // light mine
+bind  shift+x  buildunit_armmine2    // medium mine
+bind  shift+x  buildunit_cormine2    // medium mine
+bind  shift+x  buildunit_cormine4    // commando mine
+bind  shift+c  buildunit_armmine3    // heavy mine
+bind  shift+c  buildunit_cormine3    // heavy mine
+bind  shift+x  buildunit_armfmine3   // naval heavy mine (naval engineer)
+bind  shift+x  buildunit_corfmine3   // naval heavy mine (naval engineer)
+
+
+  // Production hotkeys
+  // Please note that not every unit in each lab has a keybind, but in some instances k, l, and ; 
+  // might be available for further customization since their first binds are not orders a factory
+  // can follow. Also, keybinds are not necessarily straight across the bottom row, but done with
+  // some thought about which ones would be more often used than others.
+
+
+// T1
+
+// bots
+bind  z  buildunit_armck      // T1 con
+bind  z  buildunit_corck      // T1 con
+bind  x  buildunit_armrectr   // rector
+bind  x  buildunit_cornecro   // necro
+bind  c  buildunit_armpw      // peewee
+bind  c  buildunit_corak      // AK
+bind  v  buildunit_armrock    // rocko
+bind  v  buildunit_corstorm   // storm
+bind  b  buildunit_armjeth    // jethro aa
+bind  b  buildunit_corcrash   // crasher aa
+bind  n  buildunit_armham     // hammer
+bind  n  buildunit_corthud    // thud
+bind  m  buildunit_armwar     // warrior
+bind  ,  buildunit_armflea    // flea
+
+bind  Alt+z  altenqueueunit armck 1     // T1 con
+bind  Alt+z  altenqueueunit corck 1     // T1 con
+bind  Alt+x  altenqueueunit armrectr 1  // rector
+bind  Alt+x  altenqueueunit cornecro 1  // necro
+bind  Alt+c  altenqueueunit armpw 1     // peewee
+bind  Alt+c  altenqueueunit corak 1     // AK
+bind  Alt+v  altenqueueunit armrock 1   // rocko
+bind  Alt+v  altenqueueunit corstorm 1  // storm
+bind  Alt+b  altenqueueunit armjeth 1   // jethro aa
+bind  Alt+b  altenqueueunit corcrash 1  // crasher aa
+bind  Alt+n  altenqueueunit armham 1    // hammer
+bind  Alt+n  altenqueueunit corthud 1   // thud
+bind  Alt+m  altenqueueunit armwar 1    // warrior
+bind  Alt+,  altenqueueunit armflea 1   // flea
+
+
+
+bind  Ctrl+z  dequeueunit armck 1     // T1 con
+bind  Ctrl+z  dequeueunit corck 1     // T1 con
+bind  Ctrl+x  dequeueunit armrectr 1  // rector
+bind  Ctrl+x  dequeueunit cornecro 1  // necro
+bind  Ctrl+c  dequeueunit armpw 1     // peewee
+bind  Ctrl+c  dequeueunit corak 1     // AK
+bind  Ctrl+v  dequeueunit armrock 1   // rocko
+bind  Ctrl+v  dequeueunit corstorm 1  // storm
+bind  Ctrl+b  dequeueunit armjeth 1   // jethro aa
+bind  Ctrl+b  dequeueunit corcrash 1  // crasher aa
+bind  Ctrl+n  dequeueunit armham 1    // hammer
+bind  Ctrl+n  dequeueunit corthud 1   // thud
+bind  Ctrl+m  dequeueunit armwar 1    // warrior
+bind  Ctrl+,  dequeueunit armflea 1   // flea
+
+bind  Shift+z  enqueueunit armck 5     // T1 con
+bind  Shift+z  enqueueunit corck 5     // T1 con
+bind  Shift+x  enqueueunit armrectr 5  // rector
+bind  Shift+x  enqueueunit cornecro 5  // necro
+bind  Shift+c  enqueueunit armpw 5     // peewee
+bind  Shift+c  enqueueunit corak 5     // AK
+bind  Shift+v  enqueueunit armrock 5   // rocko
+bind  Shift+v  enqueueunit corstorm 5  // storm
+bind  Shift+b  enqueueunit armjeth 5   // jethro aa
+bind  Shift+b  enqueueunit corcrash 5  // crasher aa
+bind  Shift+n  enqueueunit armham 5    // hammer
+bind  Shift+n  enqueueunit corthud 5   // thud
+bind  Shift+m  enqueueunit armwar 5    // warrior
+bind  Shift+,  enqueueunit armflea 5   // flea
+
+bind  Shift+Alt+z  altenqueueunit armck 5     // T1 con
+bind  Shift+Alt+z  altenqueueunit corck 5     // T1 con
+bind  Shift+Alt+x  altenqueueunit armrectr 5  // rector
+bind  Shift+Alt+x  altenqueueunit cornecro 5  // necro
+bind  Shift+Alt+c  altenqueueunit armpw 5     // peewee
+bind  Shift+Alt+c  altenqueueunit corak 5     // AK
+bind  Shift+Alt+v  altenqueueunit armrock 5   // rocko
+bind  Shift+Alt+v  altenqueueunit corstorm 5  // storm
+bind  Shift+Alt+b  altenqueueunit armjeth 5   // jethro aa
+bind  Shift+Alt+b  altenqueueunit corcrash 5  // crasher aa
+bind  Shift+Alt+n  altenqueueunit armham 5    // hammer
+bind  Shift+Alt+n  altenqueueunit corthud 5   // thud
+bind  Shift+Alt+m  altenqueueunit armwar 5    // warrior
+bind  Shift+Alt+,  altenqueueunit armflea 5   // flea
+
+//vehicles
+bind  z  buildunit_armcv       // T1 con
+bind  z  buildunit_corcv       // T1 con
+bind  x  buildunit_armmlv      // minelayer
+bind  x  buildunit_cormlv      // minelayer
+bind  c  buildunit_armflash    // flash
+bind  c  buildunit_corgator    // instigator
+bind  v  buildunit_armart      // shellshocker
+bind  v  buildunit_corwolv     // wolverine
+bind  b  buildunit_armsam      // samson
+bind  b  buildunit_cormist     // slasher
+bind  n  buildunit_armstump    // stumpy
+bind  n  buildunit_corraid     // raider
+bind  m  buildunit_armjanus    // janus
+bind  m  buildunit_corlevlr    // leveler
+bind  ,  buildunit_armfav      // scout
+bind  ,  buildunit_corfav      // scout
+bind  .  buildunit_armbeaver   // amphibious con
+bind  .  buildunit_cormuskrat  // amphibious con
+bind  /  buildunit_armpincer   // amphibious tank
+bind  /  buildunit_corgarp     // amphibious tank
+
+bind  Alt+z  altenqueueunit armcv 1      // T1 con
+bind  Alt+z  altenqueueunit corcv 1      // T1 con
+bind  Alt+x  altenqueueunit armmlv 1     // minelayer
+bind  Alt+x  altenqueueunit cormlv 1     // minelayer
+bind  Alt+c  altenqueueunit armflash 1   // flash
+bind  Alt+c  altenqueueunit corgator 1   // instigator
+bind  Alt+v  altenqueueunit armart 1     // shellshocker
+bind  Alt+v  altenqueueunit corwolv 1    // wolverine
+bind  Alt+b  altenqueueunit armsam 1     // samson
+bind  Alt+b  altenqueueunit cormist 1    // slasher
+bind  Alt+n  altenqueueunit armstump 1   // stumpy
+bind  Alt+n  altenqueueunit corraid 1    // raider
+bind  Alt+m  altenqueueunit armjanus 1   // janus
+bind  Alt+m  altenqueueunit corlevlr 1   // leveler
+bind  Alt+,  altenqueueunit armfav 1     // scout
+bind  Alt+,  altenqueueunit corfav 1     // scout
+bind  Alt+.  altenqueueunit armbeaver 1  // amphibious con
+bind  Alt+.  altenqueueunit cormuskrat 1 // amphibious con
+bind  Alt+/  altenqueueunit armpincer 1  // amphibious tank
+bind  Alt+/  altenqueueunit corgarp 1    // amphibious tank
+
+bind  Ctrl+z  dequeueunit armcv 1      // T1 con
+bind  Ctrl+z  dequeueunit corcv 1      // T1 con
+bind  Ctrl+x  dequeueunit armmlv 1     // minelayer
+bind  Ctrl+x  dequeueunit cormlv 1     // minelayer
+bind  Ctrl+c  dequeueunit armflash 1   // flash
+bind  Ctrl+c  dequeueunit corgator 1   // instigator
+bind  Ctrl+v  dequeueunit armart 1     // shellshocker
+bind  Ctrl+v  dequeueunit corwolv 1    // wolverine
+bind  Ctrl+b  dequeueunit armsam 1     // samson
+bind  Ctrl+b  dequeueunit cormist 1    // slasher
+bind  Ctrl+n  dequeueunit armstump 1   // stumpy
+bind  Ctrl+n  dequeueunit corraid 1    // raider
+bind  Ctrl+m  dequeueunit armjanus 1   // janus
+bind  Ctrl+m  dequeueunit corlevlr 1   // leveler
+bind  Ctrl+,  dequeueunit armfav 1     // scout
+bind  Ctrl+,  dequeueunit corfav 1     // scout
+bind  Ctrl+.  dequeueunit armbeaver 1  // amphibious con
+bind  Ctrl+.  dequeueunit cormuskrat 1 // amphibious con
+bind  Ctrl+/  dequeueunit armpincer 1  // amphibious tank
+bind  Ctrl+/  dequeueunit corgarp 1    // amphibious tank
+
+bind  Shift+z  enqueueunit armcv 5      // T1 con
+bind  Shift+z  enqueueunit corcv 5      // T1 con
+bind  Shift+x  enqueueunit armmlv 5     // minelayer
+bind  Shift+x  enqueueunit cormlv 5     // minelayer
+bind  Shift+c  enqueueunit armflash 5   // flash
+bind  Shift+c  enqueueunit corgator 5   // instigator
+bind  Shift+v  enqueueunit armart 5     // shellshocker
+bind  Shift+v  enqueueunit corwolv 5    // wolverine
+bind  Shift+b  enqueueunit armsam 5     // samson
+bind  Shift+b  enqueueunit cormist 5    // slasher
+bind  Shift+n  enqueueunit armstump 5   // stumpy
+bind  Shift+n  enqueueunit corraid 5    // raider
+bind  Shift+m  enqueueunit armjanus 5   // janus
+bind  Shift+m  enqueueunit corlevlr 5   // leveler
+bind  Shift+,  enqueueunit armfav 5     // scout
+bind  Shift+,  enqueueunit corfav 5     // scout
+bind  Shift+.  enqueueunit armbeaver 5  // amphibious con
+bind  Shift+.  enqueueunit cormuskrat 5 // amphibious con
+bind  Shift+/  enqueueunit armpincer 5  // amphibious tank
+bind  Shift+/  enqueueunit corgarp 5    // amphibious tank
+
+bind  Shift+Alt+z  altenqueueunit armcv 5      // T1 con
+bind  Shift+Alt+z  altenqueueunit corcv 5      // T1 con
+bind  Shift+Alt+x  altenqueueunit armmlv 5     // minelayer
+bind  Shift+Alt+x  altenqueueunit cormlv 5     // minelayer
+bind  Shift+Alt+c  altenqueueunit armflash 5   // flash
+bind  Shift+Alt+c  altenqueueunit corgator 5   // instigator
+bind  Shift+Alt+v  altenqueueunit armart 5     // shellshocker
+bind  Shift+Alt+v  altenqueueunit corwolv 5    // wolverine
+bind  Shift+Alt+b  altenqueueunit armsam 5     // samson
+bind  Shift+Alt+b  altenqueueunit cormist 5    // slasher
+bind  Shift+Alt+n  altenqueueunit armstump 5   // stumpy
+bind  Shift+Alt+n  altenqueueunit corraid 5    // raider
+bind  Shift+Alt+m  altenqueueunit armjanus 5   // janus
+bind  Shift+Alt+m  altenqueueunit corlevlr 5   // leveler
+bind  Shift+Alt+,  altenqueueunit armfav 5     // scout
+bind  Shift+Alt+,  altenqueueunit corfav 5     // scout
+bind  Shift+Alt+.  altenqueueunit armbeaver 5  // amphibious con
+bind  Shift+Alt+.  altenqueueunit cormuskrat 5 // amphibious con
+bind  Shift+Alt+/  altenqueueunit armpincer 5  // amphibious tank
+bind  Shift+Alt+/  altenqueueunit corgarp 5    // amphibious tank
+
+//aircraft
+bind  z  buildunit_armca       // T1 aircon
+bind  z  buildunit_corca       // T1 aircon
+bind  x  buildunit_armpeep     // air scout
+bind  x  buildunit_corfink     // air scout
+bind  c  buildunit_armatlas    // transport
+bind  c  buildunit_corvalk     // transport
+bind  v  buildunit_armfig      // air superiority fighter
+bind  v  buildunit_corveng     // air superiority fighter
+bind  b  buildunit_armthund    // bomber
+bind  b  buildunit_corshad     // bomber
+bind  n  buildunit_armkam      // gunship
+bind  n  buildunit_corbw       // bladewing
+
+bind  Alt+z  altenqueueunit armca 1      // T1 aircon
+bind  Alt+z  altenqueueunit corca 1      // T1 aircon
+bind  Alt+x  altenqueueunit armpeep 1    // air scout
+bind  Alt+x  altenqueueunit corfink 1    // air scout
+bind  Alt+c  altenqueueunit armatlas 1   // transport
+bind  Alt+c  altenqueueunit corvalk 1    // transport
+bind  Alt+v  altenqueueunit armfig 1     // air superiority fighter
+bind  Alt+v  altenqueueunit corveng 1    // air superiority fighter
+bind  Alt+b  altenqueueunit armthund 1   // bomber
+bind  Alt+b  altenqueueunit corshad 1    // bomber
+bind  Alt+n  altenqueueunit armkam 1     // gunship
+bind  Alt+n  altenqueueunit corbw 1      // bladewing
+
+bind  Ctrl+z  dequeueunit armca 1      // T1 aircon
+bind  Ctrl+z  dequeueunit corca 1      // T1 aircon
+bind  Ctrl+x  dequeueunit armpeep 1    // air scout
+bind  Ctrl+x  dequeueunit corfink 1    // air scout
+bind  Ctrl+c  dequeueunit armatlas 1   // transport
+bind  Ctrl+c  dequeueunit corvalk 1    // transport
+bind  Ctrl+v  dequeueunit armfig 1     // air superiority fighter
+bind  Ctrl+v  dequeueunit corveng 1    // air superiority fighter
+bind  Ctrl+b  dequeueunit armthund 1   // bomber
+bind  Ctrl+b  dequeueunit corshad 1    // bomber
+bind  Ctrl+n  dequeueunit armkam 1     // gunship
+bind  Ctrl+n  dequeueunit corbw 1      // bladewing
+
+bind  Shift+z  enqueueunit armca 5      // T1 aircon
+bind  Shift+z  enqueueunit corca 5      // T1 aircon
+bind  Shift+x  enqueueunit armpeep 5    // air scout
+bind  Shift+x  enqueueunit corfink 5    // air scout
+bind  Shift+c  enqueueunit armatlas 5   // transport
+bind  Shift+c  enqueueunit corvalk 5    // transport
+bind  Shift+v  enqueueunit armfig 5     // air superiority fighter
+bind  Shift+v  enqueueunit corveng 5    // air superiority fighter
+bind  Shift+b  enqueueunit armthund 5   // bomber
+bind  Shift+b  enqueueunit corshad 5    // bomber
+bind  Shift+n  enqueueunit armkam 5     // gunship
+bind  Shift+n  enqueueunit corbw 5      // bladewing
+
+bind  Shift+Alt+z  altenqueueunit armca 5      // T1 aircon
+bind  Shift+Alt+z  altenqueueunit corca 5      // T1 aircon
+bind  Shift+Alt+x  altenqueueunit armpeep 5    // air scout
+bind  Shift+Alt+x  altenqueueunit corfink 5    // air scout
+bind  Shift+Alt+c  altenqueueunit armatlas 5   // transport
+bind  Shift+Alt+c  altenqueueunit corvalk 5    // transport
+bind  Shift+Alt+v  altenqueueunit armfig 5     // air superiority fighter
+bind  Shift+Alt+v  altenqueueunit corveng 5    // air superiority fighter
+bind  Shift+Alt+b  altenqueueunit armthund 5   // bomber
+bind  Shift+Alt+b  altenqueueunit corshad 5    // bomber
+bind  Shift+Alt+n  altenqueueunit armkam 5     // gunship
+bind  Shift+Alt+n  altenqueueunit corbw 5      // bladewing
+
+//shipyard
+bind  z  buildunit_armcs       // T1 con
+bind  z  buildunit_corcs       // T1 con
+bind  x  buildunit_armrecl     // rez sub
+bind  x  buildunit_correcl     // minelayer
+bind  c  buildunit_armdecade   // decade corvette
+bind  c  buildunit_coresupp    // supporter gunboat
+bind  v  buildunit_armpt       // skeeter AA
+bind  v  buildunit_corpt       // missile ship AA
+bind  b  buildunit_armpship    // ellysaw frigate
+bind  b  buildunit_corpship    // era frigate
+bind  n  buildunit_armroy      // crusader destroyer
+bind  n  buildunit_corroy      // enforcer destroyer
+bind  m  buildunit_armsub      // lurker submarine
+bind  m  buildunit_corsub      // snake submarine
+bind  ,  buildunit_armtship    // transport
+bind  ,  buildunit_cortship    // transport
+
+bind  Alt+z  altenqueueunit armcs 1      // T1 con
+bind  Alt+z  altenqueueunit corcs 1      // T1 con
+bind  Alt+x  altenqueueunit armrecl 1    // rez sub
+bind  Alt+x  altenqueueunit correcl 1    // rez sub
+bind  Alt+c  altenqueueunit armdecade 1  // decade corvette
+bind  Alt+c  altenqueueunit coresupp 1   // supporter gunboat
+bind  Alt+v  altenqueueunit armpt 1      // skeeter AA
+bind  Alt+v  altenqueueunit corpt 1      // missile ship AA
+bind  Alt+b  altenqueueunit armpship 1   // ellysaw frigate
+bind  Alt+b  altenqueueunit corpship 1   // era frigate
+bind  Alt+n  altenqueueunit armroy 1     // crusader destroyer
+bind  Alt+n  altenqueueunit corroy 1     // enforcer destroyer
+bind  Alt+m  altenqueueunit armsub 1     // lurker submarine
+bind  Alt+m  altenqueueunit corsub 1     // snake submarine
+bind  Alt+,  altenqueueunit armtship 1   // transport
+bind  Alt+,  altenqueueunit cortship 1   // transport
+
+bind  Ctrl+z  dequeueunit armcs 1      // T1 con
+bind  Ctrl+z  dequeueunit corcs 1      // T1 con
+bind  Ctrl+x  dequeueunit armrecl 1    // rez sub
+bind  Ctrl+x  dequeueunit correcl 1    // rez sub
+bind  Ctrl+c  dequeueunit armdecade 1  // decade corvette
+bind  Ctrl+c  dequeueunit coresupp 1   // supporter gunboat
+bind  Ctrl+v  dequeueunit armpt 1      // skeeter AA
+bind  Ctrl+v  dequeueunit corpt 1      // missile ship AA
+bind  Ctrl+b  dequeueunit armpship 1   // ellysaw frigate
+bind  Ctrl+b  dequeueunit corpship 1   // era frigate
+bind  Ctrl+n  dequeueunit armroy 1     // crusader destroyer
+bind  Ctrl+n  dequeueunit corroy 1     // enforcer destroyer
+bind  Ctrl+m  dequeueunit armsub 1     // lurker submarine
+bind  Ctrl+m  dequeueunit corsub 1     // snake submarine
+bind  Ctrl+,  dequeueunit armtship 1   // transport
+bind  Ctrl+,  dequeueunit cortship 1   // transport
+
+bind  Shift+z  enqueueunit armcs 5      // T1 con
+bind  Shift+z  enqueueunit corcs 5      // T1 con
+bind  Shift+x  enqueueunit armrecl 5    // rez sub
+bind  Shift+x  enqueueunit correcl 5    // rez sub
+bind  Shift+c  enqueueunit armdecade 5  // decade corvette
+bind  Shift+c  enqueueunit coresupp 5   // supporter gunboat
+bind  Shift+v  enqueueunit armpt 5      // skeeter AA
+bind  Shift+v  enqueueunit corpt 5      // missile ship AA
+bind  Shift+b  enqueueunit armpship 5   // ellysaw frigate
+bind  Shift+b  enqueueunit corpship 5   // era frigate
+bind  Shift+n  enqueueunit armroy 5     // crusader destroyer
+bind  Shift+n  enqueueunit corroy 5     // enforcer destroyer
+bind  Shift+m  enqueueunit armsub 5     // lurker submarine
+bind  Shift+m  enqueueunit corsub 5     // snake submarine
+bind  Shift+,  enqueueunit armtship 5   // transport
+bind  Shift+,  enqueueunit cortship 5   // transport
+
+bind  Shift+Alt+z  altenqueueunit armcs 5      // T1 con
+bind  Shift+Alt+z  altenqueueunit corcs 5      // T1 con
+bind  Shift+Alt+x  altenqueueunit armrecl 5    // rez sub
+bind  Shift+Alt+x  altenqueueunit correcl 5    // rez sub
+bind  Shift+Alt+c  altenqueueunit armdecade 5  // decade corvette
+bind  Shift+Alt+c  altenqueueunit coresupp 5   // supporter gunboat
+bind  Shift+Alt+v  altenqueueunit armpt 5      // skeeter AA
+bind  Shift+Alt+v  altenqueueunit corpt 5      // missile ship AA
+bind  Shift+Alt+b  altenqueueunit armpship 5   // ellysaw frigate
+bind  Shift+Alt+b  altenqueueunit corpship 5   // era frigate
+bind  Shift+Alt+n  altenqueueunit armroy 5     // crusader destroyer
+bind  Shift+Alt+n  altenqueueunit corroy 5     // enforcer destroyer
+bind  Shift+Alt+m  altenqueueunit armsub 5     // lurker submarine
+bind  Shift+Alt+m  altenqueueunit corsub 5     // snake submarine
+bind  Shift+Alt+,  altenqueueunit armtship 5   // transport
+bind  Shift+Alt+,  altenqueueunit cortship 5   // transport
+
+//hovers
+bind  z  buildunit_armch       // hovercon
+bind  z  buildunit_corch       // hovercon
+bind  x  buildunit_armsh       // skimmer - light hover
+bind  x  buildunit_corsh       // scrubber - light hover
+bind  c  buildunit_armmh       // rocket hover
+bind  c  buildunit_cormh       // rocket hover
+bind  v  buildunit_armanac     // anaconda hovertank
+bind  v  buildunit_corsnap     // snapper hovertank 
+bind  b  buildunit_armah       // swatter AA
+bind  b  buildunit_corah       // slinger AA
+// bind  n  buildunit_arm      // no assualt hovertank for arm
+bind  n  buildunit_corhal      // halberd assault hovertank
+bind  ,  buildunit_armthovr    // surfboard
+bind  ,  buildunit_corthovr    // surfboard
+
+bind  Alt+z  altenqueueunit armch 1      // hovercon
+bind  Alt+z  altenqueueunit corch 1      // hovercon
+bind  Alt+x  altenqueueunit armsh 1      // skimmer - light hover
+bind  Alt+x  altenqueueunit corsh 1      // scrubber - light hover
+bind  Alt+c  altenqueueunit armmh 1      // rocket hover
+bind  Alt+c  altenqueueunit cormh 1      // rocket hover
+bind  Alt+v  altenqueueunit armanac 1    // anaconda hovertank
+bind  Alt+v  altenqueueunit corsnap 1    // snapper hovertank 
+bind  Alt+b  altenqueueunit armah 1      // swatter AA
+bind  Alt+b  altenqueueunit corah 1      // slinger AA
+// bind  Alt+n  altenqueueunit arm 1     // no assualt hovertank for arm
+bind  Alt+n  altenqueueunit corhal 1     // halberd assault hovertank
+bind  Alt+,  altenqueueunit armthovr 1   // surfboard
+bind  Alt+,  altenqueueunit corthovr 1   // surfboard
+
+bind  Ctrl+z  dequeueunit armch 1      // hovercon
+bind  Ctrl+z  dequeueunit corch 1      // hovercon
+bind  Ctrl+x  dequeueunit armsh 1      // skimmer - light hover
+bind  Ctrl+x  dequeueunit corsh 1      // scrubber - light hover
+bind  Ctrl+c  dequeueunit armmh 1      // rocket hover
+bind  Ctrl+c  dequeueunit cormh 1      // rocket hover
+bind  Ctrl+v  dequeueunit armanac 1    // anaconda hovertank
+bind  Ctrl+v  dequeueunit corsnap 1    // snapper hovertank 
+bind  Ctrl+b  dequeueunit armah 1      // swatter AA
+bind  Ctrl+b  dequeueunit corah 1      // slinger AA
+// bind  Ctrl+n  dequeueunit arm 1     // no assualt hovertank for arm
+bind  Ctrl+n  dequeueunit corhal 1     // halberd assault hovertank
+bind  Ctrl+,  dequeueunit armthovr 1   // surfboard
+bind  Ctrl+,  dequeueunit corthovr 1   // surfboard
+
+bind  Shift+z  enqueueunit armch 5      // hovercon
+bind  Shift+z  enqueueunit corch 5      // hovercon
+bind  Shift+x  enqueueunit armsh 5      // skimmer - light hover
+bind  Shift+x  enqueueunit corsh 5      // scrubber - light hover
+bind  Shift+c  enqueueunit armmh 5      // rocket hover
+bind  Shift+c  enqueueunit cormh 5      // rocket hover
+bind  Shift+v  enqueueunit armanac 5    // anaconda hovertank
+bind  Shift+v  enqueueunit corsnap 5    // snapper hovertank 
+bind  Shift+b  enqueueunit armah 5      // swatter AA
+bind  Shift+b  enqueueunit corah 5      // slinger AA
+// bind  Shift+n  enqueueunit arm 5     // no assualt hovertank for arm
+bind  Shift+n  enqueueunit corhal 5     // halberd assault hovertank
+bind  Shift+,  enqueueunit armthovr 5   // surfboard
+bind  Shift+,  enqueueunit corthovr 5   // surfboard
+
+bind  Shift+Alt+z  altenqueueunit armch 5      // hovercon
+bind  Shift+Alt+z  altenqueueunit corch 5      // hovercon
+bind  Shift+Alt+x  altenqueueunit armsh 5      // skimmer - light hover
+bind  Shift+Alt+x  altenqueueunit corsh 5      // scrubber - light hover
+bind  Shift+Alt+c  altenqueueunit armmh 5      // rocket hover
+bind  Shift+Alt+c  altenqueueunit cormh 5      // rocket hover
+bind  Shift+Alt+v  altenqueueunit armanac 5    // anaconda hovertank
+bind  Shift+Alt+v  altenqueueunit corsnap 5    // snapper hovertank 
+bind  Shift+Alt+b  altenqueueunit armah 5      // swatter AA
+bind  Shift+Alt+b  altenqueueunit corah 5      // slinger AA
+// bind  Shift+Alt+n  altenqueueunit arm 5     // no assualt hovertank for arm
+bind  Shift+Alt+n  altenqueueunit corhal 5     // halberd assault hovertank
+bind  Shift+Alt+,  altenqueueunit armthovr 5   // surfboard
+bind  Shift+Alt+,  altenqueueunit corthovr 5   // surfboard
+
+//seaplanes
+bind  z  buildunit_armcsa      // seaplane aircon
+bind  z  buildunit_corcsa      // seaplane aircon
+bind  x  buildunit_armsehak    // air/sea scout
+bind  x  buildunit_corhunt     // air/sea scout
+// bind  c  buildunit_armatlas    // transport
+// bind  c  buildunit_corvalk     // transport
+bind  v  buildunit_armsfig     // air superiority fighter
+bind  v  buildunit_corsfig     // air superiority fighter
+bind  b  buildunit_armsb       // thunder bomber
+bind  b  buildunit_corsb       // dam buster bomber
+bind  n  buildunit_armsaber    // seaplane gunship (fires on ground units)
+bind  n  buildunit_corcut      // seaplane gunship (fires on ground units)
+bind  m  buildunit_armseap     // torpedo gunship (fires on sea units)
+bind  m  buildunit_corseap     // torpedo gunship (fires on sea units)
+
+bind  Alt+z  altenqueueunit armcsa 1     // seaplane aircon
+bind  Alt+z  altenqueueunit corcsa 1     // seaplane aircon
+bind  Alt+x  altenqueueunit armsehak 1   // air/sea scout
+bind  Alt+x  altenqueueunit corhunt 1    // air/sea scout
+// bind  c  altenqueueunit armatlas 1   // transport
+// bind  c  altenqueueunit corvalk 1    // transport
+bind  Alt+v  altenqueueunit armsfig 1    // air superiority fighter
+bind  Alt+v  altenqueueunit corsfig 1    // air superiority fighter
+bind  Alt+b  altenqueueunit armsb 1      // thunder bomber
+bind  Alt+b  altenqueueunit corsb 1      // dam buster bomber
+bind  Alt+n  altenqueueunit armsaber 1   // seaplane gunship (fires on ground units)
+bind  Alt+n  altenqueueunit corcut 1     // seaplane gunship (fires on ground units)
+bind  Alt+m  altenqueueunit armseap 1    // torpedo gunship (fires on sea units)
+bind  Alt+m  altenqueueunit corseap 1    // torpedo gunship (fires on sea units)
+
+bind  Ctrl+z  dequeueunit armcsa 1     // seaplane aircon
+bind  Ctrl+z  dequeueunit corcsa 1     // seaplane aircon
+bind  Ctrl+x  dequeueunit armsehak 1   // air/sea scout
+bind  Ctrl+x  dequeueunit corhunt 1    // air/sea scout
+// bind  c  dequeueunit armatlas 1   // transport
+// bind  c  dequeueunit corvalk 1    // transport
+bind  Ctrl+v  dequeueunit armsfig 1    // air superiority fighter
+bind  Ctrl+v  dequeueunit corsfig 1    // air superiority fighter
+bind  Ctrl+b  dequeueunit armsb 1      // thunder bomber
+bind  Ctrl+b  dequeueunit corsb 1      // dam buster bomber
+bind  Ctrl+n  dequeueunit armsaber 1   // seaplane gunship (fires on ground units)
+bind  Ctrl+n  dequeueunit corcut 1     // seaplane gunship (fires on ground units)
+bind  Ctrl+m  dequeueunit armseap 1    // torpedo gunship (fires on sea units)
+bind  Ctrl+m  dequeueunit corseap 1    // torpedo gunship (fires on sea units)
+
+bind  Shift+z  enqueueunit armcsa 5     // seaplane aircon
+bind  Shift+z  enqueueunit corcsa 5     // seaplane aircon
+bind  Shift+x  enqueueunit armsehak 5   // air/sea scout
+bind  Shift+x  enqueueunit corhunt 5    // air/sea scout
+// bind  c  enqueueunit armatlas 5   // transport
+// bind  c  enqueueunit corvalk 5    // transport
+bind  Shift+v  enqueueunit armsfig 5    // air superiority fighter
+bind  Shift+v  enqueueunit corsfig 5    // air superiority fighter
+bind  Shift+b  enqueueunit armsb 5      // thunder bomber
+bind  Shift+b  enqueueunit corsb 5      // dam buster bomber
+bind  Shift+n  enqueueunit armsaber 5   // seaplane gunship (fires on ground units)
+bind  Shift+n  enqueueunit corcut 5     // seaplane gunship (fires on ground units)
+bind  Shift+m  enqueueunit armseap 5    // torpedo gunship (fires on sea units)
+bind  Shift+m  enqueueunit corseap 5    // torpedo gunship (fires on sea units)
+
+bind  Shift+Alt+z  altenqueueunit armcsa 5     // seaplane aircon
+bind  Shift+Alt+z  altenqueueunit corcsa 5     // seaplane aircon
+bind  Shift+Alt+x  altenqueueunit armsehak 5   // air/sea scout
+bind  Shift+Alt+x  altenqueueunit corhunt 5    // air/sea scout
+// bind  c  altenqueueunit armatlas 5   // transport
+// bind  c  altenqueueunit corvalk 5    // transport
+bind  Shift+Alt+v  altenqueueunit armsfig 5    // air superiority fighter
+bind  Shift+Alt+v  altenqueueunit corsfig 5    // air superiority fighter
+bind  Shift+Alt+b  altenqueueunit armsb 5      // thunder bomber
+bind  Shift+Alt+b  altenqueueunit corsb 5      // dam buster bomber
+bind  Shift+Alt+n  altenqueueunit armsaber 5   // seaplane gunship (fires on ground units)
+bind  Shift+Alt+n  altenqueueunit corcut 5     // seaplane gunship (fires on ground units)
+bind  Shift+Alt+m  altenqueueunit armseap 5    // torpedo gunship (fires on sea units)
+bind  Shift+Alt+m  altenqueueunit corseap 5    // torpedo gunship (fires on sea units)
+
+// I've done my best to prevent hotkeys for amphibious factories from overlapping in 
+// in other labs, however, they all end up falling on b through /, which is not
+// quite as convenient as z through b.
+  
+bind  l  buildunit_corseal     // croc -- this binding should not overlap with loadunits.
+bind  ;  buildunit_corintr     // intruder
+
+bind  Alt+l  altenqueueunit corseal 1    // croc -- this binding should not overlap with loadunits.
+bind  Alt+;  altenqueueunit corintr 1    // intruder
+
+bind  Ctrl+l  dequeueunit corseal 1    // croc -- this binding should not overlap with loadunits.
+bind  Ctrl+;  dequeueunit corintr 1    // intruder
+
+bind  Shift+l  enqueueunit corseal 5    // croc -- this binding should not overlap with loadunits.
+bind  Shift+;  enqueueunit corintr 5    // intruder
+
+bind  Shift+Alt+l  altenqueueunit corseal 5    // croc -- this binding should not overlap with loadunits.
+bind  Shift+Alt+;  altenqueueunit corintr 5    // intruder
+
+//T2
+//bots
+bind  z  buildunit_armack     // T2 con
+bind  z  buildunit_corack     // T2 con
+bind  x  buildunit_armfark    // fark
+bind  x  buildunit_corfast    // freaker
+bind  c  buildunit_armfast    // zipper
+bind  c  buildunit_corpyro    // pyro
+bind  v  buildunit_armfido    // fido
+bind  v  buildunit_cormort    // morty
+bind  b  buildunit_armzeus    // zeus
+bind  b  buildunit_corcan     // can
+bind  n  buildunit_armaak     // archangel AA
+bind  n  buildunit_coraak     // manticore AA
+bind  m  buildunit_armsnipe   // sniper
+bind  m  buildunit_corhrk     // dominator
+bind  ,  buildunit_armfboy    // fatboy
+bind  ,  buildunit_corsumo    // sumo
+bind  .  buildunit_armsptk    // recluse
+bind  .  buildunit_cortermite // termite
+bind  /  buildunit_armspy     // infiltrator
+bind  /  buildunit_corspy     // parasite
+bind  h  buildunit_armaser    // jammer
+bind  h  buildunit_corspec    // jammer
+bind  j  buildunit_armmark    // radar
+bind  j  buildunit_corvoyr    // radar
+
+bind  Alt+z  altenqueueunit armack 1    // T2 con
+bind  Alt+z  altenqueueunit corack 1    // T2 con
+bind  Alt+x  altenqueueunit armfark 1   // fark
+bind  Alt+x  altenqueueunit corfast 1   // freaker
+bind  Alt+c  altenqueueunit armfast 1   // zipper
+bind  Alt+c  altenqueueunit corpyro 1   // pyro
+bind  Alt+v  altenqueueunit armfido 1   // fido
+bind  Alt+v  altenqueueunit cormort 1   // morty
+bind  Alt+b  altenqueueunit armzeus 1   // zeus
+bind  Alt+b  altenqueueunit corcan  1   // can
+bind  Alt+n  altenqueueunit armaak  1   // archangel AA
+bind  Alt+n  altenqueueunit coraak  1   // manticore AA
+bind  Alt+m  altenqueueunit armsnipe 1  // sniper
+bind  Alt+m  altenqueueunit corhrk 1    // dominator
+bind  Alt+,  altenqueueunit armfboy 1   // fatboy
+bind  Alt+,  altenqueueunit corsumo 1   // sumo
+bind  Alt+.  altenqueueunit armsptk  1  // recluse
+bind  Alt+.  altenqueueunit cortermite 1 // termite
+bind  Alt+/  altenqueueunit armspy 1    // infiltrator
+bind  Alt+/  altenqueueunit corspy 1    // parasite
+bind  Alt+h  altenqueueunit armaser 1   // jammer
+bind  Alt+h  altenqueueunit corspec 1   // jammer
+bind  Alt+j  altenqueueunit armmark 1   // radar
+bind  Alt+j  altenqueueunit corvoyr 1   // radar
+
+bind  Ctrl+z  dequeueunit armack 1    // T2 con
+bind  Ctrl+z  dequeueunit corack 1    // T2 con
+bind  Ctrl+x  dequeueunit armfark 1   // fark
+bind  Ctrl+x  dequeueunit corfast 1   // freaker
+bind  Ctrl+c  dequeueunit armfast 1   // zipper
+bind  Ctrl+c  dequeueunit corpyro 1   // pyro
+bind  Ctrl+v  dequeueunit armfido 1   // fido
+bind  Ctrl+v  dequeueunit cormort 1   // morty
+bind  Ctrl+b  dequeueunit armzeus 1   // zeus
+bind  Ctrl+b  dequeueunit corcan  1   // can
+bind  Ctrl+n  dequeueunit armaak  1   // archangel AA
+bind  Ctrl+n  dequeueunit coraak  1   // manticore AA
+bind  Ctrl+m  dequeueunit armsnipe 1  // sniper
+bind  Ctrl+m  dequeueunit corhrk 1    // dominator
+bind  Ctrl+,  dequeueunit armfboy 1   // fatboy
+bind  Ctrl+,  dequeueunit corsumo 1   // sumo
+bind  Ctrl+.  dequeueunit armsptk  1  // recluse
+bind  Ctrl+.  dequeueunit cortermite 1 // termite
+bind  Ctrl+/  dequeueunit armspy 1    // infiltrator
+bind  Ctrl+/  dequeueunit corspy 1    // parasite
+bind  Ctrl+h  dequeueunit armaser 1   // jammer
+bind  Ctrl+h  dequeueunit corspec 1   // jammer
+bind  Ctrl+j  dequeueunit armmark 1   // radar
+bind  Ctrl+j  dequeueunit corvoyr 1   // radar
+
+bind  Shift+z  enqueueunit armack 5    // T2 con
+bind  Shift+z  enqueueunit corack 5    // T2 con
+bind  Shift+x  enqueueunit armfark 5   // fark
+bind  Shift+x  enqueueunit corfast 5   // freaker
+bind  Shift+c  enqueueunit armfast 5   // zipper
+bind  Shift+c  enqueueunit corpyro 5   // pyro
+bind  Shift+v  enqueueunit armfido 5   // fido
+bind  Shift+v  enqueueunit cormort 5   // morty
+bind  Shift+b  enqueueunit armzeus 5   // zeus
+bind  Shift+b  enqueueunit corcan  5   // can
+bind  Shift+n  enqueueunit armaak  5   // archangel AA
+bind  Shift+n  enqueueunit coraak  5   // manticore AA
+bind  Shift+m  enqueueunit armsnipe 5  // sniper
+bind  Shift+m  enqueueunit corhrk 5    // dominator
+bind  Shift+,  enqueueunit armfboy 5   // fatboy
+bind  Shift+,  enqueueunit corsumo 5   // sumo
+bind  Shift+.  enqueueunit armsptk  5  // recluse
+bind  Shift+.  enqueueunit cortermite 5 // termite
+bind  Shift+/  enqueueunit armspy 5    // infiltrator
+bind  Shift+/  enqueueunit corspy 5    // parasite
+bind  Shift+h  enqueueunit armaser 5   // jammer
+bind  Shift+h  enqueueunit corspec 5   // jammer
+bind  Shift+j  enqueueunit armmark 5   // radar
+bind  Shift+j  enqueueunit corvoyr 5   // radar
+
+bind  Shift+Alt+z  altenqueueunit armack 5    // T2 con
+bind  Shift+Alt+z  altenqueueunit corack 5    // T2 con
+bind  Shift+Alt+x  altenqueueunit armfark 5   // fark
+bind  Shift+Alt+x  altenqueueunit corfast 5   // freaker
+bind  Shift+Alt+c  altenqueueunit armfast 5   // zipper
+bind  Shift+Alt+c  altenqueueunit corpyro 5   // pyro
+bind  Shift+Alt+v  altenqueueunit armfido 5   // fido
+bind  Shift+Alt+v  altenqueueunit cormort 5   // morty
+bind  Shift+Alt+b  altenqueueunit armzeus 5   // zeus
+bind  Shift+Alt+b  altenqueueunit corcan  5   // can
+bind  Shift+Alt+n  altenqueueunit armaak  5   // archangel AA
+bind  Shift+Alt+n  altenqueueunit coraak  5   // manticore AA
+bind  Shift+Alt+m  altenqueueunit armsnipe 5  // sniper
+bind  Shift+Alt+m  altenqueueunit corhrk 5    // dominator
+bind  Shift+Alt+,  altenqueueunit armfboy 5   // fatboy
+bind  Shift+Alt+,  altenqueueunit corsumo 5   // sumo
+bind  Shift+Alt+.  altenqueueunit armsptk  5  // recluse
+bind  Shift+Alt+.  altenqueueunit cortermite 5 // termite
+bind  Shift+Alt+/  altenqueueunit armspy 5    // infiltrator
+bind  Shift+Alt+/  altenqueueunit corspy 5    // parasite
+bind  Shift+Alt+h  altenqueueunit armaser 5   // jammer
+bind  Shift+Alt+h  altenqueueunit corspec 5   // jammer
+bind  Shift+Alt+j  altenqueueunit armmark 5   // radar
+bind  Shift+Alt+j  altenqueueunit corvoyr 5   // radar
+
+// vehicles
+bind  z  buildunit_armacv     // T2 con
+bind  z  buildunit_coracv     // T2 con
+bind  x  buildunit_armconsul  // consul
+// bind  x  buildunit_cor     // no cor consul equiv :(~~~
+bind  c  buildunit_armbull    // bulldog
+bind  c  buildunit_correap    // reaper
+bind  v  buildunit_armmart    // luger
+bind  v  buildunit_cormart    // pillager
+bind  b  buildunit_armlatnk   // panther
+bind  b  buildunit_corban     // banisher
+bind  n  buildunit_armyork    // phalanx AA !fixed?
+bind  n  buildunit_corsent    // copperhead AA
+bind  m  buildunit_armcroc    // triton
+bind  m  buildunit_corparrow  // poison arrow
+bind  ,  buildunit_armmanni   // penetrator tachyon
+bind  ,  buildunit_corgol     // goliath
+bind  .  buildunit_armgremlin // gremlin !!not working ??
+bind  .  buildunit_cortrem    // tremor
+bind  /  buildunit_armmerl    // merl
+bind  /  buildunit_corvroc    // diplomat
+bind  h  buildunit_armjam     // jammer
+bind  h  buildunit_coreter    // jammer
+bind  j  buildunit_armseer    // radar
+bind  j  buildunit_corvrad    // radar
+
+bind  Alt+z  altenqueueunit armacv 1    // T2 con
+bind  Alt+z  altenqueueunit coracv 1    // T2 con
+bind  Alt+x  altenqueueunit armconsul 1 // consul
+// bind  Alt+x  altenqueueunit cor 1    // no cor consul equiv :(~~~
+bind  Alt+c  altenqueueunit armbull 1   // bulldog
+bind  Alt+c  altenqueueunit correap 1   // reaper
+bind  Alt+v  altenqueueunit armmart 1   // luger
+bind  Alt+v  altenqueueunit cormart 1   // pillager
+bind  Alt+b  altenqueueunit armlatnk 1  // panther
+bind  Alt+b  altenqueueunit corban 1    // banisher
+bind  Alt+n  altenqueueunit armyork 1   // phalanx AA !fixed?
+bind  Alt+n  altenqueueunit corsent 1   // copperhead AA
+bind  Alt+m  altenqueueunit armcroc 1   // triton
+bind  Alt+m  altenqueueunit corparrow 1 // poison arrow
+bind  Alt+,  altenqueueunit armmanni 1  // penetrator tachyon
+bind  Alt+,  altenqueueunit corgol 1    // goliath
+bind  Alt+.  altenqueueunit armgremlin 1 // gremlin !!not working ??
+bind  Alt+.  altenqueueunit cortrem 1   // tremor
+bind  Alt+/  altenqueueunit armmerl 1   // merl
+bind  Alt+/  altenqueueunit corvroc 1   // diplomat
+bind  Alt+h  altenqueueunit armjam 1    // jammer
+bind  Alt+h  altenqueueunit coreter 1   // jammer
+bind  Alt+j  altenqueueunit armseer 1   // radar
+bind  Alt+j  altenqueueunit corvrad 1   // radar
+
+bind  Ctrl+z  dequeueunit armacv 1    // T2 con
+bind  Ctrl+z  dequeueunit coracv 1    // T2 con
+bind  Ctrl+x  dequeueunit armconsul 1 // consul
+// bind  Ctrl+x  dequeueunit cor 1    // no cor consul equiv :(~~~
+bind  Ctrl+c  dequeueunit armbull 1   // bulldog
+bind  Ctrl+c  dequeueunit correap 1   // reaper
+bind  Ctrl+v  dequeueunit armmart 1   // luger
+bind  Ctrl+v  dequeueunit cormart 1   // pillager
+bind  Ctrl+b  dequeueunit armlatnk 1  // panther
+bind  Ctrl+b  dequeueunit corban 1    // banisher
+bind  Ctrl+n  dequeueunit armyork 1   // phalanx AA !fixed?
+bind  Ctrl+n  dequeueunit corsent 1   // copperhead AA
+bind  Ctrl+m  dequeueunit armcroc 1   // triton
+bind  Ctrl+m  dequeueunit corparrow 1 // poison arrow
+bind  Ctrl+,  dequeueunit armmanni 1  // penetrator tachyon
+bind  Ctrl+,  dequeueunit corgol 1    // goliath
+bind  Ctrl+.  dequeueunit armgremlin 1 // gremlin !!not working ??
+bind  Ctrl+.  dequeueunit cortrem 1   // tremor
+bind  Ctrl+/  dequeueunit armmerl 1   // merl
+bind  Ctrl+/  dequeueunit corvroc 1   // diplomat
+bind  Ctrl+h  dequeueunit armjam 1    // jammer
+bind  Ctrl+h  dequeueunit coreter 1   // jammer
+bind  Ctrl+j  dequeueunit armseer 1   // radar
+bind  Ctrl+j  dequeueunit corvrad 1   // radar
+
+bind  Shift+z  enqueueunit armacv 5    // T2 con
+bind  Shift+z  enqueueunit coracv 5    // T2 con
+bind  Shift+x  enqueueunit armconsul 5 // consul
+// bind  Shift+x  enqueueunit cor 5    // no cor consul equiv :(~~~
+bind  Shift+c  enqueueunit armbull 5   // bulldog
+bind  Shift+c  enqueueunit correap 5   // reaper
+bind  Shift+v  enqueueunit armmart 5   // luger
+bind  Shift+v  enqueueunit cormart 5   // pillager
+bind  Shift+b  enqueueunit armlatnk 5  // panther
+bind  Shift+b  enqueueunit corban 5    // banisher
+bind  Shift+n  enqueueunit armyork 5   // phalanx AA !fixed?
+bind  Shift+n  enqueueunit corsent 5   // copperhead AA
+bind  Shift+m  enqueueunit armcroc 5   // triton
+bind  Shift+m  enqueueunit corparrow 5 // poison arrow
+bind  Shift+,  enqueueunit armmanni 5  // penetrator tachyon
+bind  Shift+,  enqueueunit corgol 5    // goliath
+bind  Shift+.  enqueueunit armgremlin 5 // gremlin !!not working ??
+bind  Shift+.  enqueueunit cortrem 5   // tremor
+bind  Shift+/  enqueueunit armmerl 5   // merl
+bind  Shift+/  enqueueunit corvroc 5   // diplomat
+bind  Shift+h  enqueueunit armjam 5    // jammer
+bind  Shift+h  enqueueunit coreter 5   // jammer
+bind  Shift+j  enqueueunit armseer 5   // radar
+bind  Shift+j  enqueueunit corvrad 5   // radar
+
+bind  Shift+Alt+z  altenqueueunit armacv 5    // T2 con
+bind  Shift+Alt+z  altenqueueunit coracv 5    // T2 con
+bind  Shift+Alt+x  altenqueueunit armconsul 5 // consul
+// bind  Shift+Alt+x  altenqueueunit cor 5    // no cor consul equiv :(~~~
+bind  Shift+Alt+c  altenqueueunit armbull 5   // bulldog
+bind  Shift+Alt+c  altenqueueunit correap 5   // reaper
+bind  Shift+Alt+v  altenqueueunit armmart 5   // luger
+bind  Shift+Alt+v  altenqueueunit cormart 5   // pillager
+bind  Shift+Alt+b  altenqueueunit armlatnk 5  // panther
+bind  Shift+Alt+b  altenqueueunit corban 5    // banisher
+bind  Shift+Alt+n  altenqueueunit armyork 5   // phalanx AA !fixed?
+bind  Shift+Alt+n  altenqueueunit corsent 5   // copperhead AA
+bind  Shift+Alt+m  altenqueueunit armcroc 5   // triton
+bind  Shift+Alt+m  altenqueueunit corparrow 5 // poison arrow
+bind  Shift+Alt+,  altenqueueunit armmanni 5  // penetrator tachyon
+bind  Shift+Alt+,  altenqueueunit corgol 5    // goliath
+bind  Shift+Alt+.  altenqueueunit armgremlin 5 // gremlin !!not working ??
+bind  Shift+Alt+.  altenqueueunit cortrem 5   // tremor
+bind  Shift+Alt+/  altenqueueunit armmerl 5   // merl
+bind  Shift+Alt+/  altenqueueunit corvroc 5   // diplomat
+bind  Shift+Alt+h  altenqueueunit armjam 5    // jammer
+bind  Shift+Alt+h  altenqueueunit coreter 5   // jammer
+bind  Shift+Alt+j  altenqueueunit armseer 5   // radar
+bind  Shift+Alt+j  altenqueueunit corvrad 5   // radar
+
+// aircraft
+bind  z  buildunit_armaca     // T2 con
+bind  z  buildunit_coraca     // T2 con
+bind  x  buildunit_armawac    // eagle
+bind  x  buildunit_corawac    // vulture
+bind  c  buildunit_armdfly    // dragonfly
+bind  c  buildunit_corseah    // seahook
+bind  v  buildunit_armhawk    // hawk
+bind  v  buildunit_corvamp    // vamp
+bind  b  buildunit_armpnix    // phoenix
+bind  b  buildunit_corhurc    // hurricane
+bind  n  buildunit_armblade   // blade
+bind  n  buildunit_corape     // rapier
+bind  m  buildunit_armlance   // lancet
+bind  m  buildunit_cortitan   // titan
+bind  ,  buildunit_armliche   // liche
+bind  ,  buildunit_corcrw     // krow
+bind  .  buildunit_armstil    // stiletto
+bind  /  buildunit_armbrawl   // brawler
+
+bind  Alt+z  altenqueueunit armaca 1    // T2 con
+bind  Alt+z  altenqueueunit coraca 1    // T2 con
+bind  Alt+x  altenqueueunit armawac 1   // eagle
+bind  Alt+x  altenqueueunit corawac 1   // vulture
+bind  Alt+c  altenqueueunit armdfly 1   // dragonfly
+bind  Alt+c  altenqueueunit corseah 1   // seahook
+bind  Alt+v  altenqueueunit armhawk 1   // hawk
+bind  Alt+v  altenqueueunit corvamp 1   // vamp
+bind  Alt+b  altenqueueunit armpnix 1   // phoenix
+bind  Alt+b  altenqueueunit corhurc  1  // hurricane
+bind  Alt+n  altenqueueunit armblade 1  // blade
+bind  Alt+n  altenqueueunit corape 1    // rapier
+bind  Alt+m  altenqueueunit armlance 1  // lancet
+bind  Alt+m  altenqueueunit cortitan 1  // titan
+bind  Alt+,  altenqueueunit armliche 1  // liche
+bind  Alt+,  altenqueueunit corcrw 1    // krow
+bind  Alt+.  altenqueueunit armstil 1   // stiletto
+bind  Alt+/  altenqueueunit armbrawl 1  // brawler
+
+bind  Ctrl+z  dequeueunit armaca 1    // T2 con
+bind  Ctrl+z  dequeueunit coraca 1    // T2 con
+bind  Ctrl+x  dequeueunit armawac 1   // eagle
+bind  Ctrl+x  dequeueunit corawac 1   // vulture
+bind  Ctrl+c  dequeueunit armdfly 1   // dragonfly
+bind  Ctrl+c  dequeueunit corseah 1   // seahook
+bind  Ctrl+v  dequeueunit armhawk 1   // hawk
+bind  Ctrl+v  dequeueunit corvamp 1   // vamp
+bind  Ctrl+b  dequeueunit armpnix 1   // phoenix
+bind  Ctrl+b  dequeueunit corhurc  1  // hurricane
+bind  Ctrl+n  dequeueunit armblade 1  // blade
+bind  Ctrl+n  dequeueunit corape 1    // rapier
+bind  Ctrl+m  dequeueunit armlance 1  // lancet
+bind  Ctrl+m  dequeueunit cortitan 1  // titan
+bind  Ctrl+,  dequeueunit armliche 1  // liche
+bind  Ctrl+,  dequeueunit corcrw 1    // krow
+bind  Ctrl+.  dequeueunit armstil 1   // stiletto
+bind  Ctrl+/  dequeueunit armbrawl 1  // brawler
+
+bind  Shift+z  enqueueunit armaca 5    // T2 con
+bind  Shift+z  enqueueunit coraca 5    // T2 con
+bind  Shift+x  enqueueunit armawac 5   // eagle
+bind  Shift+x  enqueueunit corawac 5   // vulture
+bind  Shift+c  enqueueunit armdfly 5   // dragonfly
+bind  Shift+c  enqueueunit corseah 5   // seahook
+bind  Shift+v  enqueueunit armhawk 5   // hawk
+bind  Shift+v  enqueueunit corvamp 5   // vamp
+bind  Shift+b  enqueueunit armpnix 5   // phoenix
+bind  Shift+b  enqueueunit corhurc  5  // hurricane
+bind  Shift+n  enqueueunit armblade 5  // blade
+bind  Shift+n  enqueueunit corape 5    // rapier
+bind  Shift+m  enqueueunit armlance 5  // lancet
+bind  Shift+m  enqueueunit cortitan 5  // titan
+bind  Shift+,  enqueueunit armliche 5  // liche
+bind  Shift+,  enqueueunit corcrw 5    // krow
+bind  Shift+.  enqueueunit armstil 5   // stiletto
+bind  Shift+/  enqueueunit armbrawl 5  // brawler
+
+bind  Shift+Alt+z  altenqueueunit armaca 5    // T2 con
+bind  Shift+Alt+z  altenqueueunit coraca 5    // T2 con
+bind  Shift+Alt+x  altenqueueunit armawac 5   // eagle
+bind  Shift+Alt+x  altenqueueunit corawac 5   // vulture
+bind  Shift+Alt+c  altenqueueunit armdfly 5   // dragonfly
+bind  Shift+Alt+c  altenqueueunit corseah 5   // seahook
+bind  Shift+Alt+v  altenqueueunit armhawk 5   // hawk
+bind  Shift+Alt+v  altenqueueunit corvamp 5   // vamp
+bind  Shift+Alt+b  altenqueueunit armpnix 5   // phoenix
+bind  Shift+Alt+b  altenqueueunit corhurc  5  // hurricane
+bind  Shift+Alt+n  altenqueueunit armblade 5  // blade
+bind  Shift+Alt+n  altenqueueunit corape 5    // rapier
+bind  Shift+Alt+m  altenqueueunit armlance 5  // lancet
+bind  Shift+Alt+m  altenqueueunit cortitan 5  // titan
+bind  Shift+Alt+,  altenqueueunit armliche 5  // liche
+bind  Shift+Alt+,  altenqueueunit corcrw 5    // krow
+bind  Shift+Alt+.  altenqueueunit armstil 5   // stiletto
+bind  Shift+Alt+/  altenqueueunit armbrawl 5  // brawler
+
+// shipyard
+bind  z  buildunit_armacsub   // T2 con sub
+bind  z  buildunit_coracsub   // T2 con sub
+bind  x  buildunit_armmls     // naval engineer
+bind  x  buildunit_cormls     // naval engineer
+bind  c  buildunit_armcrus    // conqueror cruiser
+bind  c  buildunit_corcrus    // executioner cruiser
+bind  v  buildunit_armaas     // archer AA
+bind  v  buildunit_corarch    // shredder AA
+bind  b  buildunit_armbats    // battleship
+bind  b  buildunit_corbats    // battleship
+bind  n  buildunit_armsubk    // sub killer - fast sub
+bind  n  buildunit_corshark   // sub killer - fast sub
+bind  m  buildunit_armserp    // serpent - long range sub
+bind  m  buildunit_corssub    // leviathan - long range sub
+bind  ,  buildunit_armmship   // missile cruiser
+bind  ,  buildunit_cormship   // missile cruiser
+bind  .  buildunit_armepoch   // flagship
+bind  .  buildunit_corblackhy // flagship
+bind  h  buildunit_armsjam    // jammer
+bind  h  buildunit_corsjam    // jammer
+bind  j  buildunit_armcarry   // carrier
+bind  j  buildunit_corcarry   // carrier
+
+bind  Alt+z  altenqueueunit armacsub 1  // T2 con sub
+bind  Alt+z  altenqueueunit coracsub 1  // T2 con sub
+bind  Alt+x  altenqueueunit armmls 1    // naval engineer
+bind  Alt+x  altenqueueunit cormls 1    // naval engineer
+bind  Alt+c  altenqueueunit armcrus 1   // conqueror cruiser
+bind  Alt+c  altenqueueunit corcrus 1   // executioner cruiser
+bind  Alt+v  altenqueueunit armaas 1    // archer AA
+bind  Alt+v  altenqueueunit corarch 1   // shredder AA
+bind  Alt+b  altenqueueunit armbats 1   // battleship
+bind  Alt+b  altenqueueunit corbats 1   // battleship
+bind  Alt+n  altenqueueunit armsubk 1   // sub killer - fast sub
+bind  Alt+n  altenqueueunit corshark 1  // sub killer - fast sub
+bind  Alt+m  altenqueueunit armserp 1   // serpent - long range sub
+bind  Alt+m  altenqueueunit corssub 1   // leviathan - long range sub
+bind  Alt+,  altenqueueunit armmship 1  // missile cruiser
+bind  Alt+,  altenqueueunit cormship 1  // missile cruiser
+bind  Alt+.  altenqueueunit armepoch 1  // flagship
+bind  Alt+.  altenqueueunit corblackhy 1 // flagship
+bind  Alt+h  altenqueueunit armsjam 1   // jammer
+bind  Alt+h  altenqueueunit corsjam 1   // jammer
+bind  Alt+j  altenqueueunit armcarry 1  // carrier
+bind  Alt+j  altenqueueunit corcarry 1  // carrier
+
+bind  Ctrl+z  dequeueunit armacsub 1  // T2 con sub
+bind  Ctrl+z  dequeueunit coracsub 1  // T2 con sub
+bind  Ctrl+x  dequeueunit armmls 1    // naval engineer
+bind  Ctrl+x  dequeueunit cormls 1    // naval engineer
+bind  Ctrl+c  dequeueunit armcrus 1   // conqueror cruiser
+bind  Ctrl+c  dequeueunit corcrus 1   // executioner cruiser
+bind  Ctrl+v  dequeueunit armaas 1    // archer AA
+bind  Ctrl+v  dequeueunit corarch 1   // shredder AA
+bind  Ctrl+b  dequeueunit armbats 1   // battleship
+bind  Ctrl+b  dequeueunit corbats 1   // battleship
+bind  Ctrl+n  dequeueunit armsubk 1   // sub killer - fast sub
+bind  Ctrl+n  dequeueunit corshark 1  // sub killer - fast sub
+bind  Ctrl+m  dequeueunit armserp 1   // serpent - long range sub
+bind  Ctrl+m  dequeueunit corssub 1   // leviathan - long range sub
+bind  Ctrl+,  dequeueunit armmship 1  // missile cruiser
+bind  Ctrl+,  dequeueunit cormship 1  // missile cruiser
+bind  Ctrl+.  dequeueunit armepoch 1  // flagship
+bind  Ctrl+.  dequeueunit corblackhy 1 // flagship
+bind  Ctrl+h  dequeueunit armsjam 1   // jammer
+bind  Ctrl+h  dequeueunit corsjam 1   // jammer
+bind  Ctrl+j  dequeueunit armcarry 1  // carrier
+bind  Ctrl+j  dequeueunit corcarry 1  // carrier
+
+bind  Shift+z  enqueueunit armacsub 5  // T2 con sub
+bind  Shift+z  enqueueunit coracsub 5  // T2 con sub
+bind  Shift+x  enqueueunit armmls 5    // naval engineer
+bind  Shift+x  enqueueunit cormls 5    // naval engineer
+bind  Shift+c  enqueueunit armcrus 5   // conqueror cruiser
+bind  Shift+c  enqueueunit corcrus 5   // executioner cruiser
+bind  Shift+v  enqueueunit armaas 5    // archer AA
+bind  Shift+v  enqueueunit corarch 5   // shredder AA
+bind  Shift+b  enqueueunit armbats 5   // battleship
+bind  Shift+b  enqueueunit corbats 5   // battleship
+bind  Shift+n  enqueueunit armsubk 5   // sub killer - fast sub
+bind  Shift+n  enqueueunit corshark 5  // sub killer - fast sub
+bind  Shift+m  enqueueunit armserp 5   // serpent - long range sub
+bind  Shift+m  enqueueunit corssub 5   // leviathan - long range sub
+bind  Shift+,  enqueueunit armmship 5  // missile cruiser
+bind  Shift+,  enqueueunit cormship 5  // missile cruiser
+bind  Shift+.  enqueueunit armepoch 5  // flagship
+bind  Shift+.  enqueueunit corblackhy 5 // flagship
+bind  Shift+h  enqueueunit armsjam 5   // jammer
+bind  Shift+h  enqueueunit corsjam 5   // jammer
+bind  Shift+j  enqueueunit armcarry 5  // carrier
+bind  Shift+j  enqueueunit corcarry 5  // carrier
+
+bind  Shift+Alt+z  altenqueueunit armacsub 5  // T2 con sub
+bind  Shift+Alt+z  altenqueueunit coracsub 5  // T2 con sub
+bind  Shift+Alt+x  altenqueueunit armmls 5    // naval engineer
+bind  Shift+Alt+x  altenqueueunit cormls 5    // naval engineer
+bind  Shift+Alt+c  altenqueueunit armcrus 5   // conqueror cruiser
+bind  Shift+Alt+c  altenqueueunit corcrus 5   // executioner cruiser
+bind  Shift+Alt+v  altenqueueunit armaas 5    // archer AA
+bind  Shift+Alt+v  altenqueueunit corarch 5   // shredder AA
+bind  Shift+Alt+b  altenqueueunit armbats 5   // battleship
+bind  Shift+Alt+b  altenqueueunit corbats 5   // battleship
+bind  Shift+Alt+n  altenqueueunit armsubk 5   // sub killer - fast sub
+bind  Shift+Alt+n  altenqueueunit corshark 5  // sub killer - fast sub
+bind  Shift+Alt+m  altenqueueunit armserp 5   // serpent - long range sub
+bind  Shift+Alt+m  altenqueueunit corssub 5   // leviathan - long range sub
+bind  Shift+Alt+,  altenqueueunit armmship 5  // missile cruiser
+bind  Shift+Alt+,  altenqueueunit cormship 5  // missile cruiser
+bind  Shift+Alt+.  altenqueueunit armepoch 5  // flagship
+bind  Shift+Alt+.  altenqueueunit corblackhy 5 // flagship
+bind  Shift+Alt+h  altenqueueunit armsjam 5   // jammer
+bind  Shift+Alt+h  altenqueueunit corsjam 5   // jammer
+bind  Shift+Alt+j  altenqueueunit armcarry 5  // carrier
+bind  Shift+Alt+j  altenqueueunit corcarry 5  // carrier
+
+// T3
+bind  z  buildunit_armlun      // T3 hovertank
+bind  z  buildunit_corsok      // T3 hovertank
+bind  x  buildunit_armmar      // marauder
+bind  x  buildunit_corshiva    // shiva
+bind  c  buildunit_armvang     // vanguard
+bind  c  buildunit_corcat      // catapult
+bind  v  buildunit_armraz      // razorback
+bind  v  buildunit_corkarg     // karganeth
+bind  b  buildunit_armthor     // thor
+bind  b  buildunit_corjugg     // juggernaut
+bind  n  buildunit_armbanth    // bantha
+bind  n  buildunit_corkorg     // korgoth
+
+bind  Alt+z  altenqueueunit armlun 1     // T3 hovertank
+bind  Alt+z  altenqueueunit corsok 1     // T3 hovertank
+bind  Alt+x  altenqueueunit armmar 1     // marauder
+bind  Alt+x  altenqueueunit corshiva 1   // shiva
+bind  Alt+c  altenqueueunit armvang 1    // vanguard
+bind  Alt+c  altenqueueunit corcat 1     // catapult
+bind  Alt+v  altenqueueunit armraz 1     // razorback
+bind  Alt+v  altenqueueunit corkarg 1    // karganeth
+bind  Alt+b  altenqueueunit armthor 1    // thor
+bind  Alt+b  altenqueueunit corjugg 1    // juggernaut
+bind  Alt+n  altenqueueunit armbanth 1   // bantha
+bind  Alt+n  altenqueueunit corkorg 1    // korgoth
+
+bind  Ctrl+z  dequeueunit armlun 1     // T3 hovertank
+bind  Ctrl+z  dequeueunit corsok 1     // T3 hovertank
+bind  Ctrl+x  dequeueunit armmar 1     // marauder
+bind  Ctrl+x  dequeueunit corshiva 1   // shiva
+bind  Ctrl+c  dequeueunit armvang 1    // vanguard
+bind  Ctrl+c  dequeueunit corcat 1     // catapult
+bind  Ctrl+v  dequeueunit armraz 1     // razorback
+bind  Ctrl+v  dequeueunit corkarg 1    // karganeth
+bind  Ctrl+b  dequeueunit armthor 1    // thor
+bind  Ctrl+b  dequeueunit corjugg 1    // juggernaut
+bind  Ctrl+n  dequeueunit armbanth 1   // bantha
+bind  Ctrl+n  dequeueunit corkorg 1    // korgoth
+
+bind  Shift+z  enqueueunit armlun 5     // T3 hovertank
+bind  Shift+z  enqueueunit corsok 5     // T3 hovertank
+bind  Shift+x  enqueueunit armmar 5     // marauder
+bind  Shift+x  enqueueunit corshiva 5   // shiva
+bind  Shift+c  enqueueunit armvang 5    // vanguard
+bind  Shift+c  enqueueunit corcat 5     // catapult
+bind  Shift+v  enqueueunit armraz 5     // razorback
+bind  Shift+v  enqueueunit corkarg 5    // karganeth
+bind  Shift+b  enqueueunit armthor 5    // thor
+bind  Shift+b  enqueueunit corjugg 5    // juggernaut
+bind  Shift+n  enqueueunit armbanth 5   // bantha
+bind  Shift+n  enqueueunit corkorg 5    // korgoth
+
+bind  Shift+Alt+z  altenqueueunit armlun 5     // T3 hovertank
+bind  Shift+Alt+z  altenqueueunit corsok 5     // T3 hovertank
+bind  Shift+Alt+x  altenqueueunit armmar 5     // marauder
+bind  Shift+Alt+x  altenqueueunit corshiva 5   // shiva
+bind  Shift+Alt+c  altenqueueunit armvang 5    // vanguard
+bind  Shift+Alt+c  altenqueueunit corcat 5     // catapult
+bind  Shift+Alt+v  altenqueueunit armraz 5     // razorback
+bind  Shift+Alt+v  altenqueueunit corkarg 5    // karganeth
+bind  Shift+Alt+b  altenqueueunit armthor 5    // thor
+bind  Shift+Alt+b  altenqueueunit corjugg 5    // juggernaut
+bind  Shift+Alt+n  altenqueueunit armbanth 5   // bantha
+bind  Shift+Alt+n  altenqueueunit corkorg 5    // korgoth
+
+
+
