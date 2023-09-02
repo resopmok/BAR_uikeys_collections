@@ -10,6 +10,7 @@ There may be a variety of reasons why you want to change a single or multiple ke
 - Open "data" folder (not necessary on Linux systems). This is where the custom keybind config file, `uikeys.txt`, will  live.
 - In-game (singleplayer skirmish against InactiveAI), first choose the preset you want to customize from Settings -> Control -> Keybindings
 - Then from Settings -> Control -> Keybindings, select "Custom" from the drop-down and the game will create a `uikeys.txt` for you to edit with your favorite text editor. This first version of your custom file is based on the last preset you had chosen.
+  - We recommend using [VS Code](https://code.visualstudio.com/) with the [`uikeys` extension](https://marketplace.visualstudio.com/items?itemName=nbusseneau.vscode-uikeys), for syntax highlighting and completion suggestions.
 - To test your changes in real time: Type `/keyreload` after you have saved additional changes to your `uikeys.txt`.
 
 ## Customize by using the Ingame Keybind Editor widget (by MasterBel)

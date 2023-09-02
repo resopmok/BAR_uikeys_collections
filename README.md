@@ -31,3 +31,6 @@ keyload luaui/configs/hotkeys/default_keys.txt
 
 # Keybind reference
 https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
+
+# VS Code extension
+https://marketplace.visualstudio.com/items?itemName=nbusseneau.vscode-uikeys
