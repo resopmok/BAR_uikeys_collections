@@ -52,6 +52,25 @@ This sets the config to read your local `num_keys.txt` which has the changes, in
 There are "scancodes" in the config files that ensure the layout is positional ( if g were swapped with a, you would press g to atacck). The mnemonic layout is for people who have keyboard layouts different from qwerty but prefer their commands in their home keyboard's position instead (a would still attack, but that is located where g is on a qwerty keyboard).
 This layout was made shortly after scancodes were introduced to keybindings to accomodate a few players who had learned the hotkeys in their home keyboard's layout. One colemak user in particular was very confused when pressing s caused his commander to dgun instead of stop.
 
+### How do I use hotkeys with orders that have multiple states you can toggle between (like hold fire and fire at will)?
+
+The stateful orders which have actions exposed for binding are `repeat`, `onoff`, `wantcloak`, `firestate`, and `movestate`. There are some orders which do not have actions exposed for binding, they are priority, fly/land, and retreat percentage. There are two ways you can create keybindings for stateful orders as part of your custom keyset:
+- Define the state using a keychain and an integar as argument. This is how grid optimized uses toggles so that a player does not need to know a unit's current state in order to set it to the desired state (1 tap green, 2 taps red, 3 taps yellow). For example, `firestate` is bound as follows in grid optimized:
+```
+bind     sc_l,sc_l,sc_l  firestate 1
+bind          sc_l,sc_l  firestate 0
+bind               sc_l  firestate 2
+bind Shift+sc_l,Shift+sc_l,Shift+sc_l  firestate 1
+bind Shift+sc_l,Shift+sc_l  firestate 0
+bind         Shift+sc_l  firestate 2
+```
+- Use the keypress as a toggle, the same behavior as clicking on the order menu. To do this, you do not need a keychain and you put no integars as argument to the action. For example:
+```
+bind               sc_l  firestate
+bind         Shift+sc_l  firestate
+```
+Bada-bing! Now you have hotkeys for those order menu toggles.
+
 ### What is different about the 60% layouts? Do you have any images of the 60% layouts?
 
 60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including default and grid 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
