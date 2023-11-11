@@ -95,3 +95,5 @@ Note: this .lua config file will not work in the game anymore. Sometime in the n
 - Keybinding doesn't currently support rebinding of mouse buttons. It is however possible to bind mouse presses in widgets via `MousePress` and `MouseRelease` but it is not recommended to pursue this without some knowledge of how the engine handles these calls.
 - Some users have had success with third party software like AutoHotkey to allow for the rebinding of mouse buttons.
 - Depending on your needs, this widget from MasterBel might be helpful: https://discord.com/channels/549281623154229250/1123878514827997195
+- You could modify this and use it as a custom widget: https://github.com/beyond-all-reason/Beyond-All-Reason/blob/master/luaui/Widgets/gui_buildspacing.lua
+  - Replace input on Spring.SendCommands with what you want to be done
