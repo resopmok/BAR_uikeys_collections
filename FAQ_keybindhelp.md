@@ -2,32 +2,6 @@
 
 # FAQs from #keybind-help
 
-### BAR recently updated the custom keybind format, and I am now missing grid menu unit hotkeys while wanting to use the default key layout. How do I fix?
-
-One of the biggest changes with the new `uikeys.txt` format is that you can now include other preset files by using `keyload`. This might allow you to create a couple different presets (for example, one for playing and one for spectating or casting) and easily change between them by editing a single line in your uikeys.txt. In this case, you will need to put the default keyset with the keyset that manages grid menu hotkeys. 
-- First, from the in-game Settings -> Control -> Keybindings, make sure you have "Custom" selected from the dropdown. WHen you do this a "grid" button will appear right below. The green toggle enables grid build menu, the red one default build menu.
-- Then, make a `uikeys.txt` which contains only the following; put it in your BAR install /data/ directory (not needed on Linux, just put it in the install directory):
-```
-unbindall
-keyload luaui/configs/hotkeys/gridmenu_keys.txt
-keyload luaui/configs/hotkeys/default_keys.txt
-```
-Or, if you were previously using the default 60% layout with grid menu, your uikeys.txt would look like this:
-```
-unbindall
-keyload luaui/configs/hotkeys/gridmenu_keys.txt
-keyload luaui/configs/hotkeys/default_keys_60pct.txt
-```
-### I want to port an old bar_hotkeys_custom.lua format configuration to uikeys.txt (or it failed to update format with recent change).
-
-- First, make sure your keybinds are set to custom ingame.
-- Close the game
-- Make sure your bar_hotkeys_custom.lua file is in your data directory
-- Open springsettings.cfg (in your data folder) and find the line with `KeybindingFile`
-- Set it to `KeybindingFile = bar_hotkeys_custom.lua`
-- If you have a uikeys.txt file, delete or rename it
-- Launch the game, and start a skirmish
-  
 ### I want to move the camera with WASD.
 
 Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_camera_presets/).
@@ -46,11 +20,6 @@ keyload luaui/configs/hotkeys/num_keys.txt
 keyload num_keys.txt
 ```
 This sets the config to read your local `num_keys.txt` which has the changes, instead of the default from the repo.
-
-### What is the "mnemonic" layout and should I use it?
-
-There are "scancodes" in the config files that ensure the layout is positional ( if g were swapped with a, you would press g to atacck). The mnemonic layout is for people who have keyboard layouts different from qwerty but prefer their commands in their home keyboard's position instead (a would still attack, but that is located where g is on a qwerty keyboard).
-This layout was made shortly after scancodes were introduced to keybindings to accomodate a few players who had learned the hotkeys in their home keyboard's layout. One colemak user in particular was very confused when pressing s caused his commander to dgun instead of stop.
 
 ### How do I use hotkeys with orders that have multiple states you can toggle between (like hold fire and fire at will)?
 
@@ -71,13 +40,9 @@ bind         Shift+sc_l  firestate
 ```
 Bada-bing! Now you have hotkeys for those order menu toggles.
 
-### What is different about the 60% layouts? Do you have any images of the 60% layouts?
+### What is different about the 60% layouts?
 
 60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including default and grid 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
-
-### How can I access the widget list and why do I want to?
-
-There may be an option in the in-game settings to enable the widget selector. If so, enable it, then press F11 to bring up the widget menu. If not, type `/widgetselector` into "everyone" chat. This menu is used to enable and disable custom widgets which you have installed in your `/data/LuaUI/Widgets/` directory. This isn't necessarily a hotkey-related question anymore but it comes up frequently anyway.
 
 ### I want to invert the grid menu home row to QWER. How?
 
