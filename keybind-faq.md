@@ -1,8 +1,6 @@
-8 April 2023
+# Keybinding FAQ
 
-# FAQs from #keybind-help
-
-### I want to move the camera with WASD.
+### Controlling the camera with WASD
 
 Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_camera_presets/).
 
@@ -44,7 +42,7 @@ Bada-bing! Now you have hotkeys for those order menu toggles.
 
 60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including default and grid 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
 
-### I want to invert the grid menu home row to QWER. How?
+### Can the grid menu home row be inverted to QWER?
 
 You can use this version of the grid opti config file (https://github.com/resopmok/BAR_uikeys_collections/blob/main/bar_hotkeys_custom_invertqwer.lua) to move your grid menu's home row from ZXCV to QWER. In this case, instead of the ZX keystrokes building you a solar, QW will do so. RA would build you a construction turret, and WS would be your basic anti-air. Currently we can't invert the actual layout of grid menu in game to accomodate, so your QWER row will still display in the same location on the menu that ZXCV was. The config also moves army selection, resurrect, repair, and reclaim order to ZXCV respectively.
 Note: this .lua config file will not work in the game anymore. Sometime in the near future I'll make preset file you can include which would replace your `gridmenu_keys.txt` and makes the swap. It's more likely to happen sooner if someone bothers me about it.
