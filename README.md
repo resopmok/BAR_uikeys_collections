@@ -11,7 +11,10 @@ To use any of these hotkey files, simply make sure they are named `uikeys.txt` a
 For more specific instruction, see:
 - [Custom keybind guide](keybind-guide.md)
 - [Custom keybind FAQ](keybind-faq.md)
-- 
+
+
+For keymaps of the shipped presets, check the preset-images directory.
+
 
 # Built-in hotkey files
 With the uikeys hotkey format it is possible to import other keybind files with all their binds with the `keyload` command. 
