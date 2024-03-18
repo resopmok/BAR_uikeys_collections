@@ -1,0 +1,3 @@
+slpp
+pytest
+requests
