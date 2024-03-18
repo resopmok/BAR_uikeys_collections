@@ -1,0 +1,703 @@
+
+unbindall          // clear the defaults
+unbind enter chat  // clear the defaults
+
+fakemeta  space
+
+bind                esc  select AllMap++_ClearSelection_SelectNum_0+
+bind                esc  quitmessage
+bind          Shift+esc  quitmenu
+bind     Ctrl+Shift+esc  quitforce
+bind      Alt+Shift+esc  reloadforce
+bind         Any+escape  edit_escape
+bind          Any+pause  pause
+bind                esc  teamstatus_close
+bind                esc  customgameinfo_close
+bind                esc  buildmenu_pregame_deselect
+bind      Alt+backspace  fullscreen
+bind           Any+sc_z  selectbox_same
+bind          Any+space  selectbox_idle
+bind          Any+shift  selectbox_all
+bind           Any+ctrl  selectbox_deselect
+bind            Any+alt  selectbox_mobile
+bind          Any+space  selectloop
+bind           Any+ctrl  selectloop_invert
+bind          Any+shift  selectloop_add
+bind          Any+space  commandinsert prepend_queue
+bind          Any+enter  chat
+bind      Alt+ctrl+sc_q  chatswitchally
+bind      Alt+ctrl+sc_s  chatswitchspec
+bind            Any+tab  edit_complete
+bind      Any+backspace  edit_backspace
+bind         Any+delete  edit_delete
+bind           Any+home  edit_home
+bind           Alt+left  edit_home
+bind            Any+end  edit_end
+bind          Alt+right  edit_end
+bind             Any+up  edit_prev_line
+bind           Any+down  edit_next_line
+bind           Any+left  edit_prev_char
+bind          Any+right  edit_next_char
+bind          Ctrl+left  edit_prev_word
+bind         Ctrl+right  edit_next_word
+bind          Any+enter  edit_return
+bind             Ctrl+v  pastetext
+bind             Any+up  moveforward
+bind           Any+down  moveback
+bind          Any+right  moveright
+bind           Any+left  moveleft
+bind         Any+pageup  moveup
+bind       Any+pagedown  movedown
+bind            Any+alt  movereset
+bind            Any+alt  moverotate
+bind           Any+ctrl  movetilt
+bind                  1  specteam 0
+bind                  2  specteam 1
+bind                  3  specteam 2
+bind                  4  specteam 3
+bind                  5  specteam 4
+bind                  6  specteam 5
+bind                  7  specteam 6
+bind                  8  specteam 7
+bind                  9  specteam 8
+bind              Alt+0  add_to_autogroup 0
+bind              Alt+1  add_to_autogroup 1
+bind              Alt+2  add_to_autogroup 2
+bind              Alt+3  add_to_autogroup 3
+bind              Alt+4  add_to_autogroup 4
+bind              Alt+5  add_to_autogroup 5
+bind              Alt+6  add_to_autogroup 6
+bind              Alt+7  add_to_autogroup 7
+bind              Alt+8  add_to_autogroup 8
+bind              Alt+9  add_to_autogroup 9
+bind                0,0  group focus 0
+bind                1,1  group focus 1
+bind                2,2  group focus 2
+bind                3,3  group focus 3
+bind                4,4  group focus 4
+bind                5,5  group focus 5
+bind                6,6  group focus 6
+bind                7,7  group focus 7
+bind                8,8  group focus 8
+bind                9,9  group focus 9
+bind                  0  group select 0
+bind                  1  group select 1
+bind                  2  group select 2
+bind                  3  group select 3
+bind                  4  group select 4
+bind                  5  group select 5
+bind                  6  group select 6
+bind                  7  group select 7
+bind                  8  group select 8
+bind                  9  group select 9
+bind             Ctrl+0  group set 0
+bind             Ctrl+1  group set 1
+bind             Ctrl+2  group set 2
+bind             Ctrl+3  group set 3
+bind             Ctrl+4  group set 4
+bind             Ctrl+5  group set 5
+bind             Ctrl+6  group set 6
+bind             Ctrl+7  group set 7
+bind             Ctrl+8  group set 8
+bind             Ctrl+9  group set 9
+bind            Shift+0  group selectadd 0
+bind            Shift+1  group selectadd 1
+bind            Shift+2  group selectadd 2
+bind            Shift+3  group selectadd 3
+bind            Shift+4  group selectadd 4
+bind            Shift+5  group selectadd 5
+bind            Shift+6  group selectadd 6
+bind            Shift+7  group selectadd 7
+bind            Shift+8  group selectadd 8
+bind            Shift+9  group selectadd 9
+bind       Ctrl+Shift+0  group add 0
+bind       Ctrl+Shift+1  group add 1
+bind       Ctrl+Shift+2  group add 2
+bind       Ctrl+Shift+3  group add 3
+bind       Ctrl+Shift+4  group add 4
+bind       Ctrl+Shift+5  group add 5
+bind       Ctrl+Shift+6  group add 6
+bind       Ctrl+Shift+7  group add 7
+bind       Ctrl+Shift+8  group add 8
+bind       Ctrl+Shift+9  group add 9
+bind         Ctrl+Alt+0  group selecttoggle 0
+bind         Ctrl+Alt+1  group selecttoggle 1
+bind         Ctrl+Alt+2  group selecttoggle 2
+bind         Ctrl+Alt+3  group selecttoggle 3
+bind         Ctrl+Alt+4  group selecttoggle 4
+bind         Ctrl+Alt+5  group selecttoggle 5
+bind         Ctrl+Alt+6  group selecttoggle 6
+bind         Ctrl+Alt+7  group selecttoggle 7
+bind         Ctrl+Alt+8  group selecttoggle 8
+bind         Ctrl+Alt+9  group selecttoggle 9
+bind           Any+sc_h  sharedialog
+bind               sc_i  customgameinfo
+bind    Shift+backspace  togglecammode
+bind     Ctrl+backspace  togglecammode
+bind            Any+tab  toggleoverview
+bind           Any+home  increaseViewRadius
+bind            Any+end  decreaseViewRadius
+bind         Alt+insert  increasespeed
+bind         Alt+delete  decreasespeed
+bind           Alt+sc_=  increasespeed
+bind           Alt+sc_-  decreasespeed
+bind        Alt+numpad+  increasespeed
+bind        Alt+numpad-  decreasespeed
+bind               sc_[  buildfacing inc
+bind         Shift+sc_[  buildfacing inc
+bind               sc_]  buildfacing dec
+bind         Shift+sc_]  buildfacing dec
+bind           Alt+sc_z  buildspacing inc
+bind     Shift+Alt+sc_z  buildspacing inc
+bind           Alt+sc_x  buildspacing dec
+bind     Shift+Alt+sc_x  buildspacing dec
+bind               sc_q  attack
+bind         Shift+sc_q  attack
+bind           Alt+sc_q  areaattack
+bind     Alt+Shift+sc_q  areaattack
+bind               sc_d  manualfire
+bind         Shift+sc_d  manualfire
+bind               sc_d  manuallaunch
+bind         Shift+sc_d  manuallaunch
+bind          Ctrl+sc_k  selfd
+bind    Ctrl+Shift+sc_k  selfd queued
+bind               sc_e  reclaim
+bind         Shift+sc_e  reclaim
+bind               sc_f  fight
+bind         Shift+sc_f  fight
+bind           Alt+sc_f  forcestart
+bind               sc_g  guard
+bind         Shift+sc_g  guard
+bind               sc_j  canceltarget
+bind               sc_k  cloak
+bind         Shift+sc_k  cloak
+bind               sc_k  wantcloak
+bind           Any+sc_k  wantcloak
+bind               sc_l  loadunits
+bind         Shift+sc_l  loadunits
+bind               sc_m  move
+bind         Shift+sc_m  move
+bind               sc_p  patrol
+bind         Shift+sc_p  patrol
+bind          sc_a,sc_a  drawlabel
+bind               sc_a  drawinmap
+bind               sc_r  repair
+bind         Shift+sc_r  repair
+bind          Ctrl+sc_r  resurrect
+bind               sc_s  stop
+bind         Shift+sc_s  stop
+bind          Ctrl+sc_s  stopproduction
+bind               sc_u  unloadunits
+bind         Shift+sc_u  unloadunits
+bind               sc_w  wait
+bind         Shift+sc_w  wait queued
+bind               sc_x  onoff
+bind         Shift+sc_x  onoff
+bind           Any+sc_l  togglelos
+bind          Ctrl+sc_t  trackmode
+bind           Any+sc_t  track
+bind           Any+ctrl  moveslow
+bind          Any+shift  movefast
+
+
+bind            Ctrl+F1  set_camera_anchor 1
+bind            Ctrl+F2  set_camera_anchor 2
+bind            Ctrl+F3  set_camera_anchor 3
+bind            Ctrl+F4  set_camera_anchor 4
+
+bind                 F1  focus_camera_anchor 1
+bind                 F2  focus_camera_anchor 2
+bind                 F3  focus_camera_anchor 3
+bind                 F4  focus_camera_anchor 4
+
+bind             Any+f5  LastMsgPos
+bind             Any+f6  ShowElevation
+bind             Any+f7  ShowPathTraversability
+bind             Any+f8  ShowMetalMap
+
+bind            Ctrl+f5  viewfps
+bind            Ctrl+f6  viewta
+bind            Ctrl+f7  viewspring
+bind            Ctrl+f8  viewrot
+bind            Ctrl+f9  viewfree
+
+bind                f10  options
+bind            Any+f12  screenshot png
+bind      Ctrl+Shift+f8  savegame
+
+bind          Alt+enter  fullscreen
+bind          sc_`,sc_`  drawlabel
+bind               sc_`  drawinmap
+// Select all units same than current selection
+bind          Ctrl+sc_a  select AllMap++_ClearSelection_SelectAll+
+// Cycle through engineers
+bind          Ctrl+sc_e  select AllMap+_Builder_Not_Building_Not_IdMatches_armnanotc_Not_IdMatches_armnanotcplat_Not_IdMatches_cornanotc_Not_IdMatches_cornanotcplat+_ClearSelection_SelectOne+
+// Cycle through factories
+bind 		  ctrl+sc_f	 select AllMap+_Building_Buildoptions+_ClearSelection_SelectNum_1+	// Select no focus
+//bind          Ctrl+sc_f  select AllMap+_Builder_Building+_ClearSelection_SelectOne+		// Select with focus
+// Cycle through idle constructors (Engineers and Factories)
+bind          Ctrl+sc_b  select AllMap+_Builder_Idle+_ClearSelection_SelectOne+
+// Select all visible damaned units
+bind          Ctrl+sc_d  select Visible+_Not_RelativeHealth_30+_ClearSelection_SelectAll+   // Damaged units (<30%HP)
+
+// Select commander and focus
+bind          Ctrl+sc_c  select AllMap+_ManualFireUnit_Not_IdMatches_armthor+_ClearSelection_SelectOne+
+bind          Ctrl+sc_v  select AllMap+_InPrevSel_Not_Builder_Not_InHotkeyGroup+_SelectAll+
+// Select all units with weapons, except aircrafts
+bind          Ctrl+sc_w  select AllMap+_Not_Aircraft_Weapons+_ClearSelection_SelectAll+
+// Select all units with weapons except commanders
+bind          Ctrl+sc_q  select AllMap+_Weapons_Not_IdMatches_corcom_Not_IdMatches_armcom+_ClearSelection_SelectAll+
+bind          Ctrl+sc_x  select AllMap+_InPrevSel_Not_InHotkeyGroup+_SelectAll+
+// Select all units of same type
+bind          Ctrl+sc_z  select AllMap+_InPrevSel+_ClearSelection_SelectAll+
+
+// ==============================
+// Cycle through metal related constructions
+// ==============================
+bind                sc_z buildunit_armmakr                    // Energy Converter (Converts 70 energy into 1 metal per sec)
+bind          Shift+sc_z buildunit_armmakr                    // Energy Converter (Converts 70 energy into 1 metal per sec)
+bind                sc_z buildunit_cormakr                    // Energy Converter (Converts 70 energy into 1 metal per sec)
+bind          Shift+sc_z buildunit_cormakr                    // Energy Converter (Converts 70 energy into 1 metal per sec)
+bind                sc_z buildunit_armfmkr                    // Naval Energy Converter (Converts 70 energy into 1.1 metal per sec)
+bind          Shift+sc_z buildunit_armfmkr                    // Naval Energy Converter (Converts 70 energy into 1.1 metal per sec)
+bind                sc_z buildunit_corfmkr                    // Naval Energy Converter (Converts 70 energy into 1.1 metal per sec)
+bind          Shift+sc_z buildunit_corfmkr                    // Naval Energy Converter (Converts 70 energy into 1.1 metal per sec)
+// bind                sc_z buildunit_armmex           // Metal Extractor (Extracts Metal from Metalspots)
+// bind          Shift+sc_z buildunit_armmex           // Metal Extractor (Extracts Metal from Metalspots)
+// bind                sc_z buildunit_cormex           // Metal Extractor (Extracts Metal from Metalspots)
+// bind          Shift+sc_z buildunit_cormex           // Metal Extractor (Extracts Metal from Metalspots)
+// bind                sc_z buildunit_armuwmex         // Naval Metal Extractor (Extracts Metal)
+// bind          Shift+sc_z buildunit_armuwmex         // Naval Metal Extractor (Extracts Metal)
+// bind                sc_z buildunit_coruwmex         // Naval Metal Extractor (Extracts Metal)
+// bind          Shift+sc_z buildunit_coruwmex         // Naval Metal Extractor (Extracts Metal)
+// bind                sc_z buildunit_armamex          // Twilight (Stealthy Cloakable Metal Extractor)
+// bind          Shift+sc_z buildunit_armamex          // Twilight (Stealthy Cloakable Metal Extractor)
+// bind                sc_z buildunit_corexp           // Exploiter (Armed Metal Extractor)
+// bind          Shift+sc_z buildunit_corexp           // Exploiter (Armed Metal Extractor)
+bind                sc_z buildunit_armmstor                   // Metal Storage (Increases Metal Storage (3000))
+bind          Shift+sc_z buildunit_armmstor                   // Metal Storage (Increases Metal Storage (3000))
+bind                sc_z buildunit_cormstor                   // Metal Storage (Increases Metal Storage (3000))
+bind          Shift+sc_z buildunit_cormstor                   // Metal Storage (Increases Metal Storage (3000))
+bind                sc_z buildunit_coruwms                    // Naval Metal Storage (Increases Metal Storage (3000))
+bind          Shift+sc_z buildunit_coruwms                    // Naval Metal Storage (Increases Metal Storage (3000))
+bind                sc_z buildunit_armuwms                    // Naval Metal Storage (Increases Metal Storage (3000))
+bind          Shift+sc_z buildunit_armuwms                    // Naval Metal Storage (Increases Metal Storage (3000))
+bind                sc_z buildunit_cormmkr                    // Advanced Energy Converter (Converts 600 energy into 10.3 metal per sec)
+bind          Shift+sc_z buildunit_cormmkr                    // Advanced Energy Converter (Converts 600 energy into 10.3 metal per sec)
+bind                sc_z buildunit_armmmkr                    // Advanced Energy Converter (Converts 600 energy into 10.3 metal per sec)
+bind          Shift+sc_z buildunit_armmmkr                    // Advanced Energy Converter (Converts 600 energy into 10.3 metal per sec)
+bind                sc_z buildunit_armuwmmm                   // Naval Advanced Energy Converter (Converts 650 energy into 11 metal per sec)
+bind          Shift+sc_z buildunit_armuwmmm                   // Naval Advanced Energy Converter (Converts 650 energy into 11 metal per sec)
+bind                sc_z buildunit_coruwmmm                   // Naval Advanced Energy Converter (Converts 650 energy into 11 metal per sec)
+bind          Shift+sc_z buildunit_coruwmmm                   // Naval Advanced Energy Converter (Converts 650 energy into 11 metal per sec)
+// bind                sc_z buildunit_armmoho          // Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind          Shift+sc_z buildunit_armmoho          // Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind                sc_z buildunit_cormoho          // Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind          Shift+sc_z buildunit_cormoho          // Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind                sc_z buildunit_armuwmme         // Naval Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind          Shift+sc_z buildunit_armuwmme         // Naval Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind                sc_z buildunit_coruwmme         // Naval Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+// bind          Shift+sc_z buildunit_coruwmme         // Naval Advanced Metal Extractor (Advanced Metal Extractor / Storage)
+bind                sc_z buildunit_armuwadvms       // Hardened Metal Storage (Increases Metal Storage (10000))
+bind          Shift+sc_z buildunit_armuwadvms       // Hardened Metal Storage (Increases Metal Storage (10000))
+bind                sc_z buildunit_coruwadvms       // Hardened Metal Storage (Increases Metal Storage (10000))
+bind          Shift+sc_z buildunit_coruwadvms       // Hardened Metal Storage (Increases Metal Storage (10000))
+// bind                sc_z buildunit_armshockwave     // Shockwave (Advanced Defensive Metal Extractor and EMP Turret)
+// bind          Shift+sc_z buildunit_armshockwave     // Shockwave (Advanced Defensive Metal Extractor and EMP Turret)
+// bind                sc_z buildunit_cormexp          // Advanced Exploiter (Armed Advanced Metal Extractor)
+// bind          Shift+sc_z buildunit_cormexp          // Advanced Exploiter (Armed Advanced Metal Extractor)
+
+// Build metal extractor in a whole area
+bind Shift+Alt+sc_z  areamex
+bind       Alt+sc_z  areamex
+
+// ==============================
+// Cycle through energy related constructions
+// ==============================
+bind                sc_x buildunit_armwin           // Wind Turbine (Produces Energy. Depends on wind strength.)
+bind          Shift+sc_x buildunit_armwin           // Wind Turbine (Produces Energy. Depends on wind strength.)
+bind                sc_x buildunit_corwin           // Wind Turbine (Produces Energy. Depends on wind strength.)
+bind          Shift+sc_x buildunit_corwin           // Wind Turbine (Produces Energy. Depends on wind strength.)
+bind                sc_x buildunit_cortide          // Tidal Generator (Produces Energy (depends on map))
+bind          Shift+sc_x buildunit_cortide          // Tidal Generator (Produces Energy (depends on map))
+bind                sc_x buildunit_armtide          // Tidal Generator (Produces Energy (depends on map))
+bind          Shift+sc_x buildunit_armtide          // Tidal Generator (Produces Energy (depends on map))
+bind                sc_x buildunit_corsolar         // Solar Collector (Produces 20 Energy)
+bind          Shift+sc_x buildunit_corsolar         // Solar Collector (Produces 20 Energy)
+bind                sc_x buildunit_armsolar         // Solar Collector (Produces 20 Energy)
+bind          Shift+sc_x buildunit_armsolar         // Solar Collector (Produces 20 Energy)
+bind                sc_x buildunit_armestor         // Energy Storage (Increases Energy Storage (6000))
+bind          Shift+sc_x buildunit_armestor         // Energy Storage (Increases Energy Storage (6000))
+bind                sc_x buildunit_corestor         // Energy Storage (Increases Energy Storage (6000))
+bind          Shift+sc_x buildunit_corestor         // Energy Storage (Increases Energy Storage (6000))
+bind                sc_x buildunit_armuwes          // Naval Energy Storage (Increases Energy Storage (6000))
+bind          Shift+sc_x buildunit_armuwes          // Naval Energy Storage (Increases Energy Storage (6000))
+bind                sc_x buildunit_coruwes          // Naval Energy Storage (Increases Energy Storage (6000))
+bind          Shift+sc_x buildunit_coruwes          // Naval Energy Storage (Increases Energy Storage (6000))
+bind                sc_x buildunit_armadvsol        // Advanced Solar Collector (Produces 75 Energy)
+bind          Shift+sc_x buildunit_armadvsol        // Advanced Solar Collector (Produces 75 Energy)
+bind                sc_x buildunit_coradvsol        // Advanced Solar Collector (Produces 75 Energy)
+bind          Shift+sc_x buildunit_coradvsol        // Advanced Solar Collector (Produces 75 Energy)
+// bind                sc_x buildunit_corgeo           // Geothermal Powerplant (Produces 300 Energy)
+// bind          Shift+sc_x buildunit_corgeo           // Geothermal Powerplant (Produces 300 Energy)
+// bind                sc_x buildunit_coruwgeo         // Geothermal Powerplant (Produces 300 Energy)
+// bind          Shift+sc_x buildunit_coruwgeo         // Geothermal Powerplant (Produces 300 Energy)
+// bind                sc_x buildunit_armgeo           // Geothermal Powerplant (Produces 300 Energy)
+// bind          Shift+sc_x buildunit_armgeo           // Geothermal Powerplant (Produces 300 Energy)
+// bind                sc_x buildunit_armuwgeo         // Geothermal Powerplant (Produces 300 Energy)
+// bind          Shift+sc_x buildunit_armuwgeo         // Geothermal Powerplant (Produces 300 Energy)
+bind                sc_x buildunit_armuwadves       // Hardened Energy Storage (Increases Energy Storage (40000))
+bind          Shift+sc_x buildunit_armuwadves       // Hardened Energy Storage (Increases Energy Storage (40000))
+bind                sc_x buildunit_coruwadves       // Hardened Energy Storage (Increases Energy Storage (40000))
+bind          Shift+sc_x buildunit_coruwadves       // Hardened Energy Storage (Increases Energy Storage (40000))
+// bind                sc_x buildunit_rmgmm           // Prude (Safe Geothermal Powerplant, produces 750 Energy)
+// bind          Shift+sc_x buildunit_rmgmm           // Prude (Safe Geothermal Powerplant, produces 750 Energy)
+// bind                sc_x buildunit_orageo          // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind          Shift+sc_x buildunit_orageo          // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind                sc_x buildunit_oruwageo        // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind          Shift+sc_x buildunit_oruwageo        // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind                sc_x buildunit_rmageo          // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind          Shift+sc_x buildunit_rmageo          // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind                sc_x buildunit_rmuwageo        // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind          Shift+sc_x buildunit_rmuwageo        // Advanced Geothermal Powerplant (Produces 1250 Energy (Hazardous))
+// bind                sc_x buildunit_orbhmth         // Cerberus (Geothermal Plasma Battery)
+// bind          Shift+sc_x buildunit_orbhmth         // Cerberus (Geothermal Plasma Battery)
+bind                sc_x buildunit_armfus           // Fusion Reactor (Produces 1000 Energy)
+bind          Shift+sc_x buildunit_armfus           // Fusion Reactor (Produces 1000 Energy)
+bind                sc_x buildunit_corfus           // Fusion Reactor (Produces 1100 Energy)
+bind          Shift+sc_x buildunit_corfus           // Fusion Reactor (Produces 1100 Energy)
+// bind                sc_x buildunit_armckfus         // Cloakable Fusion Reactor (Produces 1050 Energy)
+// bind          Shift+sc_x buildunit_armckfus         // Cloakable Fusion Reactor (Produces 1050 Energy)
+bind                sc_x buildunit_armuwfus         // Naval Fusion Reactor (Produces 1200 Energy)
+bind          Shift+sc_x buildunit_armuwfus         // Naval Fusion Reactor (Produces 1200 Energy)
+bind                sc_x buildunit_coruwfus         // Naval Fusion Reactor (Produces 1220 Energy)
+bind          Shift+sc_x buildunit_coruwfus         // Naval Fusion Reactor (Produces 1220 Energy)
+bind                sc_x buildunit_armafus          // Advanced Fusion Reactor (Produces 3000 Energy (Hazardous))
+bind          Shift+sc_x buildunit_armafus          // Advanced Fusion Reactor (Produces 3000 Energy (Hazardous))
+bind                sc_x buildunit_corafus          // Advanced Fusion Reactor (Produces 3000 Energy (Hazardous))
+bind          Shift+sc_x buildunit_corafus          // Advanced Fusion Reactor (Produces 3000 Energy (Hazardous))
+
+// ==============================
+// Cycle through utilities constructions (radars, jammers & co)
+// ==============================
+// bind                sc_c buildunit_armdrag          // Dragon's Teeth (Fortification)
+// bind          Shift+sc_c buildunit_armdrag          // Dragon's Teeth (Fortification)
+// bind                sc_c buildunit_cordrag          // Dragon's Teeth (Fortification)
+// bind          Shift+sc_c buildunit_cordrag          // Dragon's Teeth (Fortification)
+bind                sc_c buildunit_armrad           // Radar Tower (Early Warning System)
+bind          Shift+sc_c buildunit_armrad           // Radar Tower (Early Warning System)
+bind                sc_c buildunit_corrad           // Radar Tower (Early Warning System)
+bind          Shift+sc_c buildunit_corrad           // Radar Tower (Early Warning System)
+bind                sc_c buildunit_corjamt          // Castro (Short-Range Jamming Device)
+bind          Shift+sc_c buildunit_corjamt          // Castro (Short-Range Jamming Device)
+// bind                sc_c buildunit_armeyes          // Beholder (Perimeter Camera)
+// bind          Shift+sc_c buildunit_armeyes          // Beholder (Perimeter Camera)
+// bind                sc_c buildunit_coreyes          // Beholder (Perimeter Camera)
+// bind          Shift+sc_c buildunit_coreyes          // Beholder (Perimeter Camera)
+bind                sc_c buildunit_armjamt          // Sneaky Pete (Cloakable Jammer Tower)
+bind          Shift+sc_c buildunit_armjamt          // Sneaky Pete (Cloakable Jammer Tower)
+// bind                sc_c buildunit_armasp           // Air Repair Pad (Automatically Repairs Aircraft)
+// bind          Shift+sc_c buildunit_armasp           // Air Repair Pad (Automatically Repairs Aircraft)
+// bind                sc_c buildunit_corasp           // Air Repair Pad (Automatically Repairs Aircraft)
+// bind          Shift+sc_c buildunit_corasp           // Air Repair Pad (Automatically Repairs Aircraft)
+// bind                sc_c buildunit_armjuno          // Juno (Anti Radar / Jammer / Minefield / ScoutSpam Weapon)
+// bind          Shift+sc_c buildunit_armjuno          // Juno (Anti Radar / Jammer / Minefield / ScoutSpam Weapon)
+// bind                sc_c buildunit_corjuno          // Juno (Anti Radar / Jammer / Minefield / ScoutSpam Weapon)
+// bind          Shift+sc_c buildunit_corjuno          // Juno (Anti Radar / Jammer / Minefield / ScoutSpam Weapon)
+// bind                sc_c buildunit_armfort          // Fortification Wall (Advanced Fortification)
+// bind          Shift+sc_c buildunit_armfort          // Fortification Wall (Advanced Fortification)
+// bind                sc_c buildunit_corfort          // Fortification Wall (Advanced Fortification)
+// bind          Shift+sc_c buildunit_corfort          // Fortification Wall (Advanced Fortification)
+bind                sc_c buildunit_armveil          // Veil (Long-Range Jamming Tower)
+bind          Shift+sc_c buildunit_armveil          // Veil (Long-Range Jamming Tower)
+bind                sc_c buildunit_corshroud        // Shroud (Long-Range Jamming Tower)
+bind          Shift+sc_c buildunit_corshroud        // Shroud (Long-Range Jamming Tower)
+// bind                sc_c buildunit_armdf            // Decoy Fusion Reactor (Does not produce Energy, used to confuse the enemy)
+// bind          Shift+sc_c buildunit_armdf            // Decoy Fusion Reactor (Does not produce Energy, used to confuse the enemy)
+bind                sc_c buildunit_armarad          // Advanced Radar Tower (Long-Range Radar)
+bind          Shift+sc_c buildunit_armarad          // Advanced Radar Tower (Long-Range Radar)
+bind                sc_c buildunit_corarad          // Advanced Radar Tower (Long-Range Radar)
+bind          Shift+sc_c buildunit_corarad          // Advanced Radar Tower (Long-Range Radar)
+// bind                sc_c buildunit_armsd            // Tracer (Intrusion Countermeasure System - tracks down stealthy units)
+// bind          Shift+sc_c buildunit_armsd            // Tracer (Intrusion Countermeasure System - tracks down stealthy units)
+// bind                sc_c buildunit_corsd            // Nemesis (Intrusion Countermeasure System)
+// bind          Shift+sc_c buildunit_corsd            // Nemesis (Intrusion Countermeasure System)
+// bind                sc_c buildunit_cortarg          // Pinpointer (Enhanced Radar Targeting, more facilities enhance accuracy)
+// bind          Shift+sc_c buildunit_cortarg          // Pinpointer (Enhanced Radar Targeting, more facilities enhance accuracy)
+// bind                sc_c buildunit_armtarg          // Pinpointer (Enhanced Radar Targeting, more facilities enhance accuracy)
+// bind          Shift+sc_c buildunit_armtarg          // Pinpointer (Enhanced Radar Targeting, more facilities enhance accuracy)
+// bind                sc_c buildunit_cortron          // Catalyst (Tactical Missile Launcher)
+// bind          Shift+sc_c buildunit_cortron          // Catalyst (Tactical Missile Launcher)
+// bind                sc_c buildunit_armamd           // Citadel (Anti-Nuke System)
+// bind          Shift+sc_c buildunit_armamd           // Citadel (Anti-Nuke System)
+// bind                sc_c buildunit_corfmd           // Prevailer (Anti-Nuke System)
+// bind          Shift+sc_c buildunit_corfmd           // Prevailer (Anti-Nuke System)
+bind                sc_c buildunit_armgate          // Keeper (Plasma Deflector)
+bind          Shift+sc_c buildunit_armgate          // Keeper (Plasma Deflector)
+bind                sc_c buildunit_corgate          // Overseer (Plasma Deflector)
+bind          Shift+sc_c buildunit_corgate          // Overseer (Plasma Deflector)
+// bind                sc_c buildunit_corsilo          // Apocalypse (Nuclear ICBM Launcher)
+// bind          Shift+sc_c buildunit_corsilo          // Apocalypse (Nuclear ICBM Launcher)
+// bind                sc_c buildunit_armsilo          // Armageddon (Nuclear ICBM Launcher)
+// bind          Shift+sc_c buildunit_armsilo          // Armageddon (Nuclear ICBM Launcher)
+
+// For the moment (2024-03-18) there is a bug which stop cycling when not right biom:
+// If you try to build something on water while you are on land, it stops cycling, and the opposite
+// Naval stuff are at the end because I'm playing more on land
+// bind                sc_c buildunit_armfdrag         // Shark's Teeth (Naval Fortification)
+// bind          Shift+sc_c buildunit_armfdrag         // Shark's Teeth (Naval Fortification)
+// bind                sc_c buildunit_corfdrag         // Shark's Teeth (Naval Fortification)
+// bind          Shift+sc_c buildunit_corfdrag         // Shark's Teeth (Naval Fortification)
+bind                sc_c buildunit_armsonar         // Sonar Station (Locates Water Units)
+bind          Shift+sc_c buildunit_armsonar         // Sonar Station (Locates Water Units)
+bind                sc_c buildunit_corsonar         // Sonar Station (Locates Water Units)
+bind          Shift+sc_c buildunit_corsonar         // Sonar Station (Locates Water Units)
+bind                sc_c buildunit_armfrad          // Naval Radar / Sonar Tower (Early Warning System)
+bind          Shift+sc_c buildunit_armfrad          // Naval Radar / Sonar Tower (Early Warning System)
+bind                sc_c buildunit_corfrad          // Naval Radar / Sonar Tower (Early Warning System)
+bind          Shift+sc_c buildunit_corfrad          // Naval Radar / Sonar Tower (Early Warning System)
+bind                sc_c buildunit_corason          // Advanced Sonar Station (Extended Sonar)
+bind          Shift+sc_c buildunit_corason          // Advanced Sonar Station (Extended Sonar)
+bind                sc_c buildunit_armason          // Advanced Sonar Station (Extended Sonar)
+bind          Shift+sc_c buildunit_armason          // Advanced Sonar Station (Extended Sonar)
+bind                sc_c buildunit_armfatf          // Naval Pinpointer (Enhanced Radar Targeting)
+bind          Shift+sc_c buildunit_armfatf          // Naval Pinpointer (Enhanced Radar Targeting)
+bind                sc_c buildunit_corfatf          // Naval Pinpointer (Enhanced Radar Targeting)
+bind          Shift+sc_c buildunit_corfatf          // Naval Pinpointer (Enhanced Radar Targeting)
+bind                sc_c buildunit_armfgate         // Aurora (Floating Plasma Deflector)
+bind          Shift+sc_c buildunit_armfgate         // Aurora (Floating Plasma Deflector)
+bind                sc_c buildunit_corfgate         // Atoll (Floating Plasma Deflector)
+bind          Shift+sc_c buildunit_corfgate         // Atoll (Floating Plasma Deflector)
+bind                sc_c buildunit_armfasp          // Air Repair Pad (Automatically Repairs Aircraft)
+bind          Shift+sc_c buildunit_armfasp          // Air Repair Pad (Automatically Repairs Aircraft)
+bind                sc_c buildunit_corfasp          // Air Repair Pad (Automatically Repairs Aircraft)
+bind          Shift+sc_c buildunit_corfasp          // Air Repair Pad (Automatically Repairs Aircraft)
+
+
+// ==============================
+// Cycle through defensive turrets constructions
+// ==============================
+
+
+// Land T1 & commander
+bind                sc_v buildunit_armllt           // Sentry (Light Laser Tower)
+bind          Shift+sc_v buildunit_armllt           // Sentry (Light Laser Tower)
+bind                sc_v buildunit_corllt           // Guard (Light Laser Tower)
+bind          Shift+sc_v buildunit_corllt           // Guard (Light Laser Tower)
+bind                sc_v buildunit_armgplat         // Gun Platform (Light Plasma Defense)
+bind          Shift+sc_v buildunit_armgplat         // Gun Platform (Light Plasma Defense)
+bind                sc_v buildunit_corgplat         // Gun Platform (Light Plasma Defense)
+bind          Shift+sc_v buildunit_corgplat         // Gun Platform (Light Plasma Defense)
+// Air T1
+bind                sc_v buildunit_armrl            // Nettle (Light Anti-air Tower)
+bind          Shift+sc_v buildunit_armrl            // Nettle (Light Anti-air Tower)
+bind                sc_v buildunit_corrl            // Thistle (Light Anti-air Tower)
+bind          Shift+sc_v buildunit_corrl            // Thistle (Light Anti-air Tower)
+// bind                sc_v buildunit_cormadsam        // SAM (Hardened Anti-Air Missile Battery)
+// bind          Shift+sc_v buildunit_cormadsam        // SAM (Hardened Anti-Air Missile Battery)
+// bind                sc_v buildunit_armcir           // Chainsaw (Bomb-Resistant Medium-Range Anti-Air Missile Battery)
+// bind          Shift+sc_v buildunit_armcir           // Chainsaw (Bomb-Resistant Medium-Range Anti-Air Missile Battery)
+// bind                sc_v buildunit_corerad          // Eradicator (Bomb-Resistant Medium-Range Anti-Air Missile Battery)
+// bind          Shift+sc_v buildunit_corerad          // Eradicator (Bomb-Resistant Medium-Range Anti-Air Missile Battery)
+// bind                sc_v buildunit_armferret        // Ferret (Pop-Up Anti-Air Missile Battery)
+// bind          Shift+sc_v buildunit_armferret        // Ferret (Pop-Up Anti-Air Missile Battery)
+
+// Naval
+bind                sc_v buildunit_armptl           // Harpoon (Pop-up Torpedo Launcher)
+bind          Shift+sc_v buildunit_armptl           // Harpoon (Pop-up Torpedo Launcher)
+bind                sc_v buildunit_armtl            // Harpoon (Offshore Torpedo Launcher)
+bind          Shift+sc_v buildunit_armtl            // Harpoon (Offshore Torpedo Launcher)
+bind                sc_v buildunit_corptl           // Urchin (Pop-up Torpedo Launcher)
+bind          Shift+sc_v buildunit_corptl           // Urchin (Pop-up Torpedo Launcher)
+bind                sc_v buildunit_cortl            // Urchin (Offshore Torpedo Launcher)
+bind          Shift+sc_v buildunit_cortl            // Urchin (Offshore Torpedo Launcher)
+bind                sc_v buildunit_armatl           // Moray (Advanced Torpedo Launcher)
+bind          Shift+sc_v buildunit_armatl           // Moray (Advanced Torpedo Launcher)
+bind                sc_v buildunit_coratl           // Lamprey (Advanced Torpedo Launcher)
+bind          Shift+sc_v buildunit_coratl           // Lamprey (Advanced Torpedo Launcher)
+// bind                sc_v buildunit_armfhlt          // Manta (Floating Heavy Laser Tower)
+// bind          Shift+sc_v buildunit_armfhlt          // Manta (Floating Heavy Laser Tower)
+// bind                sc_v buildunit_corfhlt          // Coral (Floating Heavy Laser Tower)
+// bind          Shift+sc_v buildunit_corfhlt          // Coral (Floating Heavy Laser Tower)
+// bind                sc_v buildunit_armkraken        // Gorgon (Floating Rapid-fire Plasma Tower)
+// bind          Shift+sc_v buildunit_armkraken        // Gorgon (Floating Rapid-fire Plasma Tower)
+// bind                sc_v buildunit_corfdoom         // Devastator (Floating Multi-Weapon Platform)
+// bind          Shift+sc_v buildunit_corfdoom         // Devastator (Floating Multi-Weapon Platform)
+
+// Naval Air
+bind                sc_v buildunit_armfrt           // Naval Nettle (Floating Anti-air Tower)
+bind          Shift+sc_v buildunit_armfrt           // Naval Nettle (Floating Anti-air Tower)
+bind                sc_v buildunit_armfflak         // Naval Arbalest (Anti-Air Flak Gun - Naval Series)
+bind          Shift+sc_v buildunit_armfflak         // Naval Arbalest (Anti-Air Flak Gun - Naval Series)
+bind                sc_v buildunit_corenaa          // Naval Birdshot (Anti-Air Flak Gun - Naval Series)
+bind          Shift+sc_v buildunit_corenaa          // Naval Birdshot (Anti-Air Flak Gun - Naval Series)
+bind                sc_v buildunit_corfrt           // Slingshot (Floating Anti-air Tower)
+bind          Shift+sc_v buildunit_corfrt           // Slingshot (Floating Anti-air Tower)
+bind                sc_v buildunit_corfrock         // Janitor (Floating Anti-Air Missile Battery)
+bind          Shift+sc_v buildunit_corfrock         // Janitor (Floating Anti-Air Missile Battery)
+bind                sc_v buildunit_armfrock         // Scumbag (Floating Anti-Air Missile Battery)
+bind          Shift+sc_v buildunit_armfrock         // Scumbag (Floating Anti-Air Missile Battery)
+
+// Land T1
+// bind                sc_v buildunit_armbeamer        // Beamer (Beam Laser Turret)
+// bind          Shift+sc_v buildunit_armbeamer        // Beamer (Beam Laser Turret)
+// bind                sc_v buildunit_corhllt          // Twin Guard (Anti-Swarm Double Guard)
+// bind          Shift+sc_v buildunit_corhllt          // Twin Guard (Anti-Swarm Double Guard)
+// bind                sc_v buildunit_armdl            // Anemone (Coastal Torpedo Launcher)
+// bind          Shift+sc_v buildunit_armdl            // Anemone (Coastal Torpedo Launcher)
+// bind                sc_v buildunit_cordl            // Jellyfish (Coastal Torpedo Launcher)
+// bind          Shift+sc_v buildunit_cordl            // Jellyfish (Coastal Torpedo Launcher)
+// bind                sc_v buildunit_cormaw           // Dragon's Maw (Pop-up Flamethrower Turret)
+// bind          Shift+sc_v buildunit_cormaw           // Dragon's Maw (Pop-up Flamethrower Turret)
+// bind                sc_v buildunit_armclaw          // Dragon's Claw (Pop-up Lightning Turret)
+// bind          Shift+sc_v buildunit_armclaw          // Dragon's Claw (Pop-up Lightning Turret)
+// bind                sc_v buildunit_armhlt           // Overwatch (Area Control Laser Tower)
+// bind          Shift+sc_v buildunit_armhlt           // Overwatch (Area Control Laser Tower)
+// bind                sc_v buildunit_corhlt           // Warden (Area Control Laser Tower)
+// bind          Shift+sc_v buildunit_corhlt           // Warden (Area Control Laser Tower)
+bind                sc_v buildunit_armguard         // Gauntlet (Area Control Plasma Artillery)
+bind          Shift+sc_v buildunit_armguard         // Gauntlet (Area Control Plasma Artillery)
+bind                sc_v buildunit_corpun           // Agitator (Area Control Plasma Artillery)
+bind          Shift+sc_v buildunit_corpun           // Agitator (Area Control Plasma Artillery)
+// Land T2
+bind                sc_v buildunit_armpb            // Pit Bull (Pop-up Gauss Cannon)
+bind          Shift+sc_v buildunit_armpb            // Pit Bull (Pop-up Gauss Cannon)
+bind                sc_v buildunit_corvipe          // Scorpion (Pop-up Sabot Battery)
+bind          Shift+sc_v buildunit_corvipe          // Scorpion (Pop-up Sabot Battery)
+// bind                sc_v buildunit_armemp           // Paralyzer (EMP Missile Launcher)
+// bind          Shift+sc_v buildunit_armemp           // Paralyzer (EMP Missile Launcher)
+// bind                sc_v buildunit_cortoast         // Persecutor (Pop-up Plasma Artillery)
+// bind          Shift+sc_v buildunit_cortoast         // Persecutor (Pop-up Plasma Artillery)
+// bind                sc_v buildunit_armamb           // Rattlesnake (Cloakable Pop-up Plasma Artillery)
+// bind          Shift+sc_v buildunit_armamb           // Rattlesnake (Cloakable Pop-up Plasma Artillery)
+bind                sc_v buildunit_cordoom          // Bulwark (Energy Weapon)
+bind          Shift+sc_v buildunit_cordoom          // Bulwark (Energy Weapon)
+bind                sc_v buildunit_armanni          // Pulsar (Tachyon Accelerator)
+bind          Shift+sc_v buildunit_armanni          // Pulsar (Tachyon Accelerator)
+// bind                sc_v buildunit_armbrtha         // Basilica (Long Range Plasma Cannon)
+// bind          Shift+sc_v buildunit_armbrtha         // Basilica (Long Range Plasma Cannon)
+// bind                sc_v buildunit_corint           // Basilisk (Long Range Plasma Cannon)
+// bind          Shift+sc_v buildunit_corint           // Basilisk (Long Range Plasma Cannon)
+// bind                sc_v buildunit_corbuzz          // Calamity (Rapid-Fire Long-Range Plasma Cannon)
+// bind          Shift+sc_v buildunit_corbuzz          // Calamity (Rapid-Fire Long-Range Plasma Cannon)
+// bind                sc_v buildunit_armvulc          // Ragnarok (Rapid-Fire Long-Range Plasma Cannon)
+// bind          Shift+sc_v buildunit_armvulc          // Ragnarok (Rapid-Fire Long-Range Plasma Cannon)
+
+// Air T2
+bind                sc_v buildunit_armflak          // Arbalest (Anti-Air Flak Gun)
+bind          Shift+sc_v buildunit_armflak          // Arbalest (Anti-Air Flak Gun)
+bind                sc_v buildunit_corflak          // Birdshot (Anti-Air Flak Gun)
+bind          Shift+sc_v buildunit_corflak          // Birdshot (Anti-Air Flak Gun)
+// bind                sc_v buildunit_armmercury       // Mercury (Long Range Anti-Air Tower)
+// bind          Shift+sc_v buildunit_armmercury       // Mercury (Long Range Anti-Air Tower)
+// bind                sc_v buildunit_corscreamer      // Screamer (Long Range Anti-Air Tower)
+// bind          Shift+sc_v buildunit_corscreamer      // Screamer (Long Range Anti-Air Tower)
+
+
+
+// ==============================
+// Cycle through factories
+// ==============================
+bind                sc_b buildunit_armnanotc        // Construction Turret (Assist & Repair in large radius)
+bind          Shift+sc_b buildunit_armnanotc        // Construction Turret (Assist & Repair in large radius)
+bind                sc_b buildunit_cornanotc        // Construction Turret (Assist & Repair in large radius)
+bind          Shift+sc_b buildunit_cornanotc        // Construction Turret (Assist & Repair in large radius)
+bind                sc_b buildunit_armnanotct2      // T2 Construction Turret (Assist & Repair in larger radius)
+bind          Shift+sc_b buildunit_armnanotct2      // T2 Construction Turret (Assist & Repair in larger radius)
+bind                sc_b buildunit_cornanotct2      // T2 Construction Turret (Assist & Repair in larger radius)
+bind          Shift+sc_b buildunit_cornanotct2      // T2 Construction Turret (Assist & Repair in larger radius)
+bind                sc_b buildunit_armshltx         // Experimental Gantry (Produces Experimental Units)
+bind          Shift+sc_b buildunit_armshltx         // Experimental Gantry (Produces Experimental Units)
+bind                sc_b buildunit_corgant          // Experimental Gantry (Produces Experimental Units)
+bind          Shift+sc_b buildunit_corgant          // Experimental Gantry (Produces Experimental Units)
+bind                sc_b buildunit_coravp           // Advanced Vehicle Plant (Produces Tech 2 Vehicles)
+bind          Shift+sc_b buildunit_coravp           // Advanced Vehicle Plant (Produces Tech 2 Vehicles)
+bind                sc_b buildunit_armalab          // Advanced Bot Lab (Produces Tech 2 Bots)
+bind          Shift+sc_b buildunit_armalab          // Advanced Bot Lab (Produces Tech 2 Bots)
+bind                sc_b buildunit_coralab          // Advanced Bot Lab (Produces Tech 2 Bots)
+bind          Shift+sc_b buildunit_coralab          // Advanced Bot Lab (Produces Tech 2 Bots)
+bind                sc_b buildunit_armavp           // Advanced Vehicle Plant (Produces Tech 2 Vehicles)
+bind          Shift+sc_b buildunit_armavp           // Advanced Vehicle Plant (Produces Tech 2 Vehicles)
+bind                sc_b buildunit_armaap           // Advanced Aircraft Plant (Produces Tech 2 Aircraft)
+bind          Shift+sc_b buildunit_armaap           // Advanced Aircraft Plant (Produces Tech 2 Aircraft)
+bind                sc_b buildunit_coraap           // Advanced Aircraft Plant (Produces Tech 2 Aircraft)
+bind          Shift+sc_b buildunit_coraap           // Advanced Aircraft Plant (Produces Tech 2 Aircraft)
+bind                sc_b buildunit_corlab           // Bot Lab (Produces Tech 1 Bots)
+bind          Shift+sc_b buildunit_corlab           // Bot Lab (Produces Tech 1 Bots)
+bind                sc_b buildunit_armlab           // Bot Lab (Produces Tech 1 Bots)
+bind          Shift+sc_b buildunit_armlab           // Bot Lab (Produces Tech 1 Bots)
+bind                sc_b buildunit_corvp            // Vehicle Plant (Produces Tech 1 Vehicles)
+bind          Shift+sc_b buildunit_corvp            // Vehicle Plant (Produces Tech 1 Vehicles)
+bind                sc_b buildunit_armvp            // Vehicle Plant (Produces Tech 1 Vehicles)
+bind          Shift+sc_b buildunit_armvp            // Vehicle Plant (Produces Tech 1 Vehicles)
+bind                sc_b buildunit_corap            // Aircraft Plant (Produces Tech 1 Aircraft)
+bind          Shift+sc_b buildunit_corap            // Aircraft Plant (Produces Tech 1 Aircraft)
+bind                sc_b buildunit_armap            // Aircraft Plant (Produces Tech 1 Aircraft)
+bind          Shift+sc_b buildunit_armap            // Aircraft Plant (Produces Tech 1 Aircraft)
+bind                sc_b buildunit_armhp            // Hovercraft Platform (Builds Hovercraft)
+bind          Shift+sc_b buildunit_armhp            // Hovercraft Platform (Builds Hovercraft)
+bind                sc_b buildunit_corhp            // Hovercraft Platform (Builds Hovercraft)
+bind          Shift+sc_b buildunit_corhp            // Hovercraft Platform (Builds Hovercraft)
+
+// For the moment (2024-03-18) there is a bug which stop cycling when not right biom:
+// If you try to build something on water while you are on land, it stops cycling, and the opposite
+// Naval stuff are at the end because I'm playing more on land
+bind                sc_b buildunit_armnanotcplat    // Naval Construction Turret (Repairs and builds in large radius)
+bind          Shift+sc_b buildunit_armnanotcplat    // Naval Construction Turret (Repairs and builds in large radius)
+bind                sc_b buildunit_cornanotcplat    // Naval Construction Turret (Repairs and builds in large radius)
+bind          Shift+sc_b buildunit_cornanotcplat    // Naval Construction Turret (Repairs and builds in large radius)
+bind                sc_b buildunit_armnanotc2plat   // T2 Naval Construction Turret (Repairs and builds in larger radius)
+bind          Shift+sc_b buildunit_armnanotc2plat   // T2 Naval Construction Turret (Repairs and builds in larger radius)
+bind                sc_b buildunit_cornanotc2plat   // T2 Naval Construction Turret (Repairs and builds in larger radius)
+bind          Shift+sc_b buildunit_cornanotc2plat   // T2 Naval Construction Turret (Repairs and builds in larger radius)
+bind                sc_b buildunit_armshltxuw       // Experimental Gantry (Produces Large Amphibious Units)
+bind          Shift+sc_b buildunit_armshltxuw       // Experimental Gantry (Produces Large Amphibious Units)
+bind                sc_b buildunit_corgantuw        // Experimental Gantry (Produces Large Amphibious Units)
+bind          Shift+sc_b buildunit_corgantuw        // Experimental Gantry (Produces Large Amphibious Units)
+bind                sc_b buildunit_corasy           // Advanced Shipyard (Produces Tech 2 Ships)
+bind          Shift+sc_b buildunit_corasy           // Advanced Shipyard (Produces Tech 2 Ships)
+bind                sc_b buildunit_armasy           // Advanced Shipyard (Produces Tech 2 Ships)
+bind          Shift+sc_b buildunit_armasy           // Advanced Shipyard (Produces Tech 2 Ships)
+bind                sc_b buildunit_armsy            // Shipyard (Produces Tech 1 Ships)
+bind          Shift+sc_b buildunit_armsy            // Shipyard (Produces Tech 1 Ships)
+bind                sc_b buildunit_corsy            // Shipyard (Produces Tech 1 Ships)
+bind          Shift+sc_b buildunit_corsy            // Shipyard (Produces Tech 1 Ships)
+bind                sc_b buildunit_armfhp           // Naval Hovercraft Platform (Builds Hovercraft)
+bind          Shift+sc_b buildunit_armfhp           // Naval Hovercraft Platform (Builds Hovercraft)
+bind                sc_b buildunit_corfhp           // Naval Hovercraft Platform (Builds Hovercraft)
+bind          Shift+sc_b buildunit_corfhp           // Naval Hovercraft Platform (Builds Hovercraft)
+bind                sc_b buildunit_armamsub         // Amphibious Complex (Produces Amphibious / Underwater Units)
+bind          Shift+sc_b buildunit_armamsub         // Amphibious Complex (Produces Amphibious / Underwater Units)
+bind                sc_b buildunit_coramsub         // Amphibious Complex (Produces Amphibious / Underwater Units)
+bind          Shift+sc_b buildunit_coramsub         // Amphibious Complex (Produces Amphibious / Underwater Units)
+bind                sc_b buildunit_corplat          // Seaplane Platform (Builds Seaplanes)
+bind          Shift+sc_b buildunit_corplat          // Seaplane Platform (Builds Seaplanes)
+bind                sc_b buildunit_armplat          // Seaplane Platform (Builds Seaplanes)
+bind          Shift+sc_b buildunit_armplat          // Seaplane Platform (Builds Seaplanes)
+
+
+//==============================
+
+bind            numpad2  moveback
+bind            numpad6  moveright
+bind            numpad4  moveleft
+bind            numpad8  moveforward
+bind            numpad9  moveup
+bind            numpad3  movedown
+bind            numpad1  movefast
+bind            numpad+  snd_volume_increase
+bind               sc_=  snd_volume_increase
+bind               sc_-  snd_volume_decrease
+bind            numpad-  snd_volume_decrease
+bind           Any+sc_;  losradar
+bind          Any+space  unit_stats
+bind    Ctrl+Shift+sc_o  cameraflip
+bind           Alt+sc_y  settarget
+bind               sc_y  settargetnoground
+bind          Ctrl+sc_`  group unset
+bind           Alt+sc_`  remove_from_autogroup
+
+
+// ressources: https://github.com/resopmok/BAR_uikeys_collections/blob/main/README.md
+// https://springrts.com/wiki/Invqueuekey
+// Unit names: https://www.beyondallreason.info/units/armada-factories
