@@ -303,7 +303,7 @@ autorepairlevel         // Set at which HP % this aircraft retreats to nearest a
 priority                // Assigns resources to use for this builder when not having enough for all
 
 cloak                   // Cloaks (why have this when wantcloak exists?)
-wantcloak               // Visibility state - Only T1 Twilight has both On/Off and Visibility state
+wantcloak               // Visibility state
 hound_weapon_toggle     // Sets weapon to a slow plasma projectile with a large AOE, or a fast projectice gauss weapon
 onoff                   // Active state: turn a unit on/off, also toggles Low/High Trajectory: Switch artillery firing angle
 factoryguard            // Builders produced by this factory will automatically guard it
