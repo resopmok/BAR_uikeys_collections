@@ -1,8 +1,8 @@
 unbindall // clear the defaults (required)
 
 // Don't uncomment both of these lines! Things will break!
-keyload luaui/configs/hotkeys/default_keys.txt          // Uncomment this line to base the config on fullsize default keys
-// keyload luaui/configs/hotkeys/default_keys_60pct.txt // Uncomment this line to base the config on 60% default keys
+keyload luaui/configs/hotkeys/legacy_keys.txt          // Uncomment this line to base the config on fullsize legacy keys
+// keyload luaui/configs/hotkeys/legacy_keys_60pct.txt // Uncomment this line to base the config on 60% legacy keys
 
 
 // Unbind WASD keys (incl. modifiers)

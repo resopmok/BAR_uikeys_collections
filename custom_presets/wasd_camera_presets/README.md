@@ -1,6 +1,6 @@
 # Presets with `WASD` camera movement
 
-Since `WASD` are bound to other actions in both the default keys and the grid keys presets, some compromises have to be made in order to use `WASD` for camera movement, generally by moving around important commands such as `D-Gun`.
+Since `WASD` are bound to other actions in both the grid keys and legacy key presets, some compromises have to be made in order to use `WASD` for camera movement, generally by moving around important commands such as `D-Gun`.
 
 Some options are provided below, and can be used a starting point for making your own preferred `WASD`-compatible keys.
 
@@ -46,13 +46,13 @@ If you are OK with clicking units in factories and would like `WASD` to also mov
 
 An opinionated grid keys config with `WASD` camera controls plus some other changes, made by Hobo Joe, who contributed the bindable actions `builder` and `factory` for `gridmenu_key` binds.
 
-## [`WASD` for default keys](./default_wasd.txt)
+## [`WASD` for legacy keys](./legacy_wasd.txt)
 
-It is possible to move around all commands associated with `WASD` (incl. modifiers) on default keys, and have `WASD` usable in absolutely all circumstances, along with `Ctrl` and `Shift` modifiers for camera move speed.
+It is possible to move around all commands associated with `WASD` (incl. modifiers) on legacy keys, and have `WASD` usable in absolutely all circumstances, along with `Ctrl` and `Shift` modifiers for camera move speed.
 
 In this setup:
 
-- `WASD` are inserted into the default keys, and can always be used to move camera.
+- `WASD` are inserted into the legacy keys, and can always be used to move camera.
   - `Shift`+`WASD` will move camera faster.
   - `Ctrl`+`WASD` will move camera slower.
 - Commands previously bound to `WASD` (incl. modifiers) are changed as follows:

@@ -6,7 +6,7 @@ Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_cam
 
 ### I'm not satisfied with the function of Shift+<number key>. I want it to _add_ my selection to the control group and select the whole group.
 
-During the recent hotkey update, group behavior was unified between grid and default keybinds. To restore the previous grid behavior (which is now Ctrl+Shift+), follow these steps:
+During the recent hotkey update, group behavior was unified between grid and legacy keybinds. To restore the previous grid behavior (which is now Ctrl+Shift+), follow these steps:
 - Put this file in your /data/ directory (same place as `uikeys.txt`): https://github.com/resopmok/BAR_uikeys_collections/blob/main/old_keybinds/num_keys.txt
 - Create a custom `uikeys.txt` following instructions in the how-to: https://github.com/resopmok/BAR_uikeys_collections/blob/main/HOWTO_customkeybind.md
 - Find the following line in the `uikeys.txt`:
@@ -40,7 +40,7 @@ Bada-bing! Now you have hotkeys for those order menu toggles.
 
 ### What is different about the 60% layouts?
 
-60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including default and grid 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
+60% layouts are designed for players who have small mechanical gaming keyboards (they are roughly 60% the number of keys as a full-size keyboard). Typically, these keyboards lack F keys, and so these layouts have been modified to accomodate that. The majority of the change moves F key commands to a combination of spacebar and a number key. There are a few other changes too, so make sure to consult images or read the config files on the main repo (https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs). You can find images for all layouts, including grid and legacy 60% here: (https://github.com/resopmok/BAR_uikeys_collections/tree/main/keyboard_layout_pngs).
 
 ### Can the grid menu home row be inverted to QWER?
 
@@ -49,8 +49,8 @@ Note: this .lua config file will not work in the game anymore. Sometime in the n
 
 ### How do I invert map scrolling with the middle mouse button?
 
-- When using Spring camera (Ctrl+F3 in default binds, Ctrl+F6 in grid bindings): you can type `/set MouseInvert 1` into everyone chat and it will invert the camera scroll while holding down the middle mouse button.
-- When using TA (overhead) camera (Ctrl+F2 in default binds, Ctrl+F5 in grid bindings): when holding down middle mouse button to scroll, there is no option for inverting. If you enable "Middle click toggles camera move (Settings -> Control), you can use a mode which will reverse this middle mouse button click activated mouse panning. To do that, type `/set MiddleClickScrollSpeed -0.01` into everyone chat.
+- When using Spring camera (Ctrl+F6 in grid bindings, Ctrl+F3 in legacy binds): you can type `/set MouseInvert 1` into everyone chat and it will invert the camera scroll while holding down the middle mouse button.
+- When using TA (overhead) camera (Ctrl+F5 in grid bindings, Ctrl+F2 in legacy binds): when holding down middle mouse button to scroll, there is no option for inverting. If you enable "Middle click toggles camera move (Settings -> Control), you can use a mode which will reverse this middle mouse button click activated mouse panning. To do that, type `/set MiddleClickScrollSpeed -0.01` into everyone chat.
 - These settings should save automatically for your next load.
 
 ### Can I rebind my mouse buttons, or add bindings for extended mouse buttons?
