@@ -21,7 +21,7 @@ To use custom keybind files, you need to edit a text file, specifically one call
 
 ## References:
 
-- Documentation for select action: https://beyond-all-reason.github.io/spring/articles/select-command/
-- Documentation for uikeys format: https://github.com/beyond-all-reason/spring/blob/BAR105/doc/uikeys.txt
+- Documentation for select action: https://beyond-all-reason.github.io/RecoilEngine/articles/select-command/
+- Documentation for uikeys format: https://github.com/beyond-all-reason/RecoilEngine/blob/BAR105/doc/uikeys.txt
 - General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
 - BAR master preset layouts: https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs/hotkeys
