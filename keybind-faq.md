@@ -4,7 +4,7 @@
 
 Please see the page dedicated to [WASD camera presets](./custom_presets/wasd_camera_presets/).
 
-### I'm not satisfied with the function of Shift+<number key>. I want it to _add_ my selection to the control group and select the whole group.
+### I'm not satisfied with the function of Shift+_number key_. I want it to _add_ my selection to the control group and select the whole group.
 
 During the recent hotkey update, group behavior was unified between grid and legacy keybinds. To restore the previous grid behavior (which is now Ctrl+Shift+), follow these steps:
 - Put this file in your /data/ directory (same place as `uikeys.txt`): https://github.com/resopmok/BAR_uikeys_collections/blob/main/old_keybinds/num_keys.txt
