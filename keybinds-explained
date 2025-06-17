@@ -1,0 +1,403 @@
+known keybinds, besides the unit binds
+// this to help users know what keybinds does what for custom keybinds
+
+keyload             // Unsure
+keyreload           // Reloads keybinds from file
+
+unbindall           // clear the defaults
+unbind enter chat   // clear the defaults
+
+fakemeta            // Creates a Modifier key from a key press of your choosing
+
+
+// Ingame Adjustments
+
+quitforce               // Exits Game, Same as Alt+F4
+reloadforce             // Quits to Menu, Prioritized over quitmenu
+pause                   // Pauses Game, Can also be done by Clicking on Settings Menu
+buildmenu_pregame_deselect  // Deselects structures to build before game starts
+increasespeed           // Increases Games Speed
+decreasespeed           // Decreases Games Speed
+increasespeed           // Increases Games Speed
+decreasespeed           // Decreases Games Speed
+MuteSound               // Toggle Mute
+snd_volume_increase     // Increases Sound Volume
+snd_volume_decrease     // Decreases Sound Volume
+screenshot png          // Takes a Screenshot
+savegame                // Saves Game
+fullscreen              // Fullscreen Mode
+forcestart              // force start games
+
+
+
+// Chat Controls - Self explanatory, rebind at your own risk
+
+bind                esc  quitmessage
+bind          Any+enter  chat
+bind      Alt+ctrl+sc_a  chatswitchally
+bind      Alt+ctrl+sc_s  chatswitchspec
+bind         Any+escape  edit_escape
+bind            Any+tab  edit_complete
+bind      Any+backspace  edit_backspace
+bind         Any+delete  edit_delete
+bind           Any+home  edit_home
+bind           Alt+left  edit_home
+bind            Any+end  edit_end
+bind          Alt+right  edit_end
+bind             Any+up  edit_prev_line
+bind           Any+down  edit_next_line
+bind           Any+left  edit_prev_char
+bind          Any+right  edit_next_char
+bind          Ctrl+left  edit_prev_word
+bind         Ctrl+right  edit_next_word
+bind          Any+enter  edit_return
+bind             Ctrl+v  pastetext
+
+
+
+// Menus Controls
+
+quitmenu                // do you want to.. Menu
+teamstatus_close        // Close Statistics Menu
+customgameinfo_close    // Close Gameinfo Menu
+options                 // Settings Menu
+luaui selector          // Widget Selector Menu
+sharedialog             // Share Resource/Units Menu
+customgameinfo          // Gameinfo Menu
+
+
+
+// Camera Controls
+
+moveforward             // Camera forward
+moveback                // Camera back
+moveright               // Camera right
+moveleft                // Camera left
+moveup                  // Zoom out/camera up
+movedown                // Zoom in/camera down
+movereset               // fast camera reset on mousewheel
+moverotate              // Camera rotate on x,y with mmb hold + move (Spring Camera)
+movetilt                // Camera rotate on x with mousewheel
+moveslow                // Camera move slow modifier
+movefast                // Camera move fast modifier
+togglecammode           // Cycles between FPS, Overhead (TA), Spring, and Rotatable style Cameras
+cameraflip              // Flips Camera on Global Y axis
+LastMsgPos              // Go to last send Ping or notification
+track                   // Camera follows selected Units
+trackmode               // Cycles the track camera between Single, Average, and Extents
+viewfps                 // FPS Style Camera
+viewta                  // Overhead (TA) Style Camera
+viewspring              // Spring Style Camera
+viewrot                 // Rotatable Overhead Camera
+viewfree                // Free Style Camera
+toggleoverview          // Overview Style Camera
+
+
+
+// View Controls
+
+togglelos               // Toggle line of Sight (Fog of War)
+increaseViewRadius      // Increase Ground Detail
+decreaseViewRadius      // Decrease Ground Detail
+ShowElevation           // Show Heightmap
+ShowPathTraversability  // Show passability (for selected unit.)
+HideInterface           // Hide General User Interface
+ShowMetalMap            // Screen Mode:Resources
+DynamicSky              // Unsure
+losradar                // Switch Los Mode / los_colors
+
+
+
+// Ingame Information Controls
+
+unit_stats              // Display Unit's Stats
+drawlabel               // Add Labels (Pings with Text)
+drawinmap               // Draw while holding Primary Mouse Button, Erase while holding Secondary Mouse Button, Ping with Middle Mouse Button, Add Labels with double Clicking Primary Mouse Button
+
+
+
+// Spectator Controls(Spectate teams)
+
+specteam 0
+specteam 1
+specteam 2
+specteam 3
+specteam 4
+specteam 5
+specteam 6
+specteam 7
+specteam 8
+
+
+
+// Group Unit Controls
+
+    // Set units as auto-group. Newly build units will get assigned automatically
+
+add_to_autogroup 0
+add_to_autogroup 1
+add_to_autogroup 2
+add_to_autogroup 3
+add_to_autogroup 4
+add_to_autogroup 5
+add_to_autogroup 6
+add_to_autogroup 7
+add_to_autogroup 8
+add_to_autogroup 9
+
+remove_from_autogroup   // Ungroup from Autogroup
+
+
+    // Camera Snaps to group
+
+group focus 0
+group focus 1
+group focus 2
+group focus 3
+group focus 4
+group focus 5
+group focus 6
+group focus 7
+group focus 8
+group focus 9
+
+
+    // Selects previously set groups or auto-groups
+
+group select 0
+group select 1
+group select 2
+group select 3
+group select 4
+group select 5
+group select 6
+group select 7
+group select 8
+group select 9
+
+
+    // Add all selected units to Group number
+
+group set 0
+group set 1
+group set 2
+group set 3
+group set 4
+group set 5
+group set 6
+group set 7
+group set 8
+group set 9
+
+group unset             // Removes selected unit(s) from group
+
+
+    // Select all units within Group without Deselectiong other Units/Groups
+
+group selectadd 0
+group selectadd 1
+group selectadd 2
+group selectadd 3
+group selectadd 4
+group selectadd 5
+group selectadd 6
+group selectadd 7
+group selectadd 8
+group selectadd 9
+
+
+    // Add all selected units to Group number without removing units from group
+
+group add 0
+group add 1
+group add 2
+group add 3
+group add 4
+group add 5
+group add 6
+group add 7
+group add 8
+group add 9
+
+
+    // Select/Deselect units within Group without Deselectiong other Units/Groups, Can also be used to select one part of group and deselect another part of group at the same time if some parts of the group was selected already
+
+group selecttoggle 0
+group selecttoggle 1
+group selecttoggle 2
+group selecttoggle 3
+group selecttoggle 4
+group selecttoggle 5
+group selecttoggle 6
+group selecttoggle 7
+group selecttoggle 8
+group selecttoggle 9
+
+
+
+// Selection Controls
+
+selectbox_same          // select only units that share type with current selection modifier | Smart Select Widget
+selectbox_idle          // select only idle units modifier | Smart Select Widget
+selectbox_all           // select all units modifier | Smart Select Widget
+selectbox_deselect      // remove units from current selection modifier | Smart Select Widget
+selectbox_mobile        // select only mobile units modifier | Smart Select Widget
+selectloop              // activate select shape | Loop Select Widget
+selectloop_invert       // select units not present in current selection modifier | Loop Select Widget
+selectloop_add          // add to selection modifier | Loop Select Widget
+
+
+    // Custom Selection Controls
+
+select AllMap++_ClearSelection_SelectNum_0+     // deselect all
+
+select AllMap+_Builder_Idle+_ClearSelection_SelectAll+          // Select all idle Builders
+select AllMap+_Builder_Idle+_ClearSelection_SelectOne+          // Cycle Select idle Builders
+select Visible+_Builder_Idle+_ClearSelection_SelectAll+         // Select all idle Builders in View
+
+select AllMap+_Transport_Idle+_ClearSelection_SelectAll+        // Select all Idle Transports
+select AllMap+_Transport_Idle+_ClearSelection_SelectOne+        // Cycle Select Idle Transports
+select Visible+_Transport_Idle+_ClearSelection_SelectAll+       // Select all Idle Transports in View
+
+select AllMap+_ManualFireUnit_Not_IdMatches_cordecom_Not_IdMatches_armdecom_Not_IdMatches_armthor+_ClearSelection_SelectOne+    // (Cycle) Select Commander(s)(If you have More than 1, Possible by Capturing One)
+
+select AllMap+_InPrevSel+_ClearSelection_SelectOne+             // Cycle Select units with the same id
+select AllMap+_InPrevSel+_ClearSelection_SelectAll+             // Select all units with the same id
+select Visible+_InPrevSel+_ClearSelection_SelectAll+            // Select all units with the same id in View
+
+select AllMap+_Waiting+_ClearSelection_SelectOne+               // Cycle Select Waiting Units
+select AllMap+_Waiting+_ClearSelection_SelectAll+               // Select all Waiting Units
+select Visible+_Waiting+_ClearSelection_SelectAll+              // Select all Waiting Units in View
+
+select AllMap+_Not_Builder_Not_Commander_InPrevSel_Not_InHotkeyGroup+_SelectAll+    // Select Armed Units - does not work
+select Visible+_Not_Builder_Not_Commander_InPrevSel_Not_InHotkeyGroup+_SelectAll+   // Select Armed Units in View - does not work
+
+select AllMap++_ClearSelection_SelectOne+                       // Cycle Select all units
+select AllMap++_ClearSelection_SelectAll+                       // Select all units
+select Visible++_ClearSelection_SelectAll+                      // Select all units in View
+
+select PrevSelection++_ClearSelection_SelectPart_50+            // Splits Army in Half
+
+select AllMap+_Not_Aircraft_Weapons+_ClearSelection_SelectAll+  // Unsure
+select AllMap+_InPrevSel_Not_InHotkeyGroup+_SelectAll+          // Unsure
+
+
+
+// Action Commands
+
+    // missing actions - spawn units(Aircraft Carriers), Aircaft Plant(for when aircaft is created, for idle and retreat Health Percentage)
+
+
+    // Toggleable Actions
+
+firestate               // Sets under what condition a unit should start firing at enemies(without an explicit attack order)
+
+movestate               // Sets how far out of its way a unit should move to attack enemies
+
+repeat                  // Repeat unit command queue
+
+idlemode                // Sets the state on what the aircraft will do when idle
+
+autorepairlevel         // Set at which HP % this aircraft retreats to nearest air repair pad
+
+priority                // Assigns resources to use for this builder when not having enough for all
+
+cloak                   // Cloaks (why have this when wantcloak exists?)
+wantcloak               // Visibility state
+hound_weapon_toggle     // Sets weapon to a slow plasma projectile with a large AOE, or a fast projectice gauss weapon
+onoff                   // Active state: turn a unit on/off, also toggles Low/High Trajectory: Switch artillery firing angle
+factoryguard            // Builders produced by this factory will automatically guard it
+
+
+    // Actions with Primary Click Curser
+
+attack                  // Attack a unit or ground position
+areaattack              // Define a circle in which to spread attack/fire
+manualfire              // Fires the powerful commander Disintegrator-gun
+manuallaunch            // Launch a missile at a target (Thor[Experimental Terminator Tank])
+
+selfd                   // Initiate self-destruct sequence
+selfd queued            // Initiate self-destruct sequence in queue
+
+resurrect               // Revive wrecks to become units again (click-drag for area)
+capture                 // Converts units that belong to the enemy(or ally)
+restore                 // Restore an area of the map to its original height
+loadunits               // Load unit or multiple units within an area in the transport
+unloadunits             // Unload unit or multiple units within an area in the transport
+raw_move                // does not know what this does terraforming maybe?
+loadonto                // loads a unit into a vehicle - redundent due to loadunits
+
+patrol                  // Patrol along one or more waypoints
+guard                   // Guard another unit against enemy units attacking it
+
+fight                   // Order units to take action while moving to a position
+repair                  // Repair a damaged unit
+reclaim                 // Suck metal/energy from wrecks or features (trees/stones)
+assist                  // does not know what this does
+
+settarget               // Set a prioritized target or area (prioritizes targeting when target or area in range)
+settargetnoground       // Set only a valid prioritized target (prioritizes targeting when target in range)
+
+areamex                 // Click-drag an area to auto queue metal extractors for all available metal spots
+move                    // Move a unit towards a position or follow other units - this command redundent for most cases
+
+
+    // Immediate Actions
+
+canceltarget            // Removes the priority target
+
+landatairbase           // Go to nearest Air Repair Pad
+
+stopproduction          // Stops producing units (clears queue)
+stop                    // Cancel the units current actions
+
+wait                    // Pause a unit/factory on processing command/build queues
+wait queued             // Pause a unit/factory on processing command/build queues in queue
+gatherwait              // Wait until all units arrive before continuing
+timewait                // Wait for a period of time before continuing
+deathwait               // Wait until units die before continuing
+squadwait               // Wait for a number of units to arrive before continuing
+
+
+    // Actions modifiers
+
+commandinsert prepend_between   // Adds a command between 2 commands close to cursor
+commandinsert prepend_queue     // prepend command into a separate prepend queue until key released
+command_skip_current    // Skip to Next in Queue
+command_cancel_last     // Skip Last in Queue
+
+
+
+// Grid Menu Hotkeys
+
+gridmenu_key 3 1        // Top left gridmenu key
+gridmenu_key 3 2        // Top mid-left gridmenu key
+gridmenu_key 3 3        // Top mid-right gridmenu key
+gridmenu_key 3 4        // Top right gridmenu key
+
+gridmenu_key 2 1        // Center left gridmenu key
+gridmenu_key 2 2        // Center mid-left gridmenu key
+gridmenu_key 2 3        // Center mid-right gridmenu key
+gridmenu_key 2 4        // Center right gridmenu key
+
+gridmenu_key 1 1        // Bottom left gridmenu key
+gridmenu_key 1 2        // Bottom mid-left gridmenu key
+gridmenu_key 1 3        // Bottom mid-right gridmenu key
+gridmenu_key 1 4        // Bottom right gridmenu key
+
+gridmenu_category 1     // Economy Category
+gridmenu_category 2     // Defense Category
+gridmenu_category 3     // Utility Category
+gridmenu_category 4     // Factory Category
+
+gridmenu_cycle_builder  // Next builder
+gridmenu_next_page      // Next page
+
+
+
+// Building Hotkeys
+
+buildfacing inc         // Rotate Buildings 90 degree Counterclockwise
+buildfacing dec         // Rotate Buildings 90 degree Clockwise
+buildspacing inc        // Increase Build Line Spacing
+buildspacing dec        // Decrease Build Line Spacing
