@@ -2,18 +2,26 @@
 This repository is meant to help players customize their keybinds for BAR. 
 The files here are intended to provide drop-in custom presets, or to serve as reference for more specific customizations.
 Please refer to the HOWTO and FAQ as documentation, and come find us on the official BAR discord in #keybind-help for more information and assistance.
-To use any of these hotkey files, simply make sure they are named `uikeys.txt` and place them in your install folder (the same directory as `springsettings.cfg`)
 - The .png's are visual layouts of the grid optimized layout, available in-game.
 - custom_army_selection is an amalgam of selection keys players have found useful.
 - old files are incomplete but may contain interesting binds and historical reference.
 
+## How to install/use
+
+> [!WARNING]
+> When using your file browser, make sure the extensions are not hidden, so you don't create a `uikeys.txt.txt` file for example.
+
+Make sure to download the desired file, named as `uikeys.txt` in your install folder (the same directory as `springsettings.cfg`).
+
+If there's already a `uikeys.txt` file present, you can rename that file to a backup (e.g. `uikeys.backup.txt`) and do above.
 
 For more specific instruction, see:
 - [Custom keybind guide](keybind-guide.md)
 - [Custom keybind FAQ](keybind-faq.md)
 
-
 For keymaps of the shipped presets, check the preset-images directory.
+
+### Windows users
 
 
 # Built-in hotkey files
