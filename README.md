@@ -9,20 +9,17 @@ Please refer to the HOWTO and FAQ as documentation, and come find us on the offi
 ## How to install/use
 
 > [!WARNING]
-> When using your file browser, make sure the extensions are not hidden, so you don't create a `uikeys.txt.txt` file for example.
+> When using your file browser, make sure the extensions are not hidden, so you don't create a `uikeys.txt.txt` file by mistake for example.
 
-Make sure to download the desired file, named as `uikeys.txt` in your install folder (the same directory as `springsettings.cfg`).
+Make sure to download the desired file, named as `uikeys.txt`, in your install folder (the same directory as `springsettings.cfg`).
 
-If there's already a `uikeys.txt` file present, you can rename that file to a backup (e.g. `uikeys.backup.txt`) and do above.
+If there's already a `uikeys.txt` file present, you can rename that file to a backup (e.g. `uikeys.backup.txt`) and redo above.
 
 For more specific instruction, see:
 - [Custom keybind guide](keybind-guide.md)
 - [Custom keybind FAQ](keybind-faq.md)
 
 For keymaps of the shipped presets, check the preset-images directory.
-
-### Windows users
-
 
 # Built-in hotkey files
 With the uikeys hotkey format it is possible to import other keybind files with all their binds with the `keyload` command. 
