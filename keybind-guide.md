@@ -52,6 +52,3 @@ bind alt+shift+f1 say hi from alt+shift+f1
 - Documentation for uikeys format: https://github.com/beyond-all-reason/RecoilEngine/blob/BAR105/doc/uikeys.txt
 - General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
 - BAR master preset layouts: https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs/hotkeys
-
-[qwerty]: https://www.kbdlayout.info/KBDUS/
-[qwertz]: https://www.kbdlayout.info/kbdgr/
