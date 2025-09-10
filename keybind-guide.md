@@ -15,7 +15,19 @@ To use custom keybind files, you need to edit a text file, specifically one call
 
 ## Customizing bindings
 
-### Overview
+### Use a custom presets
+
+See [the custom presets available here](https://github.com/resopmok/BAR_uikeys_collections/tree/main/custom_presets).
+
+### Customize by using the Ingame Keybind Editor widget (by MasterBel)
+
+- You can find this widget on the official BAR discord here: https://discord.com/channels/549281623154229250/1113861314582954078
+- There are special instructions for the installation of this widget, be sure to read them and follow them carefully to ensure it works properly.
+- It has a variety of useful features and allows you to search keybinds and manage them without tabbing out of the game.
+
+### Customize by writing your own
+
+TLDR below, see a more complete guide [here].
 
 Bindings are done using actions and keysets. A binding looks like this: `bind <keyset> <action>`.
 
@@ -33,12 +45,6 @@ bind alt+shift+f1 say hi from alt+shift+f1
 // unbindaction group // unbinds all group bindings
 // bind alt+f1 group select 1 // bind alt+f1 to group select 1
 ```
-
-### Customize by using the Ingame Keybind Editor widget (by MasterBel)
-
-- You can find this widget on the official BAR discord here: https://discord.com/channels/549281623154229250/1113861314582954078
-- There are special instructions for the installation of this widget, be sure to read them and follow them carefully to ensure it works properly.
-- It has a variety of useful features and allows you to search keybinds and manage them without tabbing out of the game.
 
 ## References:
 
