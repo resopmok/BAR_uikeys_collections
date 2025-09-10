@@ -4,7 +4,7 @@ Keybinds in BAR are handled differently than most games, having no built-in keyb
 
 To use custom keybind files, you need to edit a text file, specifically one called `uikeys.txt`
 
-## Setting up a custom keybind file
+## Enabling Custom keybindings
 
 - Open the launcher and click on "Open Installation Directory."
 - Open "data" folder (not necessary on Linux systems). This is where the custom keybind config file, `uikeys.txt`, will  live.
@@ -13,7 +13,28 @@ To use custom keybind files, you need to edit a text file, specifically one call
   - We recommend using [VS Code](https://code.visualstudio.com/) with the [`uikeys` extension](https://marketplace.visualstudio.com/items?itemName=nbusseneau.vscode-uikeys), for syntax highlighting and completion suggestions.
 - To test your changes in real time: Type `/keyreload` after you have saved additional changes to your `uikeys.txt`.
 
-## Customize by using the Ingame Keybind Editor widget (by MasterBel)
+## Customizing bindings
+
+### Overview
+
+Bindings are done using actions and keysets. A binding looks like this: `bind <keyset> <action>`.
+
+Bind like this: `bind ctrl+f12 say hi from ctrl+f12`.
+Some of the available actions described [here](https://github.com/resopmok/BAR_uikeys_collections/blob/main/keybinds-explained).
+
+Change `uikeys.txt` the game has created for you, or use a starter template:
+
+```
+keyreload luaui/configs/hotkeys/grid_keys.txt // loads keys for a preset
+
+bind alt+shift+f1 say hi from alt+shift+f1
+
+// example of changing already bound bindings
+// unbindaction group // unbinds all group bindings
+// bind alt+f1 group select 1 // bind alt+f1 to group select 1
+```
+
+### Customize by using the Ingame Keybind Editor widget (by MasterBel)
 
 - You can find this widget on the official BAR discord here: https://discord.com/channels/549281623154229250/1113861314582954078
 - There are special instructions for the installation of this widget, be sure to read them and follow them carefully to ensure it works properly.
@@ -25,3 +46,6 @@ To use custom keybind files, you need to edit a text file, specifically one call
 - Documentation for uikeys format: https://github.com/beyond-all-reason/RecoilEngine/blob/BAR105/doc/uikeys.txt
 - General repository of custom keybindings: https://github.com/resopmok/BAR_uikeys_collections
 - BAR master preset layouts: https://github.com/beyond-all-reason/Beyond-All-Reason/tree/master/luaui/configs/hotkeys
+
+[qwerty]: https://www.kbdlayout.info/KBDUS/
+[qwertz]: https://www.kbdlayout.info/kbdgr/
