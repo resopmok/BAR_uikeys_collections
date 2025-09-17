@@ -13,6 +13,39 @@ To use custom keybind files, you need to edit a text file, specifically one call
   - We recommend using [VS Code](https://code.visualstudio.com/) with the [`uikeys` extension](https://marketplace.visualstudio.com/items?itemName=nbusseneau.vscode-uikeys), for syntax highlighting and completion suggestions.
 - To test your changes in real time: Type `/keyreload` after you have saved additional changes to your `uikeys.txt`.
 
+## Select command
+
+[This page](https://beyond-all-reason.github.io/spring/articles/select-command/) explain how to create your unit selection.
+
+Available categories for `category_` filter are not mentioned in this page.
+Here are available categories:
+```
+ALL
+BOT
+CANBEUW
+COMMANDER
+EMPABLE
+GROUNDSCOUT
+HOVER
+LIGHTAIRSCOUT
+MINE
+MOBILE
+NOTAIR
+NOTHOVER
+NOTLAND
+NOTSHIP
+NOTSUB
+NOWEAPON
+PHIB
+SHIP
+SURFACE
+T4AIR
+TANK
+UNDERWATER
+VTOL
+WEAPON
+```
+
 ## Customize by using the Ingame Keybind Editor widget (by MasterBel)
 
 - You can find this widget on the official BAR discord here: https://discord.com/channels/549281623154229250/1113861314582954078
